@@ -24,23 +24,35 @@ if (distance > tolerance && distance > speed_move) {
 }
 
 // no clique ele define o target_x e target_y e verifica a posição para o player nao sair da tela
-if (mouse_check_button_pressed(mb_left)) {
-	target_x = mouse_x;
-	target_y = mouse_y;
-	
-	if (target_x > (room_width - (sprite_get_width(sprBlouses)/2))){
-		target_x = room_width - sprite_get_width(sprBlouses) / 2;
-	}
-	
-	if (target_x < (sprite_get_width(sprBlouses) / 2)){
-		target_x = sprite_get_width(sprBlouses) / 2;
-	}
-	
-	if (target_y > (room_height - sprite_get_height(sprBlouses))){
-		target_y = (room_height - sprite_get_height(sprBlouses))
-	}
-	
-	if (target_y < sprite_get_height(sprBlouses)){
-		target_y = sprite_get_height(sprBlouses);
-	}
+if (mouse_check_button_pressed(mb_left) && !global.pause) {
+    var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
+    var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
+
+    // verifica se bão clicou no botão pause
+    if (!point_in_rectangle(mouse_x, mouse_y,
+        global.xPauseButton - pauseButtonHalfWidth,
+        global.yPauseButton - pauseButtonHalfHeight,
+        global.xPauseButton + pauseButtonHalfWidth,
+        global.yPauseButton + pauseButtonHalfHeight))
+    {
+        target_x = mouse_x;
+        target_y = mouse_y;
+        
+        if (target_x > (room_width - (sprite_get_width(sprBlouses) / 2))){
+            target_x = room_width - sprite_get_width(sprBlouses) / 2;
+        }
+        
+        if (target_x < (sprite_get_width(sprBlouses) / 2)){
+            target_x = sprite_get_width(sprBlouses) / 2;
+        }
+        
+        if (target_y > (room_height - sprite_get_height(sprBlouses))){
+            target_y = (room_height - sprite_get_height(sprBlouses));
+        }
+        
+        if (target_y < sprite_get_height(sprBlouses)){
+            target_y = sprite_get_height(sprBlouses);
+        }
+    }
 }
+

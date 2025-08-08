@@ -62,12 +62,17 @@ for (var i = 0; i < numOptions; i++) {
         // se selecionado, verifica se foi pressionado
         selectedOption = i
         if (mouse_check_button_pressed(mb_left)) {
-            pauseSelection(selectedOption)
+            pauseSelection(selectedOption);
+			if (i == 0) {
+				global.pause = false;
+			}
         }
     }
 
-    if (keyboard_check_pressed(vk_enter))
-        pauseSelection(selectedOption)
+    if (keyboard_check_pressed(vk_enter)){
+        pauseSelection(selectedOption);
+		global.pause = false;
+	}
 
     if (selectedOption == i) {
         draw_set_color(c_white)
