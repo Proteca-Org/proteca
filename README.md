@@ -36,16 +36,15 @@ Antes da adoção do GitFlow, algumas branches foram usadas para estudo e testes
 - `options/`: configurações do projeto.
 - `fonts/`: fontes utilizadas no jogo.
 - `datafiles/`: arquivos auxiliares do GameMaker.
-- `docs/`: **artefatos de documentação**, como:
-  - [`requisitos_proteca.md`](docs/requisitos_proteca.md): requisitos funcionais, não funcionais e de processo.
-  - [`processo_desenvolvimento.md`](docs/processo_desenvolvimento.md): etapas e fluxo do desenvolvimento do jogo.
-  - Diagramas de processo
-  - Relatórios e planejamentos
+- `docs/`: artefatos de documentação.
 
 ## 📝 Documentação
 
 A pasta [`docs/`](./docs) centraliza todos os documentos técnicos e organizacionais do projeto. Destaques:
 
-- O arquivo [`processo_desenvolvimento.md`](docs/processo_desenvolvimento.md) detalha cada fase (requisitos, codificação, playtest, etc.).
-- O arquivo [`requisitos_proteca.md`](docs/requisitos_proteca.md) lista todos os requisitos mapeados a partir do GDD.
 
+- [`GDD - Jogo (v.2.0 2025).md`](docs/GDD%20-%20Jogo%20(v.2.0%202025).md): versão atual do Game Design Document.
+- [`git_recomendacoes.md`](docs/git_recomendacoes.md): diretrizes de uso do Git e práticas recomendadas para versionamento no projeto.
+- [`processo_desenvolvimento.md`](docs/processo_desenvolvimento.md): descreve o fluxo de trabalho adotado pela equipe, incluindo o diagrama BPMN, as etapas de análise, desenvolvimento, avaliação e os fluxos alternativos.
+- [`requisitos/`](docs/requisitos): contém os requisitos do jogo mapeados a partir do GDD.
+- [`diagramas/`](docs/diagramas): contém os diagramas de processo, arquitetura ou apoio visual utilizados na documentação do projeto.
