@@ -29,9 +29,9 @@ var yDisplacement = (yMargin * 2) + buttonHeight
 draw_set_font(fntCustomization)
 draw_set_color(c_black)
 
-var xButtonOptions = room_width - (buttonWidth / 2)
-var xLeftColumn = xMargin + (buttonWidth / 2)
-var xRightColumn = room_width - (buttonWidth / 2) - xMargin
+var xButtonOptions = room_width - buttonHalfWidth
+var xLeftColumn = xMargin + buttonHalfWidth
+var xRightColumn = room_width - buttonHalfWidth - xMargin
 
 // se o menu selecionado for o de partes do corpo, desenha a flecha
 if (currentMenu == 0) {
