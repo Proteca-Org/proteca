@@ -43,6 +43,7 @@
     {"id":{"name":"fntMenu","path":"fonts/fntMenu/fntMenu.yy",},},
     {"id":{"name":"objAuxLevel1","path":"objects/objAuxLevel1/objAuxLevel1.yy",},},
     {"id":{"name":"objCustom","path":"objects/objCustom/objCustom.yy",},},
+    {"id":{"name":"objInventory","path":"objects/objInventory/objInventory.yy",},},
     {"id":{"name":"objMenu","path":"objects/objMenu/objMenu.yy",},},
     {"id":{"name":"objPause","path":"objects/objPause/objPause.yy",},},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},},
@@ -52,8 +53,13 @@
     {"id":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},},
     {"id":{"name":"rmVideo","path":"rooms/rmVideo/rmVideo.yy",},},
     {"id":{"name":"customDone","path":"scripts/customDone/customDone.yy",},},
+    {"id":{"name":"inventario","path":"scripts/inventario/inventario.yy",},},
     {"id":{"name":"menuSelection","path":"scripts/menuSelection/menuSelection.yy",},},
+<<<<<<< HEAD
     {"id":{"name":"pauseSelection","path":"scripts/pauseSelection/pauseSelection.yy",},},
+=======
+    {"id":{"name":"spr_slot_background","path":"sprites/spr_slot_background/spr_slot_background.yy",},},
+>>>>>>> feature/inventario
     {"id":{"name":"sprAccessories","path":"sprites/sprAccessories/sprAccessories.yy",},},
     {"id":{"name":"sprArrow","path":"sprites/sprArrow/sprArrow.yy",},},
     {"id":{"name":"sprBlouses","path":"sprites/sprBlouses/sprBlouses.yy",},},
