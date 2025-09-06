@@ -3,7 +3,6 @@
 var results = video_draw()
 if (results[0] == 0) {
 	draw_surface(results[1], 0, 0)
-	//draw_surface_stretched(results[1], 0, 0, room_width, room_height);	
 } 
 
 var strHeight = string_height("A")

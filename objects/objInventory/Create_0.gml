@@ -1,17 +1,18 @@
 inventory := new Inventory();
-is_open := false;
-select_slot = -1;
+isOpen := false;
+selectedSlot = -1;
 previous_color = draw_get_color();
 
-
-slot_size = 64;
-start_x = display_get_gui_width() / 2 - 2 * slot_size; // Centraliza horizontalmente
-start_y = display_get_gui_height() / 2 - 2 * slot_size; // Centraliza verticalmente
+slotSize = 64;
+startX = display_get_gui_width() / 2 - 2 * slotSize; // Centraliza horizontalmente
+startY = display_get_gui_height() / 2 - 2 * slotSize; // Centraliza verticalmente
 padding = 10; // Espaçamento entre slots
 
-function no_effect(){return "use"};
+function noEffect() {
+	return "use"
+};
 
-var hair := new Item(1, "cabelo", sprHair, "cabelo loiro", no_effect);
-var pants := new Item(2, "calca", sprPants, "Calça jeans", no_effect);
-inventory.add_item(hair);
-inventory.add_item(pants);
+var hair := new Item(1, "cabelo", sprHair, "cabelo loiro", noEffect);
+var pants := new Item(2, "calca", sprPants, "Calça jeans", noEffect);
+inventory.addItem(hair);
+inventory.addItem(pants);

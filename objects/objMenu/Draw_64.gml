@@ -15,7 +15,6 @@ var buttonHalfHeight = buttonHeight / 2
 
 var yButtonStartPosition = guiHalfHeight - yMargin - buttonHeight
 
-
 for (var i = 0; i < numOptions; i++) {
     var yButtonPosition = yButtonStartPosition + (i * (yMargin + buttonHeight))
     draw_sprite_ext(sprButton, 0, guiHalfWidth, yButtonPosition, 1, 1, 0, -1, 1)

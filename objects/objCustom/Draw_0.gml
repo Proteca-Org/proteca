@@ -36,9 +36,7 @@ var xRightColumn = room_width - buttonHalfWidth - xMargin
 // se o menu selecionado for o de partes do corpo, desenha a flecha
 if (currentMenu == 0) {
 	draw_sprite(sprArrow, 0, xLeftColumn, yMargin + yArrow)
-}
-// se o menu selecionado for o de opções dentro de uma parte do corpo, desenha a flecha
-else {
+} else { // se o menu selecionado for o de opções dentro de uma parte do corpo, desenha a flecha
 	draw_sprite(sprArrow, 0,  xRightColumn, yMargin + yArrow)
 }
 

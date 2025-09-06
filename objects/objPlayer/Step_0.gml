@@ -1,22 +1,22 @@
 /// @description Verifica movimentação do jogador
 if (!initialized) {
-	target_x = x;
-	target_y = y;
+	targetX = x;
+	targetY = y;
 	initialized = true;
 }
 
-var dx = target_x - x;
-var dy = target_y - y;
-var distance  = point_distance(x, y, target_x, target_y);
+var dx = targetX - x;
+var dy = targetY - y;
+var distance  = point_distance(x, y, targetX, targetY);
 var tolerance = 2;
 
-if (distance > tolerance && distance > speed_move) {
-    var dir = point_direction(x, y, target_x, target_y);
-    x += lengthdir_x(speed_move, dir);
-    y += lengthdir_y(speed_move, dir);
+if (distance > tolerance && distance > velocity) {
+    var dir = point_direction(x, y, targetX, targetY);
+    x += lengthdir_x(velocity, dir);
+    y += lengthdir_y(velocity, dir);
 } else {
-    x = target_x;
-    y = target_y;
+    x = targetX;
+    y = targetY;
 }
 
 // no clique ele define o target_x e target_y e verifica a posição para o player nao sair da tela
@@ -31,23 +31,23 @@ if (mouse_check_button_pressed(mb_left)) {
         global.xPauseButton + pauseButtonHalfWidth,
         global.yPauseButton + pauseButtonHalfHeight))
     {
-        target_x = mouse_x;
-        target_y = mouse_y;
+        targetX = mouse_x;
+        targetY = mouse_y;
         
-        if (target_x > (room_width - (sprite_get_width(sprBlouses) / 2))){
-            target_x = room_width - sprite_get_width(sprBlouses) / 2;
+        if (targetX > (room_width - (sprite_get_width(sprBlouses) / 2))){
+            targetX = room_width - sprite_get_width(sprBlouses) / 2;
         }
         
-        if (target_x < (sprite_get_width(sprBlouses) / 2)){
-            target_x = sprite_get_width(sprBlouses) / 2;
+        if (targetX < (sprite_get_width(sprBlouses) / 2)){
+            targetX = sprite_get_width(sprBlouses) / 2;
         }
         
-        if (target_y > (room_height - sprite_get_height(sprBlouses))){
-            target_y = (room_height - sprite_get_height(sprBlouses));
+        if (targetY > (room_height - sprite_get_height(sprBlouses))){
+            targetY = (room_height - sprite_get_height(sprBlouses));
         }
         
-        if (target_y < sprite_get_height(sprBlouses)){
-            target_y = sprite_get_height(sprBlouses);
+        if (targetY < sprite_get_height(sprBlouses)){
+            targetY = sprite_get_height(sprBlouses);
         }
     }
 }
