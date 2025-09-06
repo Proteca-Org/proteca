@@ -1,8 +1,4 @@
 /// @description Verifica movimentação do jogador
-if (global.pause) 
-	exit;
-
-
 if (!initialized) {
 	target_x = x;
 	target_y = y;
@@ -24,7 +20,7 @@ if (distance > tolerance && distance > speed_move) {
 }
 
 // no clique ele define o target_x e target_y e verifica a posição para o player nao sair da tela
-if (mouse_check_button_pressed(mb_left) && !global.pause) {
+if (mouse_check_button_pressed(mb_left)) {
     var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
     var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
 

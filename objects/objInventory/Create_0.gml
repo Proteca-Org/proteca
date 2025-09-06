@@ -1,5 +1,5 @@
 inventory := new Inventory();
-is_open := true;
+is_open := false;
 select_slot = -1;
 previous_color = draw_get_color();
 

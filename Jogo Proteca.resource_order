@@ -2,7 +2,7 @@
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
     {"name":"objInventory","order":1,"path":"objects/objInventory/objInventory.yy",},
-    {"name":"inventario","order":1,"path":"scripts/inventario/inventario.yy",},
     {"name":"spr_slot_background","order":1,"path":"sprites/spr_slot_background/spr_slot_background.yy",},
+    {"name":"sprHair","order":2,"path":"sprites/sprHair/sprHair.yy",},
   ],
 }
