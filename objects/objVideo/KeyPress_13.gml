@@ -1,5 +1,3 @@
-/// @description Lida com a opção selecionada no menu
-
 if (selectedOption == 0) {
 	if (video_get_status() == video_status_playing) {
 		video_pause()

@@ -1,8 +1,6 @@
-/// @description Desenha o vídeo e opções
-
 var results = video_draw()
 if (results[0] == 0) {
-	draw_surface(results[1], 0, 0)
+	draw_surface_ext(results[1], 0, 0, 0.5, 0.5, 0, -1, 1)
 } 
 
 var strHeight = string_height("A")

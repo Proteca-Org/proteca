@@ -1,5 +1,3 @@
-/// @description Inicializa variáveis do player
-
 hair = 0
 blouse = 0
 pants = 0

@@ -1,4 +1,3 @@
-/// @description Verifica movimentação do jogador
 if (!initialized) {
 	targetX = x;
 	targetY = y;
@@ -52,3 +51,9 @@ if (mouse_check_button_pressed(mb_left)) {
     }
 }
 
+#region Dialog System
+	if (keyboard_check_pressed(ord("F"))) {
+		var dialog = instance_create_layer(x, y, "Instances", objDialog)
+		dialog.npcName = "Teste Geral";
+	}
+#endregion

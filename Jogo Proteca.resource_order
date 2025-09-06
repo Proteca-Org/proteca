@@ -1,7 +1,10 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+    {"name":"fntDialog","order":1,"path":"fonts/fntDialog/fntDialog.yy",},
+    {"name":"objDialog","order":2,"path":"objects/objDialog/objDialog.yy",},
     {"name":"objInventory","order":1,"path":"objects/objInventory/objInventory.yy",},
+    {"name":"dialogScript","order":1,"path":"scripts/dialogScript/dialogScript.yy",},
     {"name":"sprHair","order":2,"path":"sprites/sprHair/sprHair.yy",},
     {"name":"sprSlotBackground","order":1,"path":"sprites/sprSlotBackground/sprSlotBackground.yy",},
   ],
