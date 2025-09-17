@@ -19,7 +19,9 @@ if (distance > tolerance && distance > velocity) {
 }
 
 // no clique ele define o target_x e target_y e verifica a posição para o player nao sair da tela
-if (mouse_check_button_pressed(mb_left)) {
+if (mouse_check_button_pressed(mb_left) 
+	&& (!variable_global_exists("dialog") || !global.dialog)
+	&& (!variable_global_exists("inventory") || !global.inventory)) {
     var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
     var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
 
@@ -28,7 +30,8 @@ if (mouse_check_button_pressed(mb_left)) {
         global.xPauseButton - pauseButtonHalfWidth,
         global.yPauseButton - pauseButtonHalfHeight,
         global.xPauseButton + pauseButtonHalfWidth,
-        global.yPauseButton + pauseButtonHalfHeight))
+        global.yPauseButton + pauseButtonHalfHeight)
+		&& !global.pause)
     {
         targetX = mouse_x;
         targetY = mouse_y;
@@ -52,7 +55,7 @@ if (mouse_check_button_pressed(mb_left)) {
 }
 
 #region Dialog System
-	if (keyboard_check_pressed(ord("F"))) {
+	if (keyboard_check_pressed(ord("F")) && (!variable_global_exists("dialog") || !global.dialog)) {
 		var dialog = instance_create_layer(x, y, "Instances", objDialog)
 		dialog.npcName = "Teste Geral";
 	}

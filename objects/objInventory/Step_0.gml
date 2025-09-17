@@ -1,5 +1,5 @@
 if (keyboard_check_pressed(ord("M"))) {
-    isOpen = !isOpen; // Alterna entre aberto/fechado
+    global.inventory = !global.inventory; // Alterna entre aberto/fechado
 }
 
 
@@ -26,4 +26,4 @@ if (mouse_check_button_pressed(mb_left)) {
     }
 }
 
-if !isOpen {selectedSlot=-1}
+if !global.inventory {selectedSlot=-1}
