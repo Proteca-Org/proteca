@@ -12,14 +12,30 @@ draw_sprite_ext(sprAccessories, selectedFeature[4], x, y, xScale, yScale, 0, -1,
 #region buttonVariables
 
 // variaveis usadas para posicionamento de botoes e de escrita
+var buttonWidth = sprite_get_width(sprButton)
+var buttonHeight = sprite_get_height(sprButton)
+var buttonHalfWidth = buttonWidth / 2
+var buttonHalfHeight = buttonHeight / 2
+var displayWidth = display_get_gui_width()
+var displayHeight = display_get_gui_height()
+
 var xMargin = 10
 var yMargin = 5
-var buttonWidth = sprite_get_width(sprButton)
-var buttonHalfWidth = buttonWidth / 2
-var buttonHeight = sprite_get_height(sprButton)
-var buttonHalfHeight = buttonHeight / 2
-var yArrow = yMargin + (sprite_get_height(sprArrow) / 2)
+var endButtonMargin = 10
 var yDisplacement = (yMargin * 2) + buttonHeight
+var yArrow = yMargin + (sprite_get_height(sprArrow) / 2)
+
+var endText = "Pronto!"
+var endTextWidth = string_width(endText)
+var endTextHeight = string_height(endText)
+
+var keyboardEndText = "Enter para finalizar"
+var keyboardEndTextWidth = string_width(keyboardEndText)
+var keyboardEndTextHeight = string_height(keyboardEndText)
+var keyboardTextOffset = 20
+
+var endButtonX = displayWidth - buttonHalfWidth - endButtonMargin
+var endButtonY = displayHeight - endButtonMargin - buttonHalfHeight
 
 #endregion
 
@@ -102,6 +118,26 @@ for (var i = 0; i < array_length(feature[selectedPart]); i++) {
 	
 }
 
+draw_sprite_ext(sprButton, 0, endButtonX, endButtonY, 1, 1, 0, -1, 1)
+draw_text(endButtonX - (endTextWidth / 2), endButtonY - (endTextHeight/2), endText)
+
+draw_set_color(c_white)
+draw_text(endButtonX - (keyboardEndTextWidth / 2), displayHeight - endButtonMargin - buttonHeight - (endTextHeight/2) - keyboardTextOffset, keyboardEndText)
+draw_set_color(c_black)
+
+if (point_in_rectangle(mouse_x, mouse_y, displayWidth - buttonWidth - endButtonMargin, displayHeight - buttonHeight - endButtonMargin, displayWidth - endButtonMargin, displayHeight - endButtonMargin)) {
+		
+	draw_set_color(c_white)
+	draw_set_alpha(.5)
+	draw_rectangle(displayWidth - buttonWidth - endButtonMargin, displayHeight - buttonHeight - endButtonMargin, displayWidth - endButtonMargin, displayHeight - endButtonMargin, false)
+	draw_set_color(c_black)
+	draw_set_alpha(1)
+	
+	// se selecionado, verifica se foi pressionado
+	if (mouse_check_button_pressed(mb_left)) {
+		customDone(selectedFeature)
+	}
+}
 // reseta cor e fonte
 draw_set_font(-1)
 draw_set_color(-1)
