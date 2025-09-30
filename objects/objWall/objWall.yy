@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"objInventory",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objWall",
+  "eventList":[],
   "managed":true,
-  "name":"objInventory",
+  "name":"objWall",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -31,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprWall",
+    "path":"sprites/sprWall/sprWall.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

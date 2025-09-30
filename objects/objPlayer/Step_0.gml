@@ -11,11 +11,37 @@ var tolerance = 2;
 
 if (distance > tolerance && distance > velocity) {
     var dir = point_direction(x, y, targetX, targetY);
-    x += lengthdir_x(velocity, dir);
-    y += lengthdir_y(velocity, dir);
+	
+	// Código anterior
+    // x += lengthdir_x(velocity, dir);
+    // y += lengthdir_y(velocity, dir);	
+	
+	// Converte velocidade + direção em deslocamentos de movimento X e Y
+	var move_x = lengthdir_x(velocity, dir);
+	var move_y = lengthdir_y(velocity, dir);
+	
+	// // Define a posição dos "pés" do sprite (usada para colisões)
+	var foot_x = x;
+	var foot_y = y + (sprite_height / 2) + 40; // offset pra baixo
+
+	// Define profundidade com base na posição Y p/ que objetos mais baixos sejam desenhados "na frente"
+	depth = -y;
+
+	// Verificações de movimento x e y somente se não houver colisão com pés
+		if (!place_meeting(foot_x + move_x, foot_y, all)) {
+			x += move_x;}
+
+		if (!place_meeting(foot_x, foot_y + move_y, all)) {
+			y += move_y;}
+	
+	// muda sprite para andando
+	sprite_index = walkSpr;
 } else {
     x = targetX;
     y = targetY;
+	
+	// muda sprite para parado
+	sprite_index = sprIdle;
 }
 
 // no clique ele define o target_x e target_y e verifica a posição para o player nao sair da tela
@@ -48,8 +74,25 @@ if (mouse_check_button_pressed(mb_left)) {
         if (targetY < sprite_get_height(sprBlouses)){
             targetY = sprite_get_height(sprBlouses);
         }
+		
+		// Determina a direção do sprite com base no clique
+		if (targetX > x) {
+            face = 1; // voltado para a direita
+        } else if (targetX < x) {
+            face = -1;  // voltado para a esquerda
+        }
     }
 }
+
+// Faz com que o personagem pareça maior quando mais perto da 
+/* var min_scale = 0;  
+var max_scale = 4.3;   
+var t = clamp(y / room_height, 0, 1);
+var final_scale = lerp(min_scale, max_scale, t);
+xScale = final_scale;
+yScale = final_scale;
+*/
+
 
 #region Dialog System
 	if (keyboard_check_pressed(ord("F"))) {
@@ -57,3 +100,4 @@ if (mouse_check_button_pressed(mb_left)) {
 		dialog.npcName = "Teste Geral";
 	}
 #endregion
+
