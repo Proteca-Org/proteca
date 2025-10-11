@@ -1,0 +1,1 @@
+global.warp_initiated = false;

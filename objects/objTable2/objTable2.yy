@@ -28,10 +28,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"sprTable2",
-    "path":"sprites/sprTable2/sprTable2.yy",
+    "name":"sprTable",
+    "path":"sprites/sprTable/sprTable.yy",
   },
   "spriteMaskId":null,
   "visible":true,

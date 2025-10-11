@@ -9,6 +9,13 @@ var dy = targetY - y;
 var distance  = point_distance(x, y, targetX, targetY);
 var tolerance = 2;
 
+// Define a posição dos "pés" do sprite (usada para colisões)
+var foot_x = x;
+var foot_y = y + (sprite_height / 2) + 40; // offset pra baixo
+
+// Define profundidade com base na posição Y p/ que objetos mais baixos sejam desenhados "na frente"
+depth = -y;
+
 if (distance > tolerance && distance > velocity) {
     var dir = point_direction(x, y, targetX, targetY);
 	
@@ -19,13 +26,6 @@ if (distance > tolerance && distance > velocity) {
 	// Converte velocidade + direção em deslocamentos de movimento X e Y
 	var move_x = lengthdir_x(velocity, dir);
 	var move_y = lengthdir_y(velocity, dir);
-	
-	// // Define a posição dos "pés" do sprite (usada para colisões)
-	var foot_x = x;
-	var foot_y = y + (sprite_height / 2) + 40; // offset pra baixo
-
-	// Define profundidade com base na posição Y p/ que objetos mais baixos sejam desenhados "na frente"
-	depth = -y;
 
 	// Verificações de movimento x e y somente se não houver colisão com pés
 		if (!place_meeting(foot_x + move_x, foot_y, all)) {
@@ -33,6 +33,7 @@ if (distance > tolerance && distance > velocity) {
 
 		if (!place_meeting(foot_x, foot_y + move_y, all)) {
 			y += move_y;}
+	
 	
 	// muda sprite para andando
 	sprite_index = walkSpr;
@@ -92,7 +93,6 @@ var final_scale = lerp(min_scale, max_scale, t);
 xScale = final_scale;
 yScale = final_scale;
 */
-
 
 #region Dialog System
 	if (keyboard_check_pressed(ord("F"))) {

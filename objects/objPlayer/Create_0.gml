@@ -20,7 +20,6 @@ inventory = []
 capacity = 10
 velocity = 4
 
-
 // Define quais sprites o personagem vai usar.
 walkSpr = sprWalk;
 idleSpr = sprIdle;
@@ -33,7 +32,6 @@ face = 1; //default
 // Por algum motivo colisões só funcionam corretamente com isso...
 image_xscale=0.5;
 image_yscale=0.5;
-
 
 // Define a "entrada" inicial do player em uma sala/room.
 /*coloquei apenas como left, right, top, bottom e default, mas teria 

@@ -1,3 +1,4 @@
+initialized = false;
 
 // Define a posição inicial do jogador na room dependendo de onde ele entrou.
 
@@ -36,3 +37,5 @@ switch(global.player_entry) {
         y = room_height / 2;
         break;
 }
+
+global.player_entry = "default";

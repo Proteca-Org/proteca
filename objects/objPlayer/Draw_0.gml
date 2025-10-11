@@ -10,3 +10,4 @@ if (showClothes) {
 	draw_sprite_ext(sprShoes, shoes, x, y,xScale, yScale, 1, -1, 1);
 	draw_sprite_ext(sprAccessories, accessory, x, y, xScale, yScale, 1, -1, 1)
 }
+
