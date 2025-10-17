@@ -1,4 +1,4 @@
-npcName = "";
+objectName = "";
 text[0] = "";
 
 page = 0;

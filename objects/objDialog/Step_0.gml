@@ -1,5 +1,5 @@
 if inicialize == false {
-	srcTexts();
+	text = srcGetDialogs("Teste Geral");
 	inicialize = true;
 }
 

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"dialogScript",
+  "%Name":"srcGetDialogs",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"dialogScript",
+  "name":"srcGetDialogs",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
