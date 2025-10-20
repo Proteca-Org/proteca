@@ -1,4 +1,4 @@
-function menuSelection(option){
+function scrMenuSelection(option){
 	switch (option) {
 		case 0:
 			room_goto(1)

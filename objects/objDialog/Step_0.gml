@@ -1,5 +1,6 @@
-if global.dialog == false {
-	srcTexts();
+if initialized == false {
+	text = scrGetDialogs("Teste Geral");
+	initialized = true;
 	global.dialog = true;
 }
 
@@ -9,7 +10,6 @@ if mouse_check_button_pressed(mb_left) {
 	} else {
 		instance_destroy();
 		global.dialog = false;
-		mouse_clear(mb_left);
 	}
 }
 

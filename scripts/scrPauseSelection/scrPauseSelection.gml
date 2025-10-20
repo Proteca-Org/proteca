@@ -1,4 +1,4 @@
-function pauseSelection(option){
+function scrPauseSelection(option){
 	switch (option) {
 		case 0:
 			global.pause = false

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"customDone",
+  "%Name":"scrPauseSelection",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"customDone",
+  "name":"scrPauseSelection",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

@@ -29,12 +29,12 @@ for (var i = 0; i < numOptions; i++) {
         // se selecionado, verifica se foi pressionado
         selectedOption = i
         if (mouse_check_button_pressed(mb_left)) {
-            menuSelection(selectedOption)
+            scrMenuSelection(selectedOption)
         }
     }
 
     if (keyboard_check_pressed(vk_enter))
-        menuSelection(selectedOption)
+        scrMenuSelection(selectedOption)
 
     if (selectedOption == i) {
         draw_set_color(c_white)

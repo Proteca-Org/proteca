@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"menuSelection",
+  "%Name":"scrCustomDone",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"menuSelection",
+  "name":"scrCustomDone",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

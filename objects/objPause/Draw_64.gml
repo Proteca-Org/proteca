@@ -62,7 +62,7 @@ for (var i = 0; i < numOptions; i++) {
         // se selecionado, verifica se foi pressionado
         selectedOption = i
         if (mouse_check_button_pressed(mb_left)) {
-            pauseSelection(selectedOption);
+            scrPauseSelection(selectedOption);
 			if (i == 0) {
 				global.pause = false;
 			}
@@ -70,7 +70,7 @@ for (var i = 0; i < numOptions; i++) {
     }
 
     if (keyboard_check_pressed(vk_enter)){
-        pauseSelection(selectedOption);
+        scrPauseSelection(selectedOption);
 		global.pause = false;
 	}
 

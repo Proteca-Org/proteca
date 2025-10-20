@@ -1,4 +1,4 @@
-if (keyboard_check_pressed(ord("M")) && !global.pause && !global.dialog) {
+if (keyboard_check_pressed(ord("M")) && !global.pause) {
     global.inventory = !global.inventory; // Alterna entre aberto/fechado
 }
 

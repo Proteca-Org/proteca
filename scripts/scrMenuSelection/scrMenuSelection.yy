@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"dialogScript",
+  "%Name":"scrMenuSelection",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"dialogScript",
+  "name":"scrMenuSelection",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

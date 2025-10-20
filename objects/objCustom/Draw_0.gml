@@ -135,7 +135,7 @@ if (point_in_rectangle(mouse_x, mouse_y, displayWidth - buttonWidth - endButtonM
 	
 	// se selecionado, verifica se foi pressionado
 	if (mouse_check_button_pressed(mb_left)) {
-		customDone(selectedFeature)
+		scrCustomDone(selectedFeature)
 	}
 }
 // reseta cor e fonte

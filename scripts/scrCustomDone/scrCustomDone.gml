@@ -1,4 +1,4 @@
-function customDone(selectedFeature){
+function scrCustomDone(selectedFeature){
 	var playerInstance 
 	
 	if (instance_number(objPlayer) == 0) {

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"inventoryDefinitions",
+  "%Name":"srcGetDialogs",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"inventoryDefinitions",
+  "name":"srcGetDialogs",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"pauseSelection",
+  "%Name":"scrInventoryDefinitions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"pauseSelection",
+  "name":"scrInventoryDefinitions",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
