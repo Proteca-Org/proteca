@@ -1,5 +1,5 @@
 inventory := new Inventory();
-isOpen := false;
+global.inventory = false;
 selectedSlot = -1;
 previous_color = draw_get_color();
 

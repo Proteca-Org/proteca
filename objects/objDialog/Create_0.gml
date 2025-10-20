@@ -2,5 +2,5 @@ npcName = "";
 text[0] = "";
 
 page = 0;
-inicialize = false;
+global.dialog = false;
 

@@ -1,4 +1,4 @@
-if (!isOpen) {
+if (!global.inventory) {
 	exit; // Não desenha se o inventário estiver fechado
 }
 

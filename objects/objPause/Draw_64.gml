@@ -32,7 +32,7 @@ if (!global.pause) {
 	if (point_in_rectangle(mx, my, global.xPauseButton-pauseButtonHalfWidth, global.yPauseButton-pauseButtonHalfHeight, global.xPauseButton+pauseButtonHalfWidth, global.yPauseButton+pauseButtonHalfHeight)) {
 		draw_set_alpha(1)
 		if (mouse_check_button_pressed(mb_left)) {
-			global.pause = true
+			global.pause = true;
 		}
 	} else {
 		draw_set_alpha(.7)
