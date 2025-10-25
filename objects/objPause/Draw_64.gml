@@ -84,3 +84,4 @@ for (var i = 0; i < numOptions; i++) {
 }
 
 draw_set_font(-1)
+draw_set_color(-1)

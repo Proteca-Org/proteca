@@ -14,9 +14,11 @@ var tolerance = 2;
 var moveX = 0;
 var moveY = 0;
 
-if (!global.pause && (!variable_global_exists("dialog") || !global.dialog) 
-	&& (!variable_global_exists("inventory") || !global.inventory)) {
-		
+var canMove = !global.pause
+    && (!variable_global_exists("dialog") || !global.dialog)
+    && (!variable_global_exists("inventory") || !global.inventory);
+
+if (canMove) {	
 	if (keyboard_check(vk_left) || keyboard_check(ord("A"))) moveX = -1;
 	if (keyboard_check(vk_right) || keyboard_check(ord("D"))) moveX = 1;
 	if (keyboard_check(vk_up) || keyboard_check(ord("W"))) moveY = -1;
@@ -48,10 +50,7 @@ if (y < sprite_get_height(sprBlouses)) y = sprite_get_height(sprBlouses);
 
 
 // MOVIMENTAÇÃO PELO CLIQUE
-if (mouse_check_button_pressed(mb_left)
-	&& (!variable_global_exists("dialog") || !global.dialog)
-	&& (!variable_global_exists("inventory") || !global.inventory)) {
-
+if (mouse_check_button_pressed(mb_left) && (canMove)) {
 	var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
 	var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
 
@@ -77,8 +76,8 @@ if (mouse_check_button_pressed(mb_left)
 }
 
 #region Dialog System
-	if (keyboard_check_pressed(ord("F"))) {
-		var dialog = instance_create_layer(x, y, "Instances", objDialog)
-		dialog.objectName = "Teste Geral";
-	}
+if (keyboard_check_pressed(ord("F"))) {
+	var dialog = instance_create_layer(x, y, "Instances", objDialog)
+	dialog.objectName = "Teste Geral";
+}
 #endregion

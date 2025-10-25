@@ -4,8 +4,13 @@
     {"name":"fntDialog","order":1,"path":"fonts/fntDialog/fntDialog.yy",},
     {"name":"objDialog","order":2,"path":"objects/objDialog/objDialog.yy",},
     {"name":"objInventory","order":1,"path":"objects/objInventory/objInventory.yy",},
+    {"name":"objPencil","order":4,"path":"objects/objPencil/objPencil.yy",},
+    {"name":"objStudentDesk","order":3,"path":"objects/objStudentDesk/objStudentDesk.yy",},
+    {"name":"srcCanOpenDialog","order":2,"path":"scripts/srcCanOpenDialog/srcCanOpenDialog.yy",},
     {"name":"srcGetDialogs","order":1,"path":"scripts/srcGetDialogs/srcGetDialogs.yy",},
     {"name":"sprHair","order":2,"path":"sprites/sprHair/sprHair.yy",},
+    {"name":"sprPencil","order":4,"path":"sprites/sprPencil/sprPencil.yy",},
     {"name":"sprSlotBackground","order":1,"path":"sprites/sprSlotBackground/sprSlotBackground.yy",},
+    {"name":"sprStudentDesk","order":3,"path":"sprites/sprStudentDesk/sprStudentDesk.yy",},
   ],
 }

@@ -1,5 +1,5 @@
 if initialized == false {
-	text = scrGetDialogs("Teste Geral");
+	text = scrGetDialogs(objectName);
 	initialized = true;
 	global.dialog = true;
 }

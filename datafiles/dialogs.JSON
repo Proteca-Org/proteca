@@ -4,5 +4,14 @@
     "Tudo bem?",
     "Onde estou?",
     "Verificando funcionamento do JSON..."
+  ],
+
+  "Carteiras da introdução": [
+    "Minha mochila não está aqui!",
+    "Tente achá-la clicando pela sala."
+  ],
+
+  "Lápis da introdução": [
+    "Espera... esses são os meus lápis!"
   ]
 }
