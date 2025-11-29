@@ -4,38 +4,45 @@ draw_set_font(fntMenu)
 var mx = device_mouse_x_to_gui(0)
 var my = device_mouse_y_to_gui(0)
 
+var yMargin = 10;
 var guiHalfWidth = display_get_gui_width()/2
 var guiHalfHeight = display_get_gui_height()/2
-var strHeight = string_height("A") // 'A' foi usado porque qualquer letra tem o mesmo tamanho maximo
+
+var buttonWidth = sprite_get_width(sprButton)
+var buttonHalfWidth = buttonWidth / 2
+var buttonHeight = sprite_get_height(sprButton)
+var buttonHalfHeight = buttonHeight / 2
+
+var yButtonStartPosition = guiHalfHeight - yMargin - buttonHeight
 
 for (var i = 0; i < numOptions; i++) {
-	var strHalfWidth = string_width(options[i]) / 2
-	
-	// Determina o ponto (x1, y1): centralizado horizontalmente, na metade de baixo da tela
-	var x1 = guiHalfWidth - strHalfWidth;
-	var y1 = guiHalfHeight - strHeight/2 + (i * strHeight)
+    var yButtonPosition = yButtonStartPosition + (i * (yMargin + buttonHeight))
+    draw_sprite_ext(sprButton, 0, guiHalfWidth, yButtonPosition, 1, 1, 0, -1, 1)
 
-	// Determina o ponto (x2, y2)
-	var x2 = guiHalfWidth + strHalfWidth;
-	var y2 = guiHalfHeight + strHeight/2 + (i * strHeight)
+    var xStr = guiHalfWidth- (string_width(options[i]) / 2)
+    var yStr = yButtonPosition - (string_height(options[i]) / 2)
 
-	if (point_in_rectangle(mx, my, x1, y1, x2, y2)) {
-		selectedOption = i
-		if (mouse_check_button_pressed(mb_left))
-			menuSelection(selectedOption)
-	}
-	
-	if (keyboard_check_pressed(vk_enter))
-		menuSelection(selectedOption)
-	
-	if (selectedOption == i) {
-		draw_set_alpha(1)
-	} else {
-		draw_set_alpha(.7)
-	}
-		
-	
-	draw_text(x1, y1, options[i])
+    // escreve a opcao
+    draw_text(xStr, yStr, options[i])
+
+    if (point_in_rectangle(mouse_x, mouse_y, guiHalfWidth - buttonHalfWidth,  yButtonPosition - buttonHalfHeight, guiHalfWidth + buttonHalfWidth, yButtonPosition + buttonHalfHeight)) {
+        // se selecionado, verifica se foi pressionado
+        selectedOption = i
+        if (mouse_check_button_pressed(mb_left)) {
+            scrMenuSelection(selectedOption)
+        }
+    }
+
+    if (keyboard_check_pressed(vk_enter))
+        scrMenuSelection(selectedOption)
+
+    if (selectedOption == i) {
+        draw_set_color(c_white)
+        draw_set_alpha(.5)
+        draw_rectangle(guiHalfWidth - buttonHalfWidth,  yButtonPosition - buttonHalfHeight, guiHalfWidth + buttonHalfWidth, yButtonPosition + buttonHalfHeight, false)
+        draw_set_color(c_black)
+        draw_set_alpha(1)
+    }
 }
 
 draw_set_font(-1)

@@ -6,7 +6,7 @@ if (currentMenu == 0) {
 	if (selectedPart >= numFeatures)	
 		selectedPart = 0;
 		
-} else if (currentMenu == 1) { // lida com a opção selecionada no atributo atual
+} else { // lida com a opção selecionada no atributo atual
 	
 	selectedFeature[selectedPart]++;
 	if (selectedFeature[selectedPart] >= array_length(feature[selectedPart]))

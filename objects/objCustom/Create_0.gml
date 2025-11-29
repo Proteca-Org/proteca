@@ -61,12 +61,12 @@ done = 0
 #region drawing
 
 // Escala em que o personagem é desenhado
-xScale = 3
-yScale = 3
+xScale = 5
+yScale = 5
 
 // (x,y) em que o personagem é desenhado (centralizado)
 // no lugar de sprHair poderia ser qualquer outra sprite do personagem
-x = room_width/2 - (sprite_get_width(sprHair)/2 * xScale)
-y = room_height - (sprite_get_height(sprHair) * yScale) - 60
+x = room_width / 2
+y = room_height - (sprite_get_height(sprHair) * yScale) + 100
 
 #endregion
