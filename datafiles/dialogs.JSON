@@ -17,5 +17,13 @@
 
   "Papel da introdução": [
     "Você encontrou um papel, parece ter algo escrito nele..."
+  ],
+
+  "Armário da introdução": [
+    "Esse armário está trancado, será que minha bolsa está aí dentro? Clique no cadeado."
+  ],
+
+  "Cadeado da introdução": [
+    "Você ainda não tem a senha para o cadeado!"
   ]
 }

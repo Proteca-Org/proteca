@@ -16,7 +16,7 @@ var moveY = 0;
 
 var canMove = !global.pause
     && (!variable_global_exists("dialog") || !global.dialog)
-    && (!variable_global_exists("inventory") || !global.inventory);
+    && (!variable_global_exists("inventory") || !global.inventory);	
 
 if (canMove) {	
 	if (keyboard_check(vk_left) || keyboard_check(ord("A"))) moveX = -1;
@@ -51,6 +51,7 @@ if (y < sprite_get_height(sprBlouses)) y = sprite_get_height(sprBlouses);
 
 // MOVIMENTAÇÃO PELO CLIQUE
 if (mouse_check_button_pressed(mb_left) && (canMove)) {
+	show_debug_message("STEP - User: Executando Step.");
 	var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
 	var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
 
