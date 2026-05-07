@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"objStudentDesk",
+  "%Name":"objStudentChair",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objStudentDesk",
+  "name":"objStudentChair",
   "overriddenProperties":[],
   "parent":{
     "name":"objInteract",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprStudentDesk",
-    "path":"sprites/sprStudentDesk/sprStudentDesk.yy",
+    "name":"sprStudentChair",
+    "path":"sprites/sprStudentChair/sprStudentChair.yy",
   },
   "spriteMaskId":null,
   "visible":true,
