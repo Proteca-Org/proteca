@@ -62,11 +62,11 @@ for (var i = 0; i < array_length(feature); i++) {
 	draw_sprite_ext(sprButton, 0, xLeftColumn, (yArrow * 4) + yMargin + (yDisplacement * i), 1, 1, 0, -1, 1)
 
 	// (x, y) para string ficar centralizada no botao
-	var xStr = xLeftColumn - (string_width(part[i]) / 2)
-	var yStr = (yArrow * 4) + yMargin + (yDisplacement * i) - (string_height(part[i]) / 2)
-
-	// escreve a opcao
-	draw_text(xStr, yStr, part[i])
+	var xStr = xLeftColumn - (string_width(part[i]) / 2);
+    var yStr = (yArrow * 4) + yMargin + (yDisplacement * i) - (string_height(part[i]) / 2);
+    
+    // escreve a categoria
+    draw_text(xStr, yStr, part[i])
 	
 	// verifica se o botao atual esta selecionado
 	if (point_in_rectangle(mouse_x, mouse_y, xLeftColumn - buttonHalfWidth,  (yArrow * 4) + yMargin + (yDisplacement * i) - buttonHalfHeight, xLeftColumn + buttonHalfWidth, (yArrow * 4) + yMargin + (yDisplacement * i) + buttonHalfHeight)) {		
@@ -92,11 +92,11 @@ for (var i = 0; i < array_length(feature[selectedPart]); i++) {
 	draw_sprite_ext(sprButton, 0, xRightColumn, (yArrow * 4) + yMargin + (yDisplacement * i), 1, 1, 0, -1, 1)
 	
 	// (x, y) para string ficar centralizada no botao
-	var xStr = xRightColumn - (string_width(feature[selectedPart, i]) / 2)
-	var yStr = (yArrow * 4) + yMargin + (yDisplacement * i) - (string_height(feature[selectedPart, i]) / 2)
+	var xStr = xRightColumn - (string_width(feature[selectedPart][i]) / 2);
+    var yStr = (yArrow * 4) + yMargin + (yDisplacement * i) - (string_height(feature[selectedPart][i]) / 2);
 
-	// escreve a opcao
-	draw_text(xStr, yStr, feature[selectedPart, i])
+    // FIX: Trocar a vírgula por colchetes [][]
+    draw_text(xStr, yStr, feature[selectedPart][i]);
 	
 	// verifica se o botao atual esta selecionado
 	if (point_in_rectangle(mouse_x, mouse_y, xRightColumn - buttonHalfWidth, (yArrow * 4) + yMargin + (yDisplacement * i) - buttonHalfHeight, xRightColumn + buttonHalfWidth, (yArrow * 4) + yMargin + (yDisplacement * i) + buttonHalfHeight)) {

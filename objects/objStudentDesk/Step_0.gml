@@ -1,5 +1,5 @@
 /// @description Verifica clique e abre diálogo
-if (srcCanOpenDialog(x, y, sprStudentDesk)) {
+if (srcCanOpenDialog()) {
     dialogInitialized = true;
 }
 

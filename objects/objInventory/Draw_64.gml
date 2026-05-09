@@ -2,7 +2,7 @@ if (!global.inventory) {
 	exit; // Não desenha se o inventário estiver fechado
 }
 
-draw_rectangle(startX - 20 , startY -20 , startX + 306, startY + 336, false) // Desenha container do inventario
+draw_rectangle(startX - 20 , startY -20 , startX + 306, startY + 336, false); // Desenha container do inventario
 
 for (var i = 0; i < 4; i++) {
     for (var j = 0; j < 4; j++) {
@@ -21,10 +21,13 @@ for (var i = 0; i < 4; i++) {
 		
 		// Desenha um retangulo ao redor do item selecionado
 		if (indexSlot == selectedSlot) {
-			draw_set_color(c_white)
-			draw_set_alpha(0.3)
-			draw_rectangle(xPos, yPos, xPos + slotSize - 1, yPos + slotSize - 1, false)
-			draw_set_alpha(1)
+            var previous_color = draw_get_color();
+
+			draw_set_color(c_white);
+			draw_set_alpha(0.3);
+			draw_rectangle(xPos, yPos, xPos + slotSize - 1, yPos + slotSize - 1, false);
+            
+			draw_set_alpha(1);
 			draw_set_color(previous_color)
 		}
     }

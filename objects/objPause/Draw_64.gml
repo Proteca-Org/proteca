@@ -58,7 +58,7 @@ for (var i = 0; i < numOptions; i++) {
     // escreve a opcao
     draw_text(xStr, yStr, options[i])
 
-    if (point_in_rectangle(mouse_x, mouse_y, guiHalfWidth - buttonHalfWidth,  yButtonPosition - buttonHalfHeight, guiHalfWidth + buttonHalfWidth, yButtonPosition + buttonHalfHeight)) {
+    if (point_in_rectangle(mx, my, guiHalfWidth - buttonHalfWidth,  yButtonPosition - buttonHalfHeight, guiHalfWidth + buttonHalfWidth, yButtonPosition + buttonHalfHeight)) {
         // se selecionado, verifica se foi pressionado
         selectedOption = i
         if (mouse_check_button_pressed(mb_left)) {
@@ -69,17 +69,20 @@ for (var i = 0; i < numOptions; i++) {
         }
     }
 
-    if (keyboard_check_pressed(vk_enter)){
-        scrPauseSelection(selectedOption);
-		global.pause = false;
-	}
-
     if (selectedOption == i) {
         draw_set_color(c_white)
         draw_set_alpha(.5)
         draw_rectangle(guiHalfWidth - buttonHalfWidth,  yButtonPosition - buttonHalfHeight, guiHalfWidth + buttonHalfWidth, yButtonPosition + buttonHalfHeight, false)
         draw_set_color(c_black)
         draw_set_alpha(1)
+    }
+}
+
+if (keyboard_check_pressed(vk_enter)){
+    scrPauseSelection(selectedOption);
+    
+    if (selectedOption == 0) {
+        global.pause = false;
     }
 }
 

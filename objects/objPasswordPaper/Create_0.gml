@@ -1,0 +1,1 @@
+password_code = "0000";
