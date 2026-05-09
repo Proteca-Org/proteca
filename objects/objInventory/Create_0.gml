@@ -9,7 +9,8 @@ startY = display_get_gui_height() / 2 - 2 * slotSize; // Centraliza verticalment
 padding = 10; // Espaçamento entre slots
 
 function noEffect() {
-	return "use"
+	show_message("function");
+	return "return"
 };
 
 var hair := new Item(1, "cabelo", sprHair, "cabelo loiro", noEffect);
