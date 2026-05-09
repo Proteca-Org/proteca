@@ -1,5 +1,3 @@
-/// @description Abre o video inicial
-
 options = ["Pausar","Pular"]
 numOptions = array_length(options)
 selectedOption = 0

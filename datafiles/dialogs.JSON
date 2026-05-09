@@ -1,0 +1,53 @@
+{
+  "Teste Geral": [
+    "Olá, meu amigo",
+    "Tudo bem?",
+    "Onde estou?",
+    "Verificando funcionamento do JSON..."
+  ],
+
+  "Carteiras da introdução": [
+    "Minha mochila não está aqui!",
+    "Tente achá-la clicando pela sala."
+  ],
+
+  "Lápis da introdução": [
+    "Espera... esses são os meus lápis!"
+  ],
+
+  "Papel da introdução": [
+    "Você encontrou um papel, parece ter algo escrito nele..."
+  ],
+
+  "IrmaoNPC": {
+    "inicio": {
+      "text": "Oi mano. Você demorou. Já estava pensando em te procurar. Está tudo bem?",
+      "options": [
+        { "label": "Aconteceram algumas coisas... (Não quero falar)", "next": "rota_a" },
+        { "label": "Esconderam minha mochila...", "next": "rota_b" }
+      ]
+    },
+    "rota_a": {
+      "text": "Tudo bem se você não quer falar. Podemos ir para casa.",
+      "action": "teleport",
+      "target": "rmCutscene"
+    },
+    "rota_b": {
+      "text": "Sinto muito irmão. Podemos falar com a professora sobre isso. Você quer fazer isso junto comigo?",
+      "options": [
+        { "label": "Sim", "next": "rota_b_sim" },
+        { "label": "Não", "next": "rota_b_nao" }
+      ]
+    },
+    "rota_b_sim": {
+      "text": "Certo, vamos lá falar com ela.",
+      "action": "teleport",
+      "target": "rmEscola4"
+    },
+    "rota_b_nao": {
+       "text": "Entendo. Vamos para casa então.",
+       "action": "teleport",
+       "target": "rmCutscene"
+    }
+  }
+}

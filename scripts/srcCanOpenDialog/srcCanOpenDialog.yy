@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"srcCanOpenDialog",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"srcCanOpenDialog",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

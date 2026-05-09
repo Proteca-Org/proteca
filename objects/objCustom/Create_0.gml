@@ -1,40 +1,44 @@
 #region customization
 
+feature = [];
+part = [];
+selectedFeature = [];
+
 // Opção 1: Estilo do cabelo
-feature[0,0] = "Longo 1"
-feature[0,1] = "Longo 2"
-feature[0,2] = "Médio 1"
-feature[0,3] = "Médio 2"
-feature[0,4] = "Curto 1"
-feature[0,5] = "Curto 2"
+feature[0][0] = "Longo 1";
+feature[0][1] = "Longo 2";
+feature[0][2] = "Médio 1";
+feature[0][3] = "Médio 2";
+feature[0][4] = "Curto 1";
+feature[0][5] = "Curto 2";
 
 // Opção 2: Vestimenta superior
-feature[1,0] = "Blusa roxa"
-feature[1,1] = "Camiseta verde"
-feature[1,2] = "Camiseta amarela"
-feature[1,3] = "Camiseta azul"
-feature[1,4] = "Camiseta vermelha"
+feature[1][0] = "Blusa roxa";
+feature[1][1] = "Camiseta verde";
+feature[1][2] = "Camiseta amarela";
+feature[1][3] = "Camiseta azul";
+feature[1][4] = "Camiseta vermelha";
 
 // Opção 3: Vestimenta inferior
-feature[2,0] = "Calça azul"
-feature[2,1] = "Calça laranja"
-feature[2,2] = "Bermuda azul"
-feature[2,3] = "Bermuda verde"
-feature[2,4] = "Bermuda amarela"
+feature[2][0] = "Calça azul";
+feature[2][1] = "Calça laranja";
+feature[2][2] = "Bermuda azul";
+feature[2][3] = "Bermuda verde";
+feature[2][4] = "Bermuda amarela";
 
 // Opção 4: Sapatos
-feature[3,0] = "Tênis"
-feature[3,1] = "Chinelo"
-feature[3,2] = "Bota"
+feature[3][0] = "Tênis";
+feature[3][1] = "Chinelo";
+feature[3][2] = "Bota";
 
 // Opção 5: Acessórios
-feature[4,0] = "Nenhum"
-feature[4,1] = "Cabeça 1"
-feature[4,2] = "Cabeça 2"
-feature[4,3] = "Cabeça 3"
-feature[4,4] = "Cabeça 4"
-feature[4,5] = "Mão 1"
-feature[4,6] = "Olhos 1"
+feature[4][0] = "Nenhum";
+feature[4][1] = "Cabeça 1";
+feature[4][2] = "Cabeça 2";
+feature[4][3] = "Cabeça 3";
+feature[4][4] = "Cabeça 4";
+feature[4][5] = "Mão 1";
+feature[4][6] = "Olhos 1";
 
 numFeatures = array_length(feature)
 
@@ -61,12 +65,12 @@ done = 0
 #region drawing
 
 // Escala em que o personagem é desenhado
-xScale = 3
-yScale = 3
+xScale = 5
+yScale = 5
 
 // (x,y) em que o personagem é desenhado (centralizado)
 // no lugar de sprHair poderia ser qualquer outra sprite do personagem
-x = room_width/2 - (sprite_get_width(sprHair)/2 * xScale)
-y = room_height - (sprite_get_height(sprHair) * yScale) - 60
+x = room_width / 2
+y = room_height - (sprite_get_height(sprHair) * yScale) + 100
 
 #endregion
