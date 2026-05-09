@@ -16,7 +16,6 @@ function Inventory() constructor{
 		if (indexSlot >= 0 && indexSlot < maxSlots) {
 			var item = slots[indexSlot];
 			slots[indexSlot] = -1;
-			show_message("Removed Item")	
 			return item;
 		}
 		return -1;   //slot já vazio
@@ -25,7 +24,6 @@ function Inventory() constructor{
 	static inspectItem = function(indexSlot) {
 		if (indexSlot >= 0 && indexSlot < maxSlots && slots[indexSlot] != -1) {
 			var item = slots[indexSlot];
-			show_message("Inspect Item")
 			return item
 		}
 	}
@@ -33,7 +31,7 @@ function Inventory() constructor{
 	static useItem = function(indexSlot) {
 		var item = inspectItem(indexSlot);
 		if (item != -1) {
-			item.effectItem();
+			script_execute(item.effectItem);
 		}
 	}
 }
