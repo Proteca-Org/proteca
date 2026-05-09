@@ -1,6 +1,6 @@
 function Inventory() constructor{
-	slots := array_create(4 * 4, -1);  //inicializa vazio
-	maxSlots := 16;
+	slots = array_create(4 * 4, -1);  //inicializa vazio
+	maxSlots = 16;
 	
 	static addItem = function(item) {
 		for(var i = 0; i < maxSlots; i++) {
@@ -14,7 +14,7 @@ function Inventory() constructor{
 	
 	static removeItem = function(indexSlot) {
 		if (indexSlot >= 0 && indexSlot < maxSlots) {
-			var item := slots[indexSlot];
+			var item = slots[indexSlot];
 			slots[indexSlot] = -1;
 			return item;
 		}
@@ -23,13 +23,13 @@ function Inventory() constructor{
 	
 	static inspectItem = function(indexSlot) {
 		if (indexSlot >= 0 && indexSlot < maxSlots && slots[indexSlot] != -1) {
-			var item := slots[indexSlot];
+			var item = slots[indexSlot];
 			return item
 		}
 	}
 	
 	static useItem = function(indexSlot) {
-		var item := inspectItem(indexSlot);
+		var item = inspectItem(indexSlot);
 		if (item != -1) {
 			script_execute(item.effectItem);
 		}
@@ -37,9 +37,9 @@ function Inventory() constructor{
 }
 
 function Item(_idItem, _nameItem, _spriteItem, _descriptionItem, _effectItem) constructor {
-	idItem := _idItem;
-	nameItem := _nameItem;
-	spriteItem := _spriteItem;
-	descriptionItem := _descriptionItem;
-	effectItem := _effectItem;
+	idItem = _idItem;
+	nameItem = _nameItem;
+	spriteItem = _spriteItem;
+	descriptionItem = _descriptionItem;
+	effectItem = _effectItem;
 }
