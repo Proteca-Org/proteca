@@ -42,7 +42,11 @@
     "rota_b_sim": {
       "text": "Certo, vamos lá falar com ela.",
       "action": "teleport",
-      "target": "rmEscola4"
+      "target": "rmEscola4",
+      "target_position": {
+        "x": 375,
+        "y": 260
+      }
     },
     "rota_b_nao": {
        "text": "Entendo. Vamos para casa então.",

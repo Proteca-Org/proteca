@@ -1,8 +1,11 @@
 initialized = false;
 
-if (room == rmEscola4) {
-	objPlayer.x = room_width * 0.60
-	objPlayer.y = room_height * 0.5
+var newRoomStartPosition = variable_global_get("newRoomStartPosition")
+if (is_struct(newRoomStartPosition) && newRoomStartPosition != undefined) {
+	objPlayer.x = newRoomStartPosition.x
+	objPlayer.y = newRoomStartPosition.y
+	// Evita sobreescrever em outras salas que não tem warp por diálogo
+	global.newRoomStartPosition = undefined 
 }
 
 if (global.hasEnteredRoom == false) {

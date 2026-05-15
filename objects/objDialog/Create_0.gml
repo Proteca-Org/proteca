@@ -11,3 +11,5 @@ currentNodeKey = "inicio";
 currentNodeData = undefined;
 optionHeight = 40;
 optionMargin = 10;
+
+global.newRoomStartPosition = undefined

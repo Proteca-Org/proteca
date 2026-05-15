@@ -32,6 +32,11 @@ if (mouse_check_button_pressed(mb_left)) {
             
             if (variable_struct_exists(currentNodeData, "action")) {
                 if (currentNodeData.action == "teleport") {
+					var newRoomStartPosition = variable_struct_get(currentNodeData, "target_position")
+					if (newRoomStartPosition != undefined) {
+						global.newRoomStartPosition = newRoomStartPosition
+					}
+	
                     var targetRoom = asset_get_index(currentNodeData.target);
                     if (targetRoom != -1) room_goto(targetRoom);
                 }
