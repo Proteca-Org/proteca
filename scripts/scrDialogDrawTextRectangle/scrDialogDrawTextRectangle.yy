@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrDialogDrawTextRectangle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDialogDrawTextRectangle",
+  "parent":{
+    "name":"dialogs",
+    "path":"folders/Scripts/dialogs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
