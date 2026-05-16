@@ -15,6 +15,8 @@ if (dialogInitialized) {
             var dialog = instance_create_layer(x, y, "Instances", objDialog);
             dialog.objectName = "Papel da introdução";
             global.dialog = true;
+
+            global.encontrouPapel = true;
             
             if (!layer_exists("TopLayer")) {
                 layer_create(-100000, "TopLayer");
