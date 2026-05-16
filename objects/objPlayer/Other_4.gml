@@ -1,4 +1,4 @@
-initialized = false;
+initialized = false
 
 var newRoomStartPosition = variable_global_get("newRoomStartPosition")
 if (is_struct(newRoomStartPosition) && newRoomStartPosition != undefined) {
@@ -9,8 +9,8 @@ if (is_struct(newRoomStartPosition) && newRoomStartPosition != undefined) {
 }
 
 if (global.hasEnteredRoom == false) {
-    objPlayer.x = room_width / 2;
-    objPlayer.y = room_height / 2;
+    objPlayer.x = room_width / 2
+    objPlayer.y = room_height / 2
 
     global.hasEnteredRoom = true;
 }

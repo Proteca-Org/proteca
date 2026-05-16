@@ -1,4 +1,4 @@
-dialogDrawTextRectangle()
-dialogDrawOptions()
-draw_set_font(-1);
-draw_set_color(-1);
+scrDialogDrawTextRectangle()
+scrDialogDrawOptions()
+draw_set_font(-1)
+draw_set_color(-1)

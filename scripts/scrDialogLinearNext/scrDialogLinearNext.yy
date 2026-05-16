@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrDialogLinearNext",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDialogLinearNext",
+  "parent":{
+    "name":"dialogs",
+    "path":"folders/Scripts/dialogs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

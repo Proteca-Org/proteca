@@ -1,8 +1,8 @@
 if (!initialized) {
-	dialogInitialize()
+	scrDialogInitialize()
 }
 
-dialogHandleInput()
+scrDialogHandleInput()
 
 if (isBranching && variable_struct_exists(currentNodeData, "options")) {
 	var options = currentNodeData.options
@@ -12,7 +12,7 @@ if (isBranching && variable_struct_exists(currentNodeData, "options")) {
 	
 	for (var i = 0; i < array_length(options); i++) {
 		var option = options[i]
-		var optionRectangle = dialogGetOptionRectangle(i)
+		var optionRectangle = scrDialogGetOptionRectangle(i)
 		var x1 = optionRectangle._x
 		var y1 = optionRectangle._y
 		var x2 = optionRectangle._x + optionRectangle._width
