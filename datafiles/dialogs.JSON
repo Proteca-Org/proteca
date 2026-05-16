@@ -25,6 +25,9 @@
   "Armário com papel": [
     "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
   ],
+  "objBlockedDoor": [
+    "Não tenho motivo para entrar. Meu irmão é da sala 4."
+  ],
   "IrmaoNPC": {
     "inicio": {
       "text": "Oi mano. Você demorou. Já estava pensando em te procurar. Está tudo bem?",
