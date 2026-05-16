@@ -57,7 +57,11 @@
     {"id":{"name":"objPause","path":"objects/objPause/objPause.yy",},},
     {"id":{"name":"objPencil","path":"objects/objPencil/objPencil.yy",},},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},},
+<<<<<<<< HEAD:Jogo Proteca.yyp
     {"id":{"name":"objSchoolLocker","path":"objects/objSchoolLocker/objSchoolLocker.yy",},},
+========
+    {"id":{"name":"objStudentChair","path":"objects/objStudentChair/objStudentChair.yy",},},
+>>>>>>>> origin/fix/corrigir-depth-objetos:initialRoomsSetup.yyp
     {"id":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},},
     {"id":{"name":"objVideo","path":"objects/objVideo/objVideo.yy",},},
     {"id":{"name":"objWarp","path":"objects/objWarp/objWarp.yy",},},
@@ -102,7 +106,11 @@
     {"id":{"name":"sprSlotBackground","path":"sprites/sprSlotBackground/sprSlotBackground.yy",},},
     {"id":{"name":"sprStairs","path":"sprites/sprStairs/sprStairs.yy",},},
     {"id":{"name":"sprStairs2","path":"sprites/sprStairs2/sprStairs2.yy",},},
+<<<<<<<< HEAD:Jogo Proteca.yyp
     {"id":{"name":"sprStairs3","path":"sprites/sprStairs3/sprStairs3.yy",},},
+========
+    {"id":{"name":"sprStudentChair","path":"sprites/sprStudentChair/sprStudentChair.yy",},},
+>>>>>>>> origin/fix/corrigir-depth-objetos:initialRoomsSetup.yyp
     {"id":{"name":"sprStudentDesk","path":"sprites/sprStudentDesk/sprStudentDesk.yy",},},
     {"id":{"name":"sprTileSet2","path":"sprites/sprTileSet2/sprTileSet2.yy",},},
     {"id":{"name":"sprTilesetTest","path":"sprites/sprTilesetTest/sprTilesetTest.yy",},},

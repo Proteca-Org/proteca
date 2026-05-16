@@ -25,7 +25,14 @@
     {"name":"inst_5028F06F","path":"rooms/rmEscola1/rmEscola1.yy",},
     {"name":"inst_12B09801","path":"rooms/rmEscola1/rmEscola1.yy",},
     {"name":"inst_780B8076","path":"rooms/rmEscola1/rmEscola1.yy",},
+<<<<<<< HEAD
     {"name":"inst_ABF6F84","path":"rooms/rmEscola1/rmEscola1.yy",},
+=======
+    {"name":"inst_2BA08FEE","path":"rooms/rmEscola1/rmEscola1.yy",},
+    {"name":"inst_4D5529E7","path":"rooms/rmEscola1/rmEscola1.yy",},
+    {"name":"inst_1F1C9086","path":"rooms/rmEscola1/rmEscola1.yy",},
+    {"name":"inst_15A0B8B","path":"rooms/rmEscola1/rmEscola1.yy",},
+>>>>>>> origin/fix/corrigir-depth-objetos
   ],
   "isDnd":false,
   "layers":[
@@ -34,7 +41,14 @@
         {"$GMRInstance":"v4","%Name":"inst_458D3C1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_458D3C1","objectId":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1,"scaleY":0.1,"x":256.0,"y":336.0,},
         {"$GMRInstance":"v4","%Name":"inst_6EBFE6CD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6EBFE6CD","objectId":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1,"scaleY":0.1,"x":160.0,"y":336.0,},
         {"$GMRInstance":"v4","%Name":"inst_1A819E5F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1A819E5F","objectId":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1,"scaleY":0.1,"x":352.0,"y":336.0,},
+<<<<<<< HEAD
         {"$GMRInstance":"v4","%Name":"inst_ABF6F84","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_ABF6F84","objectId":{"name":"objSchoolLocker","path":"objects/objSchoolLocker/objSchoolLocker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.109207675,"scaleY":0.09399773,"x":416.0,"y":128.0,},
+=======
+        {"$GMRInstance":"v4","%Name":"inst_2BA08FEE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2BA08FEE","objectId":{"name":"objStudentChair","path":"objects/objStudentChair/objStudentChair.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.14893617,"scaleY":0.1048951,"x":160.0,"y":384.0,},
+        {"$GMRInstance":"v4","%Name":"inst_4D5529E7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4D5529E7","objectId":{"name":"objStudentChair","path":"objects/objStudentChair/objStudentChair.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.14893617,"scaleY":0.1048951,"x":256.0,"y":384.0,},
+        {"$GMRInstance":"v4","%Name":"inst_1F1C9086","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F1C9086","objectId":{"name":"objStudentChair","path":"objects/objStudentChair/objStudentChair.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.14893617,"scaleY":0.1048951,"x":352.0,"y":384.0,},
+        {"$GMRInstance":"v4","%Name":"inst_15A0B8B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_15A0B8B","objectId":{"name":"objStudentChair","path":"objects/objStudentChair/objStudentChair.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.14893617,"scaleY":0.1048951,"x":448.0,"y":384.0,},
+>>>>>>> origin/fix/corrigir-depth-objetos
       ],"layers":[],"name":"Instances_2","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"InstancesColliders","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_4C40B1DD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4C40B1DD","objectId":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":4.0,"x":32.0,"y":320.0,},
