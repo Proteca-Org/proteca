@@ -49,5 +49,10 @@
        "action": "teleport",
        "target": "rmCutscene"
     }
-  }
+  },
+
+  "Mochila": [
+    "Ah, a minha mochila! Estava aqui o tempo todo.",
+    "Agora só falta encontrar o meu irmão."
+  ]
 }
