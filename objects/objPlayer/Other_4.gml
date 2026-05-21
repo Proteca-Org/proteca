@@ -1,7 +1,7 @@
 initialized = false
 
 var newRoomStartPosition = global.newRoomStartPosition
-if (is_struct(newRoomStartPosition) && newRoomStartPosition != undefined) {
+if (is_struct(newRoomStartPosition)) {
 	objPlayer.x = newRoomStartPosition.x
 	objPlayer.y = newRoomStartPosition.y
 	// Evita sobreescrever em outras salas que não tem warp por diálogo
