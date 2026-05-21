@@ -1,6 +1,6 @@
 initialized = false
 
-var newRoomStartPosition = variable_global_get("newRoomStartPosition")
+var newRoomStartPosition = global.newRoomStartPosition
 if (is_struct(newRoomStartPosition) && newRoomStartPosition != undefined) {
 	objPlayer.x = newRoomStartPosition.x
 	objPlayer.y = newRoomStartPosition.y
