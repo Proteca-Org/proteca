@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"Jogo Proteca",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -46,8 +46,8 @@
     {"id":{"name":"fntDialog","path":"fonts/fntDialog/fntDialog.yy",},},
     {"id":{"name":"fntMenu","path":"fonts/fntMenu/fntMenu.yy",},},
     {"id":{"name":"fntPressStart","path":"fonts/fntPressStart/fntPressStart.yy",},},
-    {"id":{"name":"objBlockedDoor","path":"objects/objBlockedDoor/objBlockedDoor.yy",},},
     {"id":{"name":"objBackpack","path":"objects/objBackpack/objBackpack.yy",},},
+    {"id":{"name":"objBlockedDoor","path":"objects/objBlockedDoor/objBlockedDoor.yy",},},
     {"id":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},},
     {"id":{"name":"objCustom","path":"objects/objCustom/objCustom.yy",},},
     {"id":{"name":"objDialog","path":"objects/objDialog/objDialog.yy",},},
@@ -107,8 +107,8 @@
     {"id":{"name":"sprFloorDrain","path":"sprites/sprFloorDrain/sprFloorDrain.yy",},},
     {"id":{"name":"sprFloorPaper","path":"sprites/sprFloorPaper/sprFloorPaper.yy",},},
     {"id":{"name":"sprHair","path":"sprites/sprHair/sprHair.yy",},},
-    {"id":{"name":"sprLockers","path":"sprites/sprLockers/sprLockers.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
+    {"id":{"name":"sprLockers","path":"sprites/sprLockers/sprLockers.yy",},},
     {"id":{"name":"sprPants","path":"sprites/sprPants/sprPants.yy",},},
     {"id":{"name":"sprPasswordPaper","path":"sprites/sprPasswordPaper/sprPasswordPaper.yy",},},
     {"id":{"name":"sprPauseButton","path":"sprites/sprPauseButton/sprPauseButton.yy",},},
