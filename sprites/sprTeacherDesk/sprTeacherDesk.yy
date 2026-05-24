@@ -3,8 +3,8 @@
   "%Name":"sprTeacherDesk",
   "bboxMode":0,
   "bbox_bottom":152,
-  "bbox_left":14,
-  "bbox_right":180,
+  "bbox_left":21,
+  "bbox_right":173,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"ef65547c-c9a7-4704-89df-a501a315b021","name":"ef65547c-c9a7-4704-89df-a501a315b021","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5e614e2c-8977-44dd-94a6-95250930fe90","name":"5e614e2c-8977-44dd-94a6-95250930fe90","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":153,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"448590fb-98bb-4797-a24b-63f5d959262b","blendMode":0,"displayName":"default","isLocked":false,"name":"448590fb-98bb-4797-a24b-63f5d959262b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"963e1ce3-dbd5-4c20-8d16-2e6f26526fd2","blendMode":0,"displayName":"default","isLocked":false,"name":"963e1ce3-dbd5-4c20-8d16-2e6f26526fd2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprTeacherDesk",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ef65547c-c9a7-4704-89df-a501a315b021","path":"sprites/sprTeacherDesk/sprTeacherDesk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ce21075e-984f-44fe-9354-f38b8b579ad8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e614e2c-8977-44dd-94a6-95250930fe90","path":"sprites/sprTeacherDesk/sprTeacherDesk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"f4c0d9f6-99f6-4c08-8a10-accc8841cdf0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

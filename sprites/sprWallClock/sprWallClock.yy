@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sprWallClock",
   "bboxMode":0,
-  "bbox_bottom":101,
-  "bbox_left":0,
-  "bbox_right":107,
+  "bbox_bottom":93,
+  "bbox_left":6,
+  "bbox_right":99,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"3d5bbc5e-1652-441b-8cb0-683d44128af5","name":"3d5bbc5e-1652-441b-8cb0-683d44128af5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bd0c775e-2595-49a1-9ef6-2391caf28c01","name":"bd0c775e-2595-49a1-9ef6-2391caf28c01","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":106,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"958cbc36-829c-489f-a6f5-5d07cb82d23a","blendMode":0,"displayName":"default","isLocked":false,"name":"958cbc36-829c-489f-a6f5-5d07cb82d23a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"9a2d232b-760f-4b85-9acd-637217c3eced","blendMode":0,"displayName":"default","isLocked":false,"name":"9a2d232b-760f-4b85-9acd-637217c3eced","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprWallClock",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d5bbc5e-1652-441b-8cb0-683d44128af5","path":"sprites/sprWallClock/sprWallClock.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5b6c9fe7-fede-4006-adde-591d6f21f71c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bd0c775e-2595-49a1-9ef6-2391caf28c01","path":"sprites/sprWallClock/sprWallClock.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"f45b5de3-a067-46d5-b56d-8799b450d32e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
