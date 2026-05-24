@@ -8,7 +8,7 @@ function scrCustomDone(selectedFeature){
 	}
 	
 	playerInstance.x = x
-	playerInstance.y = x 
+	playerInstance.y = y
 	playerInstance.hair = selectedFeature[0]
 	playerInstance.blouse = selectedFeature[1]
 	playerInstance.pants = selectedFeature[2]

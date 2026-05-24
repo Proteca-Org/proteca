@@ -18,7 +18,13 @@
   "Papel da introdução": [
     "Você encontrou um papel, parece ter algo escrito nele..."
   ],
-
+  "Armário sem papel": [
+    "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado.",
+    "Você ainda não tem a senha para o cadeado."
+  ],
+  "Armário com papel": [
+    "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
+  ],
   "IrmaoNPC": {
     "inicio": {
       "text": "Oi mano. Você demorou. Já estava pensando em te procurar. Está tudo bem?",
