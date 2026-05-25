@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"Jogo Proteca",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -150,6 +150,16 @@
     {"id":{"name":"TileSet2","path":"tilesets/TileSet2/TileSet2.yy",},},
     {"id":{"name":"TilesetTest","path":"tilesets/TilesetTest/TilesetTest.yy",},},
     {"id":{"name":"TileSetTest2","path":"tilesets/TileSetTest2/TileSetTest2.yy",},},
+    {"id":{"name":"srcGetDialogs","path":"scripts/srcGetDialogs/srcGetDialogs.yy",},},
+    {"id":{"name":"sprAccessories","path":"sprites/sprAccessories/sprAccessories.yy",},},
+    {"id":{"name":"sprArrow","path":"sprites/sprArrow/sprArrow.yy",},},
+    {"id":{"name":"sprBlouses","path":"sprites/sprBlouses/sprBlouses.yy",},},
+    {"id":{"name":"sprButton","path":"sprites/sprButton/sprButton.yy",},},
+    {"id":{"name":"sprHair","path":"sprites/sprHair/sprHair.yy",},},
+    {"id":{"name":"sprPants","path":"sprites/sprPants/sprPants.yy",},},
+    {"id":{"name":"sprPauseButton","path":"sprites/sprPauseButton/sprPauseButton.yy",},},
+    {"id":{"name":"sprShoes","path":"sprites/sprShoes/sprShoes.yy",},},
+    {"id":{"name":"sprSlotBackground","path":"sprites/sprSlotBackground/sprSlotBackground.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
@@ -162,6 +172,7 @@
     {"roomId":{"name":"rmEscola3","path":"rooms/rmEscola3/rmEscola3.yy",},},
     {"roomId":{"name":"rmEscola4","path":"rooms/rmEscola4/rmEscola4.yy",},},
     {"roomId":{"name":"rmCutscene","path":"rooms/rmCutscene/rmCutscene.yy",},},
+    {"roomId":{"name":"rmLevel1","path":"rooms/rmLevel1/rmLevel1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

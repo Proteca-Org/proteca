@@ -66,7 +66,14 @@ if (y < sprite_get_height(sprBlouses)) y = sprite_get_height(sprBlouses);
 
 
 // MOVIMENTAÇÃO PELO CLIQUE
+<<<<<<< HEAD
 if (mouse_check_button_pressed(mb_left) && (canMove)) {
+=======
+if (mouse_check_button_pressed(mb_left)
+	&& (!variable_global_exists("dialog") || !global.dialog)
+	&& (!variable_global_exists("inventory") || !global.inventory)) {
+
+>>>>>>> develop
 	var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
 	var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
 
