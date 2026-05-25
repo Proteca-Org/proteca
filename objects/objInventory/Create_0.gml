@@ -1,5 +1,5 @@
-inventory = new Inventory();
-global.inventory = false;
+global.inventory = new Inventory();
+global.isInventoryOpen = false;
 selectedSlot = -1;
 
 slotSize = 64;
@@ -14,5 +14,5 @@ function noEffect() {
 
 var hair = new Item(1, "cabelo", sprHair, "cabelo loiro", noEffect);
 var pants = new Item(2, "calca", sprPants, "Calça jeans", noEffect);
-inventory.addItem(hair);
-inventory.addItem(pants);
+global.inventory.addItem(hair);
+global.inventory.addItem(pants);

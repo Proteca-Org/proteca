@@ -13,7 +13,7 @@ if (dialogInitialized) {
         if (variable_global_exists("encontrouPapel") && global.encontrouPapel) {
 
             if ((!variable_global_exists("dialog") || !global.dialog) 
-                && !global.pause && !global.inventory) {
+                && !global.pause && !global.isInventoryOpen) {
 
                 var dialog = instance_create_layer(x, y, "Instances", objDialog);
                 dialog.objectName = "Armário com papel";
