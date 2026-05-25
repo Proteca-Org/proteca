@@ -25,6 +25,9 @@
   "Armário com papel": [
     "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
   ],
+  "objBlockedDoor": [
+    "Não tenho motivo para entrar. Meu irmão é da sala 4."
+  ],
   "IrmaoNPC": {
     "inicio": {
       "text": "Oi mano. Você demorou. Já estava pensando em te procurar. Está tudo bem?",
@@ -48,12 +51,21 @@
     "rota_b_sim": {
       "text": "Certo, vamos lá falar com ela.",
       "action": "teleport",
-      "target": "rmEscola4"
+      "target": "rmEscola4",
+      "target_position": {
+        "x": 375,
+        "y": 260
+      }
     },
     "rota_b_nao": {
        "text": "Entendo. Vamos para casa então.",
        "action": "teleport",
        "target": "rmCutscene"
     }
-  }
+  },
+
+  "Mochila": [
+    "Ah, a minha mochila! Estava aqui o tempo todo.",
+    "Agora só falta encontrar o meu irmão."
+  ]
 }
