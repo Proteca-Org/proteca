@@ -11,10 +11,28 @@ function Inventory() constructor{
 		}
 		return false;  //Inventario cheio
 	}
+
+    static deleteItem = function(indexSlot) {
+		if (indexSlot < 0 || indexSlot >= maxSlots) {
+		    return false;
+		}
+
+        var item = slots[indexSlot];
+		
+		if (item == -1) {
+		    return false;
+		}
+
+		slots[indexSlot] = -1;
+		delete item;
+		
+		return true;
+	}
 	
 	static removeItem = function(indexSlot) {
 		if (indexSlot >= 0 && indexSlot < maxSlots) {
 			var item = slots[indexSlot];
+			
 			slots[indexSlot] = -1;
 			return item;
 		}
@@ -24,7 +42,7 @@ function Inventory() constructor{
 	static inspectItem = function(indexSlot) {
 		if (indexSlot >= 0 && indexSlot < maxSlots && slots[indexSlot] != -1) {
 			var item = slots[indexSlot];
-			return item
+			return item;
 		}
 	}
 	
