@@ -45,6 +45,7 @@
     {"id":{"name":"fntDialog","path":"fonts/fntDialog/fntDialog.yy",},},
     {"id":{"name":"fntMenu","path":"fonts/fntMenu/fntMenu.yy",},},
     {"id":{"name":"fntPressStart","path":"fonts/fntPressStart/fntPressStart.yy",},},
+    {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},},
     {"id":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},},
     {"id":{"name":"objCustom","path":"objects/objCustom/objCustom.yy",},},
     {"id":{"name":"objDialog","path":"objects/objDialog/objDialog.yy",},},
