@@ -8,7 +8,7 @@ if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, i
 }
 
 if (dialogInitialized) {
-	if (distance_to_object(objPlayer) <= 15) {
+	if (distance_to_object(objPlayer) <= 100) {
         if ((!variable_global_exists("dialog") || !global.dialog) 
             && !global.pause && !global.inventory) {
 
