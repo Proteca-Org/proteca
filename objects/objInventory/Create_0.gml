@@ -1,3 +1,8 @@
+if (instance_number(objInventory) > 1) {
+    instance_destroy();
+    exit;
+}
+
 inventory = new Inventory();
 global.inventory = false;
 selectedSlot = -1;
@@ -12,7 +17,7 @@ function noEffect() {
 	return "return"
 };
 
-var hair = new Item(1, "cabelo", sprHair, "cabelo loiro", noEffect);
-var pants = new Item(2, "calca", sprPants, "Calça jeans", noEffect);
-inventory.addItem(hair);
-inventory.addItem(pants);
+var pencil = new Item(1, "Lápis", sprPencil, "lápis", noEffect);
+var paper = new Item(2, "Papel", sprFloorPaper, "papel", noEffect);
+inventory.addItem(pencil);
+inventory.addItem(paper);
