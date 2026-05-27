@@ -1,4 +1,8 @@
 function scrCompleteMission(flag) {
+    if (!variable_global_exists("missions") || !variable_global_exists("current_mission")) {
+        exit;
+    }
+
     var _curr = global.current_mission;
     var _len = array_length(global.missions);
 

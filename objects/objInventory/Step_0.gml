@@ -1,3 +1,7 @@
+if (!variable_global_exists("hasBackpack") || !global.hasBackpack) {
+    exit;
+}
+
 if (keyboard_check_pressed(ord("M")) && !global.pause) {
     global.inventory = !global.inventory; // Alterna entre aberto/fechado
 }

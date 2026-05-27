@@ -1,3 +1,8 @@
+if (instance_number(objInventory) > 1) {
+    instance_destroy();
+    exit;
+}
+
 inventory = new Inventory();
 global.inventory = false;
 selectedSlot = -1;
