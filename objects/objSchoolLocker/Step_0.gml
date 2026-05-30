@@ -1,4 +1,4 @@
-if (srcCanOpenDialog()) {
+if (!modoInspecao && srcCanOpenDialog()) {
     dialogInitialized = true;
 }
 if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, id)) {
@@ -48,8 +48,8 @@ if (dialogInitialized && distance_to_object(objPlayer) <= 15) {
         dialogInitialized = false;
     }
 }
-// Sair do modo com ESC
-if (modoInspecao && keyboard_check_pressed(vk_escape)) {
+// Sair do modo com a tecla de ESPAÇO
+if (modoInspecao && keyboard_check_pressed(vk_space)) {
     // Restaurar armário
     x = posicaoOriginalX;
     y = posicaoOriginalY;
@@ -74,4 +74,5 @@ if (modoInspecao && keyboard_check_pressed(vk_escape)) {
         instance_destroy(objGame);
     }
     global.dialog = false;
+	dialogInitialized = false;
 }
