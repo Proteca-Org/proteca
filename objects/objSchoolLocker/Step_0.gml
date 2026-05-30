@@ -18,7 +18,7 @@ if (dialogInitialized && distance_to_object(objPlayer) <= 15) {
     if (!modoInspecao
         && (!variable_global_exists("dialog") || !global.dialog)
         && !global.pause
-        && !global.inventory) {
+        && !global.isInventoryOpen) {
 
         modoInspecao = true;
         mask_index = -1;

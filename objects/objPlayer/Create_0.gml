@@ -16,7 +16,7 @@ storedTargetY = y
 life = 100
 score = 0
 level = 1
-inventory = []
+global.inventory = []
 capacity = 10
 velocity = 3
 
