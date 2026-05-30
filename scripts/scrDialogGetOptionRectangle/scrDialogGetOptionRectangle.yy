@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrDialogGetOptionRectangle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDialogGetOptionRectangle",
+  "parent":{
+    "name":"dialogs",
+    "path":"folders/Scripts/dialogs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

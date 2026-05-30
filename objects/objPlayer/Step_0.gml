@@ -99,3 +99,6 @@ if (mouse_check_button_pressed(mb_left) && (canMove)) {
 		dialog.objectName = "Teste Geral";
 	}
 #endregion
+
+// Define o nível de profundidade entre dois objetos, quem está mais abaixo na tela é desenhado na frente
+depth = -bbox_bottom;

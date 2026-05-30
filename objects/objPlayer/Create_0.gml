@@ -21,6 +21,7 @@ capacity = 10
 velocity = 3
 
 // Controla se roupas adicionais vão aparecer no sprite ou não (p/ testes)
-showClothes = true;
-global.hasEnteredRoom = false;
+showClothes = true
+global.hasEnteredRoom = false
 emInspecao = false;
+global.newRoomStartPosition = undefined
