@@ -4,7 +4,9 @@ if (!initialized) {
 	targetY = y;
 	initialized = true;
 }
-
+if (emInspecao) {
+    return; // Sai do Step sem processar movimento
+}
 var dx = targetX - x;
 var dy = targetY - y;
 var distance  = point_distance(x, y, targetX, targetY);

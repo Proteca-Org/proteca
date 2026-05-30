@@ -16,7 +16,8 @@ if (dialogInitialized) {
             global.dialog = true;
 
             scrCompleteMission("flag_backpack_found");
-
+            global.hasBackpack = true;
+            
             dialogInitialized = false;
         }
     }
