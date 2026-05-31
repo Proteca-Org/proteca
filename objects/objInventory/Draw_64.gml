@@ -27,7 +27,7 @@ for (var h = 0; h < hotbarSlots; h++) {
 }
 
 // --- GRID COMPLETO (soh quando inventario aberto) ---
-if (!global.isInventoryOpen) {
+if (!global.inventory) {
 	exit; // Não desenha se o inventário estiver fechado
 }
 
@@ -43,7 +43,7 @@ for (var i = 0; i < 4; i++) {
         draw_sprite(sprSlotBackground, 0, xPos, yPos);
         
         // Desenha o item, se existir
-        var items = global.inventory.slots[indexSlot];
+        var items = inventory.slots[indexSlot];
         if (is_struct(items)) {
             draw_sprite(items.spriteItem , 0, xPos + 32, yPos + 32);
         }
