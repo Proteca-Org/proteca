@@ -18,10 +18,22 @@
   "Papel da introdução": [
     "Você encontrou um papel, parece ter algo escrito nele..."
   ],
-  "Armário sem papel": [
-    "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado.",
-    "Você ainda não tem a senha para o cadeado."
+  "Armário": [
+    "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
   ],
+  "Cadeado sem senha": [
+    "Você ainda não tem a senha para o cadeado. Aperte espaço para voltar."
+  ],
+  "Inventario desbloqueado": [
+    "Você desbloqueou o inventário!"
+  ],
+  "Parabéns mochila": [
+    "Parabéns!",
+    "Você encontrou a mochila!"
+  ],
+  "Senha errada": [
+    "Essa senha não é a correta. Tente novamente."
+  ],  
   "Armário com papel": [
     "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
   ],
