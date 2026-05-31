@@ -12,7 +12,7 @@ if (dialogInitialized) {
         if ((!variable_global_exists("dialog") || !global.dialog) 
             && !global.pause && !global.isInventoryOpen) {
 
-            var dialog = instance_create_layer(x, y, "Instances", objDialog);
+            var dialog = instance_create_layer(x, y, "Instances_2", objDialog);
             dialog.objectName = "Carteiras da introdução";
             global.dialog = true;
             
