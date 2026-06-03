@@ -1,5 +1,10 @@
-inventory = new Inventory();
-global.inventory = false;
+if (instance_number(objInventory) > 1) {
+    instance_destroy();
+    exit;
+}
+
+global.inventory = new Inventory();
+global.isInventoryOpen = false;
 selectedSlot = -1;
 
 slotSize = 64;
@@ -14,5 +19,5 @@ function noEffect() {
 
 var pencil = new Item(1, "Lápis", sprPencil, "lápis", noEffect);
 var paper = new Item(2, "Papel", sprFloorPaper, "papel", noEffect);
-inventory.addItem(pencil);
-inventory.addItem(paper);
+global.inventory.addItem(pencil);
+global.inventory.addItem(paper);

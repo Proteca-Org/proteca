@@ -1,45 +1,30 @@
-if (initialized == false) {
-    dialogData = scrGetDialogs(objectName);
-    
-
-    if (is_array(dialogData)) {
-        isBranching = false;
-    } else if (is_struct(dialogData)) {
-        isBranching = true;
-        currentNodeKey = "inicio"; 
-        currentNodeData = dialogData[$ currentNodeKey];
-    }
-    
-    initialized = true;
-    global.dialog = true;
+if (!initialized) {
+	scrDialogInitialize()
 }
 
-if (mouse_check_button_pressed(mb_left)) {
-    
+scrDialogHandleInput()
 
-    if (!isBranching) {
-        if (page < array_length(dialogData) - 1) {
-            page++;
-        } else {
-            instance_destroy();
-            global.dialog = false;
-        }
-    } 
-
-    else {
-
-        if (!variable_struct_exists(currentNodeData, "options")) {
-            
-            if (variable_struct_exists(currentNodeData, "action")) {
-                if (currentNodeData.action == "teleport") {
-                    var targetRoom = asset_get_index(currentNodeData.target);
-                    if (targetRoom != -1) room_goto(targetRoom);
-                }
-            }
-            
-            instance_destroy();
-            global.dialog = false;
-        }
-    }
+if (isBranching && variable_struct_exists(currentNodeData, "options")) {
+	var options = currentNodeData.options
+	var mouseGuiX = device_mouse_x_to_gui(0)
+	var mouseGuiY = device_mouse_y_to_gui(0)
+	hoveredOption = -1
+	
+	for (var i = 0; i < array_length(options); i++) {
+		var option = options[i]
+		var optionRectangle = scrDialogGetOptionRectangle(i)
+		var x1 = optionRectangle._x
+		var y1 = optionRectangle._y
+		var x2 = optionRectangle._x + optionRectangle._width
+		var y2 = optionRectangle._y + optionRectangle._height
+		
+		if (point_in_rectangle(mouseGuiX, mouseGuiY, x1, y1, x2, y2)) {
+			hoveredOption = i
+			if (mouse_check_button_pressed(mb_left)) {
+				currentNodeKey = option.next
+				currentNodeData = dialogData[$ currentNodeKey]
+			}
+			break
+		}
+	}
 }
-

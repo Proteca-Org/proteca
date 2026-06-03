@@ -1,4 +1,33 @@
-if (!global.inventory) {
+if (!variable_global_exists("hasBackpack") || !global.hasBackpack) {
+    exit;
+}
+
+// --- HOTBAR (sempre visivel quando tem mochila) ---
+var hotbarSlots = 4;
+var hotbarX = display_get_gui_width() / 2 - (hotbarSlots * (slotSize + padding)) / 2;
+var hotbarY = display_get_gui_height() - slotSize - 20;
+
+for (var h = 0; h < hotbarSlots; h++) {
+    var hxPos = hotbarX + h * (slotSize + padding);
+    draw_sprite(sprSlotBackground, 0, hxPos, hotbarY);
+
+    var hItem = inventory.slots[h];
+    if (is_struct(hItem)) {
+        draw_sprite(hItem.spriteItem, 0, hxPos + 32, hotbarY + 32);
+    }
+
+    if (h == selectedSlot) {
+        var prev_color = draw_get_color();
+        draw_set_color(c_white);
+        draw_set_alpha(0.3);
+        draw_rectangle(hxPos, hotbarY, hxPos + slotSize - 1, hotbarY + slotSize - 1, false);
+        draw_set_alpha(1);
+        draw_set_color(prev_color);
+    }
+}
+
+// --- GRID COMPLETO (soh quando inventario aberto) ---
+if (!global.isInventoryOpen) {
 	exit; // Não desenha se o inventário estiver fechado
 }
 
@@ -14,7 +43,7 @@ for (var i = 0; i < 4; i++) {
         draw_sprite(sprSlotBackground, 0, xPos, yPos);
         
         // Desenha o item, se existir
-        var items = inventory.slots[indexSlot];
+        var items = global.inventory.slots[indexSlot];
         if (is_struct(items)) {
             draw_sprite(items.spriteItem , 0, xPos + 32, yPos + 32);
         }

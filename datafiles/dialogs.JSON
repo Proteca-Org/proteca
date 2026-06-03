@@ -6,6 +6,12 @@
     "Verificando funcionamento do JSON..."
   ],
 
+  "Introducao": [
+    "Nossa! Cadê minha mochila?",
+    "Só fui ao banheiro rapidinho e já esconderam minha mochila...",
+    "E ainda meus pais devem estar chegando e eu preciso encontrar meu irmão!"
+  ],
+
   "Carteiras da introdução": [
     "Minha mochila não está aqui!",
     "Tente achá-la clicando pela sala."
@@ -18,19 +24,34 @@
   "Papel da introdução": [
     "Você encontrou um papel, parece ter algo escrito nele..."
   ],
-  "Armário sem papel": [
-    "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado.",
-    "Você ainda não tem a senha para o cadeado."
+  "Armário": [
+    "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
   ],
+  "Cadeado sem senha": [
+    "Você ainda não tem a senha para o cadeado. Aperte espaço para voltar."
+  ],
+  "Inventario desbloqueado": [
+    "Você desbloqueou o inventário!"
+  ],
+  "Parabéns mochila": [
+    "Parabéns!",
+    "Você encontrou a mochila!"
+  ],
+  "Senha errada": [
+    "Essa senha não é a correta. Tente novamente."
+  ],  
   "Armário com papel": [
     "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
+  ],
+  "objBlockedDoor": [
+    "Não tenho motivo para entrar. Meu irmão é da sala 4."
   ],
   "IrmaoNPC": {
     "inicio": {
       "text": "Oi mano. Você demorou. Já estava pensando em te procurar. Está tudo bem?",
       "options": [
-        { "label": "Aconteceram algumas coisas... (Não quero falar)", "next": "rota_a" },
-        { "label": "Esconderam minha mochila...", "next": "rota_b" }
+        { "label": "A) Aconteceram algumas coisas comigo.... Mas não quero falar sobre isso... já estou aqui. Vamos para casa...", "next": "rota_a" },
+        { "label": "B) Esconderam minha mochila e tive que procurar. Não foi legal terem feito isso comigo", "next": "rota_b" }
       ]
     },
     "rota_a": {
@@ -48,12 +69,21 @@
     "rota_b_sim": {
       "text": "Certo, vamos lá falar com ela.",
       "action": "teleport",
-      "target": "rmEscola4"
+      "target": "rmEscola4",
+      "target_position": {
+        "x": 375,
+        "y": 260
+      }
     },
     "rota_b_nao": {
        "text": "Entendo. Vamos para casa então.",
        "action": "teleport",
        "target": "rmCutscene"
     }
-  }
+  },
+
+  "Mochila": [
+    "Ah, a minha mochila! Estava aqui o tempo todo.",
+    "Agora só falta encontrar o meu irmão."
+  ]
 }

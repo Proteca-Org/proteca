@@ -4,7 +4,9 @@ if (!initialized) {
 	targetY = y;
 	initialized = true;
 }
-
+if (emInspecao) {
+    return; // Sai do Step sem processar movimento
+}
 var dx = targetX - x;
 var dy = targetY - y;
 var distance  = point_distance(x, y, targetX, targetY);
@@ -16,7 +18,7 @@ var moveY = 0;
 
 var canMove = !global.pause
     && (!variable_global_exists("dialog") || !global.dialog)
-    && (!variable_global_exists("inventory") || !global.inventory);
+    && (!variable_global_exists("global.inventory") || !global.isInventoryOpen);
 
 if (canMove) {	
 	if (keyboard_check(vk_left) || keyboard_check(ord("A"))) moveX = -1;
@@ -97,3 +99,6 @@ if (mouse_check_button_pressed(mb_left) && (canMove)) {
 		dialog.objectName = "Teste Geral";
 	}
 #endregion
+
+// Define o nível de profundidade entre dois objetos, quem está mais abaixo na tela é desenhado na frente
+depth = -bbox_bottom;
