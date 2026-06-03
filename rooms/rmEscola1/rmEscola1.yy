@@ -34,13 +34,8 @@
     {"name":"inst_5509B52A","path":"rooms/rmEscola1/rmEscola1.yy",},
     {"name":"inst_12B09801","path":"rooms/rmEscola1/rmEscola1.yy",},
     {"name":"inst_780B8076","path":"rooms/rmEscola1/rmEscola1.yy",},
-    {"name":"inst_ABF6F84","path":"rooms/rmEscola1/rmEscola1.yy",},
-    {"name":"inst_5909EA15","path":"rooms/rmEscola1/rmEscola1.yy",},
-  ],
-  "isDnd":false,
-  "layers":[
-    {"$GMRInstanceLayer":"","%Name":"InstancesColliders","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
     {"name":"inst_3BD076AA","path":"rooms/rmEscola1/rmEscola1.yy",},
+    {"name":"inst_5909EA15","path":"rooms/rmEscola1/rmEscola1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -139,13 +134,6 @@
           -3,0,-917,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"TilesetTest","path":"tilesets/TilesetTest/TilesetTest.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
-    {"$GMRInstanceLayer":"","%Name":"Instances_2","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_626A59D6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_626A59D6","objectId":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1,"scaleY":0.1,"x":448.0,"y":336.0,},
-        {"$GMRInstance":"v4","%Name":"inst_458D3C1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_458D3C1","objectId":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1,"scaleY":0.1,"x":256.0,"y":336.0,},
-        {"$GMRInstance":"v4","%Name":"inst_6EBFE6CD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6EBFE6CD","objectId":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1,"scaleY":0.1,"x":160.0,"y":336.0,},
-        {"$GMRInstance":"v4","%Name":"inst_1A819E5F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1A819E5F","objectId":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1,"scaleY":0.1,"x":352.0,"y":336.0,},
-        {"$GMRInstance":"v4","%Name":"inst_ABF6F84","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_ABF6F84","objectId":{"name":"objSchoolLocker","path":"objects/objSchoolLocker/objSchoolLocker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.109207675,"scaleY":0.09399773,"x":416.0,"y":128.0,},
-      ],"layers":[],"name":"Instances_2","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
   ],
   "name":"rmEscola1",
   "parent":{
