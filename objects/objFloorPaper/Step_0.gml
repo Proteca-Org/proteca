@@ -10,9 +10,9 @@ if (dialogInitialized) {
     if (distance_to_object(objPlayer) <= 15) {
         
         if ((!variable_global_exists("dialog") || !global.dialog) 
-            && !global.pause && !global.inventory) {
+            && !global.pause && !global.isInventoryOpen) {
 
-            var dialog = instance_create_layer(x, y, "Instances", objDialog);
+            var dialog = instance_create_layer(x, y, "Instances_1", objDialog);
             dialog.objectName = "Papel da introdução";
             global.dialog = true;
 
