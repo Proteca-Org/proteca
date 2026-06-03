@@ -8,8 +8,8 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id
     }
     // Antes de achar o papel
     if (!variable_global_exists("encontrouPapel") || !global.encontrouPapel) {                
-        if (!global.dialog && !global.pause && !global.isInventoryOpen) {
-            var dialog = instance_create_layer(x, y, "Instances", objDialog);
+        if (!global.dialog && !global.pause) {
+            var dialog = instance_create_layer(x, y, "Instances_2", objDialog);			
             dialog.objectName = "Cadeado sem senha";
             global.dialog = true;
         }
@@ -17,7 +17,7 @@ if (mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id
     // Se achou o papel
     else { 
         if (!instance_exists(objGame)) {
-            instance_create_layer(x, y, "Instances", objGame);
+            instance_create_layer(x, y, "Instances_2", objGame);
         }
     }
 }

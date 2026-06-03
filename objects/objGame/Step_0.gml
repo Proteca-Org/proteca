@@ -68,15 +68,18 @@ else if (estado == "sucesso") {
         if (mouse_x >= spritePosX && mouse_x <= spritePosX + spriteLargura &&
             mouse_y >= spritePosY && mouse_y <= spritePosY + spriteAltura) {            
             if (!global.dialog && !global.pause && !global.isInventoryOpen) {
-                var dialog = instance_create_layer(x, y, "Instances", objDialog);
+                var dialog = instance_create_layer(x, y, "Instances_2", objDialog);
                 dialog.objectName = "Inventario desbloqueado";
                 global.dialog = true;
             }            
             if (!instance_exists(objInventoryBag)) {
-                var bag = instance_create_layer(0, 0, "Instances", objInventoryBag);
+                var bag = instance_create_layer(0, 0, "Instances_2", objInventoryBag);
                 // Ajuste a posição se necessário
                 bag.x = 350;
                 bag.y = 380;
+            //Completa a primeira missão
+                scrCompleteMission("flag_backpack_found");
+
             }           
             //Destrói cadeado
             if (instance_exists(objPadlock)) {
