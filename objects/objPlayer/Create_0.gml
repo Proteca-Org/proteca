@@ -1,3 +1,10 @@
+enum PlayerState {
+	TUTORIAL,
+	GAME_RUNNING,
+}
+
+state = PlayerState.TUTORIAL
+
 hair = 0
 blouse = 0
 pants = 0

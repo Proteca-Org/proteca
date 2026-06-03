@@ -1,3 +1,7 @@
+if (state == PlayerState.TUTORIAL) {
+	exit
+}
+
 // Inicialização do alvo na primeira execução
 if (!initialized) {
 	targetX = x;
