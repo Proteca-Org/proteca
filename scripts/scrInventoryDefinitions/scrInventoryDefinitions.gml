@@ -44,6 +44,7 @@ function Inventory() constructor{
 			var item = slots[indexSlot];
 			return item;
 		}
+		return -1;
 	}
 	
 	static useItem = function(indexSlot) {
