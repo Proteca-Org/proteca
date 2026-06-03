@@ -67,7 +67,7 @@ else if (estado == "sucesso") {
         
         if (mouse_x >= spritePosX && mouse_x <= spritePosX + spriteLargura &&
             mouse_y >= spritePosY && mouse_y <= spritePosY + spriteAltura) {            
-            if (!global.dialog && !global.pause && !global.inventory) {
+            if (!global.dialog && !global.pause && !global.isInventoryOpen) {
                 var dialog = instance_create_layer(x, y, "Instances_2", objDialog);
                 dialog.objectName = "Inventario desbloqueado";
                 global.dialog = true;
