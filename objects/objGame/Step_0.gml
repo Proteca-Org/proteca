@@ -77,6 +77,9 @@ else if (estado == "sucesso") {
                 // Ajuste a posição se necessário
                 bag.x = 350;
                 bag.y = 380;
+            //Completa a primeira missão
+                scrCompleteMission("flag_backpack_found");
+
             }           
             //Destrói cadeado
             if (instance_exists(objPadlock)) {
