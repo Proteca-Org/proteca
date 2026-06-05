@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objIrmao",
+  "%Name":"ObjSign2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objIrmao",
+  "name":"ObjSign2",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"objInteract",
+    "path":"folders/Objetos/objInteract.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBrother",
-    "path":"sprites/sprBrother/sprBrother.yy",
+    "name":"sprSign2",
+    "path":"sprites/sprSign2/sprSign2.yy",
   },
   "spriteMaskId":null,
   "visible":true,
