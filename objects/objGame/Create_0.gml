@@ -1,5 +1,4 @@
 estado = "play";
-senhaCorreta = global.paperPassword;
 senhaDigitada = "";
 maxDigitos = 4;
 // Posição e escala
