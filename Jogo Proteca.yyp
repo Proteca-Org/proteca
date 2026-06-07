@@ -73,6 +73,7 @@
     {"id":{"name":"objStudentChair","path":"objects/objStudentChair/objStudentChair.yy",},},
     {"id":{"name":"objStudentDesk","path":"objects/objStudentDesk/objStudentDesk.yy",},},
     {"id":{"name":"objTestItem","path":"objects/objTestItem/objTestItem.yy",},},
+    {"id":{"name":"objTutorial","path":"objects/objTutorial/objTutorial.yy",},},
     {"id":{"name":"objVideo","path":"objects/objVideo/objVideo.yy",},},
     {"id":{"name":"objWarp","path":"objects/objWarp/objWarp.yy",},},
     {"id":{"name":"rmCustomization","path":"rooms/rmCustomization/rmCustomization.yy",},},
