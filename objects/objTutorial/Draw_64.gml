@@ -1,3 +1,7 @@
+if (global.state != gameState.TUTORIAL) {
+	exit
+}
+
 if (state != TutorialState.SHOW) {
 	exit	
 }

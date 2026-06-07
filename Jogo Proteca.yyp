@@ -97,6 +97,7 @@
     {"id":{"name":"scrDialogHandleInput","path":"scripts/scrDialogHandleInput/scrDialogHandleInput.yy",},},
     {"id":{"name":"scrDialogInitialize","path":"scripts/scrDialogInitialize/scrDialogInitialize.yy",},},
     {"id":{"name":"scrDialogLinearNext","path":"scripts/scrDialogLinearNext/scrDialogLinearNext.yy",},},
+    {"id":{"name":"scrGameState","path":"scripts/scrGameState/scrGameState.yy",},},
     {"id":{"name":"scrInventoryDefinitions","path":"scripts/scrInventoryDefinitions/scrInventoryDefinitions.yy",},},
     {"id":{"name":"scrMenuSelection","path":"scripts/scrMenuSelection/scrMenuSelection.yy",},},
     {"id":{"name":"scrPauseSelection","path":"scripts/scrPauseSelection/scrPauseSelection.yy",},},

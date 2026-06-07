@@ -1,4 +1,4 @@
-if (state == PlayerState.TUTORIAL) {
+if (global.state != gameState.GAME_RUNNING) {
 	exit
 }
 

@@ -1,3 +1,9 @@
+if (global.state != gameState.TUTORIAL) {
+	exit
+}
+
+show_debug_message($"tutorial {global.state}")
+
 var step = steps[currentStep]
 
 switch (state) {
@@ -37,7 +43,7 @@ switch (state) {
             break
 
             case "mouse":
-                objPlayer.state = PlayerState.GAME_RUNNING
+                global.state = gameState.GAME_RUNNING
                 instance_destroy()
             break;
         }
@@ -56,7 +62,7 @@ isOnSkipBtn = point_in_rectangle(
 					)
 if (isOnSkipBtn) {
 	if (mouse_check_button_pressed(mb_left)) {
-		objPlayer.state = PlayerState.GAME_RUNNING
+		global.state = gameState.GAME_RUNNING
 		instance_destroy()
 	}
 }
