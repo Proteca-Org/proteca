@@ -6,4 +6,3 @@ posicaoOriginalY = 0;
 tamanhoOriginalX = 1;
 tamanhoOriginalY = 1;
 fatorAumento = 3.5;
-global.inventoryUnlocked = false
