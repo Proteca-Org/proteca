@@ -4,7 +4,7 @@ if (!modoInspecao && srcCanOpenDialog()) {
 if (mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, id)) {
     dialogInitialized = false;
 }
-if (dialogInitialized && distance_to_object(objPlayer) <= 15) {
+if (dialogInitialized && distance_to_object(objPlayer) <= 15 && !global.inventoryUnlocked) {
     // Cria o cadeado 1 vez
     if (!cadeadoCriado) {
         var padlock = instance_create_depth(x, y, -50, objPadlock);
