@@ -170,6 +170,7 @@
     {"id":{"name":"sprSoftDrinkBlue","path":"sprites/sprSoftDrinkBlue/sprSoftDrinkBlue.yy",},},
     {"id":{"name":"sprSoftDrinkGreen","path":"sprites/sprSoftDrinkGreen/sprSoftDrinkGreen.yy",},},
     {"id":{"name":"sprSoftDrinkRed","path":"sprites/sprSoftDrinkRed/sprSoftDrinkRed.yy",},},
+    {"id":{"name":"sprSoftDrinkYellow","path":"sprites/sprSoftDrinkYellow/sprSoftDrinkYellow.yy",},},
     {"id":{"name":"sprSpoon1","path":"sprites/sprSpoon1/sprSpoon1.yy",},},
     {"id":{"name":"sprStairs","path":"sprites/sprStairs/sprStairs.yy",},},
     {"id":{"name":"sprStairs2","path":"sprites/sprStairs2/sprStairs2.yy",},},
