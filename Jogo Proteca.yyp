@@ -186,7 +186,6 @@
     {"id":{"name":"sprStudentChair","path":"sprites/sprStudentChair/sprStudentChair.yy",},},
     {"id":{"name":"sprStudentDesk","path":"sprites/sprStudentDesk/sprStudentDesk.yy",},},
     {"id":{"name":"sprTableRoom","path":"sprites/sprTableRoom/sprTableRoom.yy",},},
-    {"id":{"name":"sprtDoor4","path":"sprites/sprtDoor4/sprtDoor4.yy",},},
     {"id":{"name":"sprTeacherDesk","path":"sprites/sprTeacherDesk/sprTeacherDesk.yy",},},
     {"id":{"name":"sprTilesetTest","path":"sprites/sprTilesetTest/sprTilesetTest.yy",},},
     {"id":{"name":"sprTrees","path":"sprites/sprTrees/sprTrees.yy",},},
