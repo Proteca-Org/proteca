@@ -1,3 +1,7 @@
+if (global.state != gameState.GAME_RUNNING) {
+	exit
+}
+
 // Inicialização do alvo na primeira execução
 if (!initialized) {
 	targetX = x;

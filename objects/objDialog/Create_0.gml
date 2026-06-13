@@ -4,7 +4,6 @@ text[0] = ""
 
 page = 0
 initialized = false
-global.dialog = false
 
 isBranching = false
 currentNodeKey = "inicio" 

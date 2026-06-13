@@ -1,3 +1,7 @@
+if (global.state != gameState.GAME_RUNNING) {
+	exit
+}
+
 /// @description Verifica clique e abre diálogo
 if (srcCanOpenDialog()) {
     dialogInitialized = true;
