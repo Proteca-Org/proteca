@@ -114,11 +114,8 @@
     {"id":{"name":"sprBackgroundLockerRoom","path":"sprites/sprBackgroundLockerRoom/sprBackgroundLockerRoom.yy",},},
     {"id":{"name":"sprBackgroundTeacherRoom","path":"sprites/sprBackgroundTeacherRoom/sprBackgroundTeacherRoom.yy",},},
     {"id":{"name":"sprBench","path":"sprites/sprBench/sprBench.yy",},},
-<<<<<<< HEAD
     {"id":{"name":"sprBigFramePainting","path":"sprites/sprBigFramePainting/sprBigFramePainting.yy",},},
-=======
     {"id":{"name":"sprBlackboard","path":"sprites/sprBlackboard/sprBlackboard.yy",},},
->>>>>>> origin/develop
     {"id":{"name":"sprBlackBox","path":"sprites/sprBlackBox/sprBlackBox.yy",},},
     {"id":{"name":"sprBlank","path":"sprites/sprBlank/sprBlank.yy",},},
     {"id":{"name":"sprBlouses","path":"sprites/sprBlouses/sprBlouses.yy",},},
@@ -189,11 +186,8 @@
     {"id":{"name":"sprStudentChair","path":"sprites/sprStudentChair/sprStudentChair.yy",},},
     {"id":{"name":"sprStudentDesk","path":"sprites/sprStudentDesk/sprStudentDesk.yy",},},
     {"id":{"name":"sprTableRoom","path":"sprites/sprTableRoom/sprTableRoom.yy",},},
-<<<<<<< HEAD
-=======
     {"id":{"name":"sprtDoor4","path":"sprites/sprtDoor4/sprtDoor4.yy",},},
     {"id":{"name":"sprTeacherDesk","path":"sprites/sprTeacherDesk/sprTeacherDesk.yy",},},
->>>>>>> origin/develop
     {"id":{"name":"sprTilesetTest","path":"sprites/sprTilesetTest/sprTilesetTest.yy",},},
     {"id":{"name":"sprTrees","path":"sprites/sprTrees/sprTrees.yy",},},
     {"id":{"name":"sprtSemiOpenDoor","path":"sprites/sprtSemiOpenDoor/sprtSemiOpenDoor.yy",},},
