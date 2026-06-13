@@ -24,9 +24,9 @@
   "name":"sprWallClock",
   "nineSlice":null,
   "origin":0,
-  "parent":{
-    "name":"Escola2",
-    "path":"folders/Sprites/Escola2.yy",
+  "parent": {
+    "name": "School2",
+    "path": "folders/Sprites/School2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
