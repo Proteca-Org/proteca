@@ -5,8 +5,6 @@ if (instance_number(objPause) > 1) {
     exit;
 }
 
-global.pause = false
-
 options = ["Retomar", "Salvar jogo", "Configurações", "Sair"]
 numOptions = array_length(options)
 selectedOption = 0

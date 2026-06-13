@@ -3,8 +3,9 @@ if (instance_number(objInventory) > 1) {
     exit;
 }
 
-global.inventory = new Inventory();
 global.isInventoryOpen = false;
+global.inventoryUnlocked = false;
+global.inventory = new Inventory();
 selectedSlot = -1;
 
 slotSize = 64;

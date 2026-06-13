@@ -11,7 +11,7 @@ for (var h = 0; h < hotbarSlots; h++) {
     var hxPos = hotbarX + h * (slotSize + padding);
     draw_sprite(sprSlotBackground, 0, hxPos, hotbarY);
 
-    var hItem = inventory.slots[h];
+    var hItem = global.inventory.slots[h];
     if (is_struct(hItem)) {
         draw_sprite(hItem.spriteItem, 0, hxPos + 32, hotbarY + 32);
     }

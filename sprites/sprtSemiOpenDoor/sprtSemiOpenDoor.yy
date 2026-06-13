@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Escola4",
-    "path":"folders/Sprites/Escola4.yy",
+    "name":"School4",
+    "path":"folders/Sprites/School4.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

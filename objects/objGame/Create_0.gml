@@ -1,8 +1,6 @@
 estado = "play";
-senhaCorreta = global.paperPassword;
 senhaDigitada = "";
 maxDigitos = 4;
-
 // Posição e escala
 escalaGame = 0.4;      
 offsetX = -120;  
@@ -26,6 +24,5 @@ spriteOriginalLargura = sprite_get_width(sprGame);
 spriteOriginalAltura = sprite_get_height(sprGame);
 
 spriteLargura = spriteOriginalLargura * escalaGame;
-spriteAltura = spriteOriginalAltura * escalaGame;
-
+spriteAltura = spriteOriginalAltura * escalaGame
 global.emInspecao = true;

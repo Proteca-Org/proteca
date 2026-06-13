@@ -71,6 +71,7 @@ else if (estado == "sucesso") {
                 var dialog = instance_create_layer(x, y, "Instances_2", objDialog);
                 dialog.objectName = "Inventario desbloqueado";
                 global.dialog = true;
+				global.inventoryUnlocked = true
             }            
             if (!instance_exists(objInventoryBag)) {
                 var bag = instance_create_layer(0, 0, "Instances_2", objInventoryBag);
