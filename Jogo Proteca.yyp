@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"Jogo Proteca",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -56,6 +56,7 @@
     {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},},
     {"id":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},},
     {"id":{"name":"objCustom","path":"objects/objCustom/objCustom.yy",},},
+    {"id":{"name":"objCutsceneController","path":"objects/objCutsceneController/objCutsceneController.yy",},},
     {"id":{"name":"objDialog","path":"objects/objDialog/objDialog.yy",},},
     {"id":{"name":"objFade","path":"objects/objFade/objFade.yy",},},
     {"id":{"name":"objFloorPaper","path":"objects/objFloorPaper/objFloorPaper.yy",},},
@@ -91,6 +92,9 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scrCompleteMission","path":"scripts/scrCompleteMission/scrCompleteMission.yy",},},
     {"id":{"name":"scrCustomDone","path":"scripts/scrCustomDone/scrCustomDone.yy",},},
+    {"id":{"name":"scrCutsceneDefinitions","path":"scripts/scrCutsceneDefinitions/scrCutsceneDefinitions.yy",},},
+    {"id":{"name":"scrCutsceneIsActive","path":"scripts/scrCutsceneIsActive/scrCutsceneIsActive.yy",},},
+    {"id":{"name":"scrCutsceneRun","path":"scripts/scrCutsceneRun/scrCutsceneRun.yy",},},
     {"id":{"name":"scrDialogBranchingNext","path":"scripts/scrDialogBranchingNext/scrDialogBranchingNext.yy",},},
     {"id":{"name":"scrDialogClose","path":"scripts/scrDialogClose/scrDialogClose.yy",},},
     {"id":{"name":"scrDialogDrawOptions","path":"scripts/scrDialogDrawOptions/scrDialogDrawOptions.yy",},},
