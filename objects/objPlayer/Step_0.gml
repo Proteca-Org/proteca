@@ -2,6 +2,12 @@ if (global.state != gameState.GAME_RUNNING) {
 	exit
 }
 
+// Para testar minigame na nova room (tirar depois)
+if (keyboard_check_pressed(vk_shift)) {
+	y = 500
+	room_goto(rmParentsBedroom)
+}
+
 // Inicialização do alvo na primeira execução
 if (!initialized) {
 	targetX = x;
