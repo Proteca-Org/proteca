@@ -86,9 +86,5 @@
   },
   "type":0,
   "VTile":false,
-<<<<<<< HEAD
   "width":500,
-=======
-  "width":753,
->>>>>>> develop
 }
