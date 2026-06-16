@@ -38,9 +38,6 @@ if (dialogInitialized && distance_to_object(objPlayer) <= 15 && !global.inventor
             x = other.x + 50;
             y = other.y + 150;
         }
-        // Posicionar player
-        objPlayer.x = x - 30;
-        objPlayer.y = y + 170;
         objPlayer.emInspecao = true;
         var dialog = instance_create_layer(x, y, "Instances_2", objDialog);
         dialog.objectName = "Armário";
@@ -60,9 +57,6 @@ if (modoInspecao && keyboard_check_pressed(vk_space)) {
         x = other.x + 10;
         y = other.y + 30;
     }
-    // Restaurar player
-    objPlayer.x = global.posPlayerOriginalX;
-    objPlayer.y = global.posPlayerOriginalY;
     objPlayer.emInspecao = false;
     modoInspecao = false;
     // Remover diálogo
