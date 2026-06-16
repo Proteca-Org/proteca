@@ -1,3 +1,4 @@
+senhaCorreta = global.paperPassword;
 estado = "play";
 senhaDigitada = "";
 maxDigitos = 4;
