@@ -1,4 +1,4 @@
-if (!variable_global_exists("hasBackpack") || !global.hasBackpack) {
+if (!global.inventoryUnlocked) {
     exit;
 }
 
