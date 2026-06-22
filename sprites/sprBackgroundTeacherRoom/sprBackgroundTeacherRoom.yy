@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sprBackgroundTeacherRoom",
   "bboxMode":0,
-  "bbox_bottom":403,
+  "bbox_bottom":409,
   "bbox_left":0,
-  "bbox_right":752,
+  "bbox_right":707,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":404,
+  "height":410,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"70862bbf-b59e-4ac6-85d1-0cb482acf647","blendMode":0,"displayName":"default","isLocked":false,"name":"70862bbf-b59e-4ac6-85d1-0cb482acf647","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":500,
+  "width":708,
 }

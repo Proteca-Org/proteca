@@ -5,9 +5,12 @@ view_set_visible(0, true);
 var _cam = view_get_camera(0)
 
 camera_set_view_size(_cam, global.viewSizeX, global.viewSizeY)
-camera_set_view_border(_cam, global.viewSizeX/2, global.viewSizeY/2)
+//camera_set_view_border(_cam, global.viewSizeX/2, global.viewSizeY/2)
 
 // Check if the player exists in this room before targeting them
-if (instance_exists(objPlayer)) {
-	camera_set_view_target(_cam, objPlayer)
-}
+//if (instance_exists(objPlayer)) {
+//	camera_set_view_target(_cam, objPlayer)
+//}
+
+// Posição fixa da câmera centralizada 
+camera_set_view_pos(_cam, room_width / 2 - global.viewSizeX / 2, room_height / 2 - global.viewSizeY / 2);
