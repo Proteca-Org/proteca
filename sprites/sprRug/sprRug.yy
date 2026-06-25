@@ -5,7 +5,7 @@
   "bbox_bottom":101,
   "bbox_left":3,
   "bbox_right":149,
-  "bbox_top":0,
+  "bbox_top":3,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,

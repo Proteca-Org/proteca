@@ -28,7 +28,8 @@ var moveY = 0;
 
 var canMove = !global.pause
     && (!variable_global_exists("dialog") || !global.dialog)
-    && (!variable_global_exists("global.inventory") || !global.isInventoryOpen);
+    && (!variable_global_exists("global.inventory") || !global.isInventoryOpen)
+	&& !global.cutscene;
 
 if (canMove) {	
 	if (keyboard_check(vk_left) || keyboard_check(ord("A"))) moveX = -1;
