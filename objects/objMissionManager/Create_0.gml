@@ -8,4 +8,3 @@ global.missions = [
     { id: 1, flag: "flag_brother_found",  text: "Preciso encontrar meu irmão para irmos pra casa.", done: false },
 ];
 global.current_mission = 0;
-global.hasBackpack = false;

@@ -28,8 +28,8 @@ var moveY = 0;
 
 var canMove = !global.pause
     && (!variable_global_exists("dialog") || !global.dialog)
-    && (!variable_global_exists("global.inventory") || !global.isInventoryOpen)
-	&& !global.cutscene;
+    && (!variable_global_exists("isInventoryOpen") || !global.isInventoryOpen)
+    && !global.cutscene;
 
 if (canMove) {	
 	if (keyboard_check(vk_left) || keyboard_check(ord("A"))) moveX = -1;
@@ -79,7 +79,7 @@ if (y < sprite_get_height(sprBlouses)) y = sprite_get_height(sprBlouses);
 
 
 // MOVIMENTAÇÃO PELO CLIQUE
-if (mouse_check_button_pressed(mb_left) && (canMove)) {
+if (mouse_check_button_pressed(mb_left) && canMove && !global.inventoryConsumedClick) {
 	var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
 	var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
 

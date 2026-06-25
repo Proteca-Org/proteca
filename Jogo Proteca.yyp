@@ -71,7 +71,6 @@
     {"id":{"name":"objGameManager","path":"objects/objGameManager/objGameManager.yy",},},
     {"id":{"name":"objIntroController","path":"objects/objIntroController/objIntroController.yy",},},
     {"id":{"name":"objInventory","path":"objects/objInventory/objInventory.yy",},},
-    {"id":{"name":"objInventoryBag","path":"objects/objInventoryBag/objInventoryBag.yy",},},
     {"id":{"name":"objIrmao","path":"objects/objIrmao/objIrmao.yy",},},
     {"id":{"name":"objMenu","path":"objects/objMenu/objMenu.yy",},},
     {"id":{"name":"objMissionManager","path":"objects/objMissionManager/objMissionManager.yy",},},

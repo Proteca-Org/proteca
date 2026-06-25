@@ -1,6 +1,9 @@
-if (!variable_global_exists("hasBackpack") || !global.hasBackpack) {
+if (!global.inventoryUnlocked) {
     exit;
 }
+
+draw_set_alpha(1);
+draw_set_color(c_white);
 
 // --- HOTBAR (sempre visivel quando tem mochila) ---
 var hotbarSlots = 4;
