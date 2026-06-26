@@ -16,8 +16,15 @@ if (dialogInitialized) {
             dialog.objectName = "Papel da introdução";
             global.dialog = true;
 
-            global.encontrouPapel = true;
+            // Só gera a senha se ainda não foi encontrada
+            if (!global.encontrouPapel) {
+                randomize();
+                var code = irandom_range(0, 9999);
+                global.paperPassword = string_repeat("0", 4 - string_length(string(code))) + string(code);
+                global.encontrouPapel = true;
+            }
             
+            // Verifica se a camada já existe antes de criar
             if (!layer_exists("TopLayer")) {
                 layer_create(-100000, "TopLayer");
             }
@@ -28,17 +35,11 @@ if (dialogInitialized) {
                 "TopLayer",
                 objPasswordPaper
             );
-            
             passwordPaper.image_xscale = 20;
             passwordPaper.image_yscale = 20;
-            
-            randomize();
-            var code = irandom_range(0, 9999);
-            global.paperPassword = string_repeat("0", 4 - string_length(string(code))) + string(code);
-
             passwordPaper.password_code = global.paperPassword;
             
-            dialogInitialized = false; 
+            dialogInitialized = false;
         }
     }
 }

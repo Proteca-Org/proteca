@@ -12,6 +12,7 @@ if (dialogInitialized && distance_to_object(objPlayer) <= 15 && !global.inventor
         padlock.y = y + 30;
         padlock.image_xscale = 0.4;
         padlock.image_yscale = 0.4;
+        padlock.visible = false; // INVISÍVEL POR PADRÃO
         cadeadoCriado = true;
     }
     // Modo inspeção
@@ -30,13 +31,12 @@ if (dialogInitialized && distance_to_object(objPlayer) <= 15 && !global.inventor
         tamanhoOriginalX = image_xscale;
         tamanhoOriginalY = image_yscale;
         image_xscale = tamanhoOriginalX * fatorAumento;
-        image_yscale = tamanhoOriginalY * fatorAumento;
-        x = 230;
-        y = 20;
-        // Mover cadeado junto
+        image_yscale = tamanhoOriginalY * fatorAumento;      
+        // Mover cadeado e TORNAR VISÍVEL
         with (objPadlock) {
-            x = other.x + 50;
-            y = other.y + 150;
+            x = 280;
+            y = 170;
+            visible = true; // MOSTRA O CADEADO
         }
         objPlayer.emInspecao = true;
         var dialog = instance_create_layer(x, y, "Instances_2", objDialog);
@@ -51,11 +51,12 @@ if (modoInspecao && keyboard_check_pressed(vk_space)) {
     x = posicaoOriginalX;
     y = posicaoOriginalY;
     image_xscale = tamanhoOriginalX;
-    image_yscale = tamanhoOriginalY;
-    // Restaurar cadeado
+    image_yscale = tamanhoOriginalY;   
+    // Restaurar cadeado e TORNAR INVISÍVEL
     with (objPadlock) {
         x = other.x + 10;
         y = other.y + 30;
+        visible = false; // ESCONDE O CADEADO
     }
     objPlayer.emInspecao = false;
     modoInspecao = false;
@@ -68,5 +69,5 @@ if (modoInspecao && keyboard_check_pressed(vk_space)) {
         instance_destroy(objGame);
     }
     global.dialog = false;
-	dialogInitialized = false;
+    dialogInitialized = false;
 }
