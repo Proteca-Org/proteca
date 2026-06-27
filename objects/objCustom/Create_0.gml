@@ -3,6 +3,7 @@
 feature = [];
 part = [];
 selectedFeature = [];
+hairColors = [] 
 
 // Opção 1: Estilo do cabelo
 feature[0][0] = "Longo 1";
@@ -10,7 +11,7 @@ feature[0][1] = "Longo 2";
 feature[0][2] = "Médio 1";
 feature[0][3] = "Médio 2";
 feature[0][4] = "Curto 1";
-feature[0][5] = "Curto 2";
+feature[0][5] = "Curto 2";  
 
 // Opção 2: Vestimenta superior
 feature[1][0] = "Blusa roxa";
@@ -40,6 +41,18 @@ feature[4][4] = "Cabeça 4";
 feature[4][5] = "Mão 1";
 feature[4][6] = "Olhos 1";
 
+//Opção 6: Cor de cabelo 
+feature[5][0] = "Amarelo";
+feature[5][1] = "Preto";
+feature[5][2] = "Vermelho";
+feature[5][3] = "Azul";
+
+// Tabela de cores disponíveis para o cabelo
+hairColors[0] = c_yellow;
+hairColors[1] = c_black;
+hairColors[2] = c_red;
+hairColors[3] = c_blue;
+
 numFeatures = array_length(feature)
 
 // selectedFeature[i] := opcao selecionada na customizacao i
@@ -54,6 +67,7 @@ part[1] = "Vestimenta superior"
 part[2] = "Vestimenta inferior"
 part[3] = "Sapatos"
 part[4] = "Acessórios"
+part[5] = "Cor do Cabelo" 
 
 // 0 se menu atual é o das customizacoes, 1 se menu atual é o das opcoes dentro de uma customizacao
 currentMenu = 0

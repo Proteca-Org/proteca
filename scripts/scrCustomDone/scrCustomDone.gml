@@ -14,6 +14,7 @@ function scrCustomDone(selectedFeature){
 	playerInstance.pants = selectedFeature[2]
 	playerInstance.shoes = selectedFeature[3]
 	playerInstance.accessory = selectedFeature[4]
+	playerInstance.hairColor = hairColors[selectedFeature[5]] 
 	
 	room_goto_next()
 	instance_destroy()	
