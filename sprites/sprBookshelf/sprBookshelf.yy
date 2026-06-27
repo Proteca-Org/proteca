@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"HouseBedRoom",
-    "path":"folders/Sprites/HouseBedRoom.yy",
+    "name":"HouseSiblingsBedRoom",
+    "path":"folders/Sprites/HouseSiblingsBedRoom.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
