@@ -55,6 +55,10 @@
   "objBlockedDoor": [
     "Não tenho motivo para entrar. Meu irmão é da sala 4."
   ],
+  "sair sem inventario": [
+    "Ops, Estou esquecendo minha mochila.",
+    "Antes de sair, acho melhor encontrar minha mochila primeiro."
+  ],
   "IrmaoNPC": {
     "inicio": {
       "text": "Oi mano. Você demorou. Já estava pensando em te procurar. Está tudo bem?",
