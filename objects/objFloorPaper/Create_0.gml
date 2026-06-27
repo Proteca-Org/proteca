@@ -1,1 +1,1 @@
-dialogInitialized = false;
+dialogInitialized = false

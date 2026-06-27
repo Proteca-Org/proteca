@@ -1,3 +1,4 @@
+senhaCorreta = global.paperPassword;
 estado = "play";
 senhaDigitada = "";
 maxDigitos = 4;
@@ -5,7 +6,7 @@ maxDigitos = 4;
 escalaGame = 0.4;      
 offsetX = -120;  
 offsetY = -250;        
-depth = -150
+depth = -9999
 // Centralizar o objeto
 var cam = view_camera[0];
 if (cam >= 0) {
