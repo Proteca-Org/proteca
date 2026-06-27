@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sprBackgroundLockerRoom",
   "bboxMode":0,
-  "bbox_bottom":417,
+  "bbox_bottom":419,
   "bbox_left":0,
-  "bbox_right":539,
+  "bbox_right":720,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":418,
+  "height":420,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"a2ec42ff-d6d0-4530-9a24-58e3f2adbd66","blendMode":0,"displayName":"default","isLocked":false,"name":"a2ec42ff-d6d0-4530-9a24-58e3f2adbd66","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":540,
+  "width":721,
 }

@@ -3,8 +3,8 @@
   "%Name":"sprFlowers",
   "bboxMode":0,
   "bbox_bottom":161,
-  "bbox_left":12,
-  "bbox_right":1439,
+  "bbox_left":17,
+  "bbox_right":1989,
   "bbox_top":19,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1447,
+  "width":2000,
 }
