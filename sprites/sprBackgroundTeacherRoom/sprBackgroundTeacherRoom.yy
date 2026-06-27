@@ -2,9 +2,11 @@
   "$GMSprite":"v2",
   "%Name":"sprBackgroundTeacherRoom",
   "bboxMode":0,
-  "bbox_bottom":419,
+
+  "bbox_bottom":409,
   "bbox_left":0,
-  "bbox_right":519,
+  "bbox_right":707,
+
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,21 +14,23 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"93274a87-913b-4583-ac7a-0217bcf99228","name":"93274a87-913b-4583-ac7a-0217bcf99228","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e87d52cf-34dc-4e63-971b-e5e68af6597a","name":"e87d52cf-34dc-4e63-971b-e5e68af6597a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":420,
+
+  "height":410,
+
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"1030662b-19d1-4a39-8911-66b81dd96186","blendMode":0,"displayName":"default","isLocked":false,"name":"1030662b-19d1-4a39-8911-66b81dd96186","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"494c1855-0ea1-421c-bf23-4b3d9f4badcc","blendMode":0,"displayName":"default","isLocked":false,"name":"494c1855-0ea1-421c-bf23-4b3d9f4badcc","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprBackgroundTeacherRoom",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Escola4",
-    "path":"folders/Sprites/Escola4.yy",
+    "name":"School4",
+    "path":"folders/Sprites/School4.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -69,8 +73,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"93274a87-913b-4583-ac7a-0217bcf99228","path":"sprites/sprBackgroundTeacherRoom/sprBackgroundTeacherRoom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0dd0c4d9-578f-4326-a7b4-b8d989405324","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e87d52cf-34dc-4e63-971b-e5e68af6597a","path":"sprites/sprBackgroundTeacherRoom/sprBackgroundTeacherRoom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"fb976aaf-e97e-4b51-bf82-cbd8a9b6e5eb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +90,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":520,
+  "width":708,
 }

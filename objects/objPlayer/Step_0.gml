@@ -1,3 +1,13 @@
+if (global.state != gameState.GAME_RUNNING) {
+	exit
+}
+
+// Para testar minigame na nova room (tirar depois)
+if (keyboard_check_pressed(vk_shift)) {
+	y = 500
+	room_goto(rmParentsBedroom)
+}
+
 // Inicialização do alvo na primeira execução
 if (!initialized) {
 	targetX = x;
@@ -18,7 +28,8 @@ var moveY = 0;
 
 var canMove = !global.pause
     && (!variable_global_exists("dialog") || !global.dialog)
-    && (!variable_global_exists("global.inventory") || !global.isInventoryOpen);
+    && (!variable_global_exists("isInventoryOpen") || !global.isInventoryOpen)
+    && !global.cutscene;
 
 if (canMove) {	
 	if (keyboard_check(vk_left) || keyboard_check(ord("A"))) moveX = -1;
@@ -68,7 +79,7 @@ if (y < sprite_get_height(sprBlouses)) y = sprite_get_height(sprBlouses);
 
 
 // MOVIMENTAÇÃO PELO CLIQUE
-if (mouse_check_button_pressed(mb_left) && (canMove)) {
+if (mouse_check_button_pressed(mb_left) && canMove && !global.inventoryConsumedClick) {
 	var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
 	var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
 

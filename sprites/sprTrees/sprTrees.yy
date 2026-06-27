@@ -3,8 +3,8 @@
   "%Name":"sprTrees",
   "bboxMode":0,
   "bbox_bottom":587,
-  "bbox_left":28,
-  "bbox_right":1610,
+  "bbox_left":37,
+  "bbox_right":2099,
   "bbox_top":73,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Forest",
+    "path":"folders/Sprites/Forest.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1611,
+  "width":2100,
 }

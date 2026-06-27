@@ -1,13 +1,12 @@
-estado = "play";
 senhaCorreta = global.paperPassword;
+estado = "play";
 senhaDigitada = "";
 maxDigitos = 4;
-
 // Posição e escala
 escalaGame = 0.4;      
 offsetX = -120;  
 offsetY = -250;        
-depth = -150
+depth = -9999
 // Centralizar o objeto
 var cam = view_camera[0];
 if (cam >= 0) {
@@ -26,6 +25,5 @@ spriteOriginalLargura = sprite_get_width(sprGame);
 spriteOriginalAltura = sprite_get_height(sprGame);
 
 spriteLargura = spriteOriginalLargura * escalaGame;
-spriteAltura = spriteOriginalAltura * escalaGame;
-
+spriteAltura = spriteOriginalAltura * escalaGame
 global.emInspecao = true;

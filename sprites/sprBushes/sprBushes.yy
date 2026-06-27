@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":125,
   "bbox_left":0,
-  "bbox_right":1283,
+  "bbox_right":1999,
   "bbox_top":10,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Forest",
+    "path":"folders/Sprites/Forest.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1284,
+  "width":2000,
 }

@@ -1,6 +1,9 @@
-if (!variable_global_exists("hasBackpack") || !global.hasBackpack) {
+if (!global.inventoryUnlocked) {
     exit;
 }
+
+draw_set_alpha(1);
+draw_set_color(c_white);
 
 // --- HOTBAR (sempre visivel quando tem mochila) ---
 var hotbarSlots = 4;
@@ -11,7 +14,7 @@ for (var h = 0; h < hotbarSlots; h++) {
     var hxPos = hotbarX + h * (slotSize + padding);
     draw_sprite(sprSlotBackground, 0, hxPos, hotbarY);
 
-    var hItem = inventory.slots[h];
+    var hItem = global.inventory.slots[h];
     if (is_struct(hItem)) {
         draw_sprite(hItem.spriteItem, 0, hxPos + 32, hotbarY + 32);
     }
