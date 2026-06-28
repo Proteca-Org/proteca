@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rmFloresta",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rmFloresta/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
