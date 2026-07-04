@@ -1,7 +1,7 @@
 #region characterDrawing
 
 // desenha o personagem
-draw_sprite_ext(sprHair, selectedFeature[0], x, y, xScale, yScale, 0, -1, 1)
+draw_sprite_ext(sprHair, selectedFeature[0], x, y, xScale, yScale, 0, hairColors[selectedFeature[5]], 1)
 draw_sprite_ext(sprBlouses, selectedFeature[1], x, y, xScale, yScale, 0, -1, 1)
 draw_sprite_ext(sprPants, selectedFeature[2], x, y, xScale, yScale, 0, -1, 1)
 draw_sprite_ext(sprShoes, selectedFeature[3], x, y, xScale, yScale, 0, -1, 1)

@@ -1,0 +1,1 @@
+if (global.inventoryUnlocked) global.hasBackpack = true;

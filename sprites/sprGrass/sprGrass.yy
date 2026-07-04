@@ -3,8 +3,8 @@
   "%Name":"sprGrass",
   "bboxMode":0,
   "bbox_bottom":123,
-  "bbox_left":3,
-  "bbox_right":1123,
+  "bbox_left":5,
+  "bbox_right":1997,
   "bbox_top":3,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1125,
+  "width":2000,
 }
