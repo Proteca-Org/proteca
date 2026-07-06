@@ -1,6 +1,6 @@
 {
   "$GMObject": "",
-  "%Name": "objMissionManager",
+  "%Name": "objInspectOverlay",
   "eventList": [
     {
       "$GMEvent": "v1",
@@ -17,8 +17,8 @@
       "$GMEvent": "v1",
       "%Name": "",
       "collisionObjectId": null,
-      "eventNum": 64,
-      "eventType": 8,
+      "eventNum": 0,
+      "eventType": 3,
       "isDnD": false,
       "name": "",
       "resourceType": "GMEvent",
@@ -29,7 +29,7 @@
       "%Name": "",
       "collisionObjectId": null,
       "eventNum": 0,
-      "eventType": 3,
+      "eventType": 8,
       "isDnD": false,
       "name": "",
       "resourceType": "GMEvent",
@@ -37,14 +37,14 @@
     }
   ],
   "managed": true,
-  "name": "objMissionManager",
+  "name": "objInspectOverlay",
   "overriddenProperties": [],
   "parent": {
     "name": "Objetos",
     "path": "folders/Objetos.yy",
   },
   "parentObjectId": null,
-  "persistent": true,
+  "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,
@@ -61,7 +61,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "2.0",
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprPasswordPaper",
+    "path": "sprites/sprPasswordPaper/sprPasswordPaper.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
