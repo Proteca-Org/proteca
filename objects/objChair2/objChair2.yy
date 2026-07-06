@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objWarp",
+  "%Name":"objChair2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objWarp",
+  "name":"objChair2",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"objInteract",
+    "path":"folders/Objetos/objInteract.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,9 +30,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBlackBox",
-    "path":"sprites/sprBlackBox/sprBlackBox.yy",
+    "name":"sprChair2",
+    "path":"sprites/sprChair2/sprChair2.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sprChair2",
+    "path":"sprites/sprChair2/sprChair2.yy",
+  },
   "visible":true,
 }
