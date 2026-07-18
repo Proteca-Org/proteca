@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objWarp",
+  "%Name":"objTable",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objWarp",
+  "name":"objTable",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"objInteract",
+    "path":"folders/Objetos/objInteract.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBlackBox",
-    "path":"sprites/sprBlackBox/sprBlackBox.yy",
+    "name":"sprTable",
+    "path":"sprites/sprTable/sprTable.yy",
   },
   "spriteMaskId":null,
   "visible":true,
