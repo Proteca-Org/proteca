@@ -10,21 +10,19 @@ function scrCutsceneDefinitions(cutscene_id) {
     }
 	
 	if (cutscene_id == "chegada_floresta") {
-      return [
-          { action: "lock_input" },
-          { action: "wait", duration: 120 },
-          { action: "unlock_input" }
-      ];
+	    return [
+	        { action: "lock_input" },
+	        { action: "move", target: objPlayer, direction: 1, speed: 1, duration: 360 },
+	        { action: "teleport", target: "rmHouseLivingRoom", target_position: { x: 700, y: 265 } },
+	        { action: "unlock_input" }
+	    ];
 	}
 	
 	if (cutscene_id == "chegada_casa") {
       return [
-          { action: "lock_input" },
-          { action: "wait", duration: 120 },
-          { action: "unlock_input" }
       ];
 	}
-
+	
     show_debug_message("scrCutsceneDefinitions: cutscene_id desconhecido: " + string(cutscene_id));
     return [];
 }

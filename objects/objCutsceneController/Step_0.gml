@@ -2,6 +2,13 @@ if (!active) {
     exit;
 }
 
+if (array_length(queue) == 0) {
+    active = false;
+    global.cutscene = false;
+    stepIndex = 0;
+    exit;
+}
+
 var step = queue[stepIndex];
 
 if (step.action == "lock_input") {
@@ -43,6 +50,23 @@ if (step.action == "lock_input") {
 
     if (!instance_exists(objFade)) {
         fadeCreated = false;
+        stepIndex++;
+    }
+
+} else if (step.action == "move") {
+    if (!moveInitialized) {
+        moveTimer = step.duration;
+        moveInitialized = true;
+        step.target.targetX += step.direction * step.speed * step.duration;
+
+        if (variable_struct_exists(step, "direction")) {
+            step.target.image_xscale = sign(step.direction);
+        }
+    }
+
+    moveTimer--;
+    if (moveTimer <= 0) {
+        moveInitialized = false;
         stepIndex++;
     }
 }
