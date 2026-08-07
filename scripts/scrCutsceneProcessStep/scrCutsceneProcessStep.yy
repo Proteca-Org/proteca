@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrTriggerDialog",
+  "%Name":"scrCutsceneProcessStep",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrTriggerDialog",
+  "name":"scrCutsceneProcessStep",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

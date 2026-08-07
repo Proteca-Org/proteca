@@ -12,14 +12,17 @@ function scrCutsceneDefinitions(cutscene_id) {
 	if (cutscene_id == "chegada_floresta") {
 	    return [
 	        { action: "lock_input" },
-	        { action: "move", target: objPlayer, direction: 1, speed: 1, duration: 360 },
-	        { action: "teleport", target: "rmHouseLivingRoom", target_position: { x: 700, y: 265 } },
+			{ action: "parallel", branches: [
+			    { action: "move", target: objPlayer, target_position: { x: inst_3CAE71CC.x, y: objPlayer.y }, velocity: 2 },
+			    { action: "teleport", delay: 200, target: "rmHouseLivingRoom", target_position: { x: 700, y: 265 }, fade_speed: 0.2 }
+			]},
 	        { action: "unlock_input" }
 	    ];
 	}
 	
 	if (cutscene_id == "chegada_casa") {
       return [
+			{ action: "unlock_input" }
       ];
 	}
 	
