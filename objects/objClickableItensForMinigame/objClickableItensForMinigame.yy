@@ -1,11 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"objBluePants",
+  "%Name":"objClickableItensForMinigame",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":3,"eventType":13,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":13,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objBluePants",
+  "name":"objClickableItensForMinigame",
   "overriddenProperties":[],
   "parent":{
     "name":"objInteract",
@@ -29,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sprBluePants",
-    "path":"sprites/sprBluePants/sprBluePants.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
