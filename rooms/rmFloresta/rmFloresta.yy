@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rmFloresta",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rmFloresta/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -14,6 +14,7 @@
     {"name":"inst_109FA51B","path":"rooms/rmFloresta/rmFloresta.yy",},
     {"name":"inst_114B6025","path":"rooms/rmFloresta/rmFloresta.yy",},
     {"name":"inst_789FE175","path":"rooms/rmFloresta/rmFloresta.yy",},
+    {"name":"inst_3CAE71CC","path":"rooms/rmFloresta/rmFloresta.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -26,6 +27,7 @@
         {"$GMRInstance":"v4","%Name":"inst_109FA51B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_109FA51B","objectId":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-1.061647,"scaleX":0.703125,"scaleY":0.8625041,"x":807.1305,"y":283.01227,},
         {"$GMRInstance":"v4","%Name":"inst_114B6025","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_114B6025","objectId":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-1.061647,"scaleX":0.703125,"scaleY":0.7687381,"x":193.93684,"y":280.01227,},
         {"$GMRInstance":"v4","%Name":"inst_789FE175","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_789FE175","objectId":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-1.061647,"scaleX":1.0,"scaleY":0.5339394,"x":82.63999,"y":272.41663,},
+        {"$GMRInstance":"v4","%Name":"inst_3CAE71CC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3CAE71CC","objectId":{"name":"objWaypoint","path":"objects/objWaypoint/objWaypoint.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":384.0,},
       ],"layers":[],"name":"Colliders","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_4","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_3D29002F","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_3D29002F","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.3962264,"scaleY":0.41463414,"spriteId":{"name":"sprBench","path":"sprites/sprBench/sprBench.yy",},"x":410.0,"y":222.0,},
