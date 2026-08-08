@@ -101,7 +101,6 @@
     {"id":{"name":"objVideo","path":"objects/objVideo/objVideo.yy",},},
     {"id":{"name":"objWarp","path":"objects/objWarp/objWarp.yy",},},
     {"id":{"name":"objYellowTree","path":"objects/objYellowTree/objYellowTree.yy",},},
-    {"id":{"name":"rmBanheiro","path":"rooms/rmBanheiro/rmBanheiro.yy",},},
     {"id":{"name":"objWaypoint","path":"objects/objWaypoint/objWaypoint.yy",},},
     {"id":{"name":"rmCustomization","path":"rooms/rmCustomization/rmCustomization.yy",},},
     {"id":{"name":"rmCutscene","path":"rooms/rmCutscene/rmCutscene.yy",},},
