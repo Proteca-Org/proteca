@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Bathroom",
-    "path":"folders/Sprites/Bathroom.yy",
+    "name":"HouseBathroom",
+    "path":"folders/Sprites/HouseBathroom.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
