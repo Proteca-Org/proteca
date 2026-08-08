@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fntMinigameBig",
+  "%Name":"fntMinigameMedium",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":26,
@@ -213,7 +213,7 @@
   "last":0,
   "lineHeight":34,
   "maintainGms1Font":false,
-  "name":"fntMinigameBig",
+  "name":"fntMinigameMedium",
   "parent":{
     "name":"Fontes",
     "path":"folders/Fontes.yy",
