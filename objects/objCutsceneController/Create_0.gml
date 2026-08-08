@@ -1,8 +1,5 @@
-queue      = [];
-stepIndex  = 0;
-waitTimer  = 0;
-fadeCreated = false;
-active     = false;
+queue = [];
+stepIndex = 0;
+active = false;
 
-moveTimer = 0;
-moveInitialized = false;
+CUTSCENE_ARRIVAL_TOLERANCE = 2;
