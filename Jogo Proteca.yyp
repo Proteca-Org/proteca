@@ -126,6 +126,7 @@
     {"id":{"name":"scrDialogLinearNext","path":"scripts/scrDialogLinearNext/scrDialogLinearNext.yy",},},
     {"id":{"name":"scrInventoryDefinitions","path":"scripts/scrInventoryDefinitions/scrInventoryDefinitions.yy",},},
     {"id":{"name":"scrMenuSelection","path":"scripts/scrMenuSelection/scrMenuSelection.yy",},},
+    {"id":{"name":"scrMinigameUI","path":"scripts/scrMinigameUI/scrMinigameUI.yy",},},
     {"id":{"name":"scrPauseSelection","path":"scripts/scrPauseSelection/scrPauseSelection.yy",},},
     {"id":{"name":"srcCanOpenDialog","path":"scripts/srcCanOpenDialog/srcCanOpenDialog.yy",},},
     {"id":{"name":"srcGetDialogs","path":"scripts/srcGetDialogs/srcGetDialogs.yy",},},
