@@ -94,5 +94,14 @@
   "Mochila": [
     "Ah, a minha mochila! Estava aqui o tempo todo.",
     "Agora só falta encontrar o meu irmão."
+  ],
+
+  "quarto_irmao_1": [
+    "Oi irmão, o almoço está pront...",
+    "Nossa! O quarto está super arrumado! Que legal! Me dê um abraço!",
+    "Pare! Vamos logo então comer!"
+  ],
+  "quarto_irmao_2": [
+    ".... O que está acontecendo com ele?"
   ]
 }

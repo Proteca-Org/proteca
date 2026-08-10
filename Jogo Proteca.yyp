@@ -247,6 +247,7 @@
     {"id":{"name":"sprPasswordPaper","path":"sprites/sprPasswordPaper/sprPasswordPaper.yy",},},
     {"id":{"name":"sprPauseButton","path":"sprites/sprPauseButton/sprPauseButton.yy",},},
     {"id":{"name":"sprPencil","path":"sprites/sprPencil/sprPencil.yy",},},
+    {"id":{"name":"sprPencil1","path":"sprites/sprPencil1/sprPencil1.yy",},},
     {"id":{"name":"sprPie","path":"sprites/sprPie/sprPie.yy",},},
     {"id":{"name":"sprPileDish","path":"sprites/sprPileDish/sprPileDish.yy",},},
     {"id":{"name":"sprPlant","path":"sprites/sprPlant/sprPlant.yy",},},

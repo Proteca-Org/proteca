@@ -25,7 +25,31 @@ function scrCutsceneDefinitions(cutscene_id) {
 			{ action: "unlock_input" }
       ];
 	}
-	
+
+	if (cutscene_id == "quarto_arrumado") {
+        return [
+            { action: "lock_input" },
+
+            { action: "move", target: objIrmao, target_position: { x: inst_ENTRADA.x, y: inst_ENTRADA.y }, velocity: 2 },
+
+            { action: "move", target: objIrmao, target_position: { x: inst_curva.x, y: inst_curva.y }, velocity: 2 },
+            { action: "move", target: objIrmao, target_position: { x: inst_curva_para.x, y: inst_curva_para.y }, velocity: 2 },
+
+            // TODO: trocar sprite do herói para expressão neutra aqui
+
+            { action: "dialog", key: "quarto_irmao_1" },
+
+			{ action: "move", target: objPlayer, target_position: { x: inst_ENTRADA.x, y: inst_ENTRADA.y }, velocity: 2 },
+
+            { action: "move", target: objPlayer, target_position: { x: inst_47412913.x, y: inst_47412913.y }, velocity: 2 },
+
+            { action: "dialog", key: "quarto_irmao_2" },
+
+            // TODO prox cena
+            { action: "wait", duration: 120 }
+        ];
+    }
+
     show_debug_message("scrCutsceneDefinitions: cutscene_id desconhecido: " + string(cutscene_id));
     return [];
 }

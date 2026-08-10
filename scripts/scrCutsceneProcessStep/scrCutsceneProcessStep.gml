@@ -103,6 +103,16 @@ function scrCutsceneProcessStep(step) {
                 }
             }
             return allDone;
+			
+		case "dialog":
+            // inicialização: cria a caixa de diálogo com o key indicado
+            if (!variable_struct_exists(step, "dialogInstance")) {
+                var d = instance_create_depth(0, 0, -9999, objDialog);
+                d.objectName = step.key;
+                step.dialogInstance = d;
+            }
+            // termina quando o objDialog não existe mais (jogador clicou na última página)
+            return !instance_exists(step.dialogInstance);
     }
 
     show_debug_message("scrCutsceneProcessStep: ação desconhecida: " + string(step.action));
