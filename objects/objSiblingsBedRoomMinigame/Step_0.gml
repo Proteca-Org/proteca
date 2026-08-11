@@ -9,15 +9,25 @@ if(!global.quartoArrumado) {
 	} else if(state == MinigameState.STARTSCREEN) {
 		// Começo do minigame, ou seja, a tela de start	
 		// se pressionou botao start
-		if(keyboard_check_pressed(vk_space)) {
-			// Se o player deu start, então ativa os objetos
-			for(var i=0; i<array_length(minigameObjects); i++) {
-				instance_activate_object(minigameObjects[i])
+		//if(keyboard_check_pressed(vk_space)) {
+		if(mouse_check_button_pressed(mb_left)) {
+			var mx = device_mouse_x(0)
+			var my = device_mouse_y(0)
+			var playSizeX = sprite_get_width(sprButtonPlay) // guiSprX - 5, guiSprY + 100, frameScaleY, frameScaleY
+			var playSizeY = sprite_get_height(sprButtonPlay)
+			if(guiPlayButtonX - 1 - (playSizeX*frameScaleY)/2.5 <= mx && mx <= guiPlayButtonX + 2 + (playSizeX*frameScaleY)/2.5 &&
+			   guiPlayButtonY + 1 - (playSizeY*frameScaleY)/3 <= my && my <= guiPlayButtonY - 4 + (playSizeY*frameScaleY)/3) {
+				show_debug_message("Funcionou!!!")
+				// Se o player deu start, então ativa os objetos
+				//for(var i=0; i<array_length(minigameObjects); i++) {
+				//	instance_activate_object(minigameObjects[i])
+				//}
+				//instance_activate_object(trashBin)
+				//instance_activate_object(clothesBin)
+				//state = MinigameState.PLAYING			
+				//global.state = gameState.PUZZLE
 			}
-			instance_activate_object(trashBin)
-			instance_activate_object(clothesBin)
-			state = MinigameState.PLAYING			
-			global.state = gameState.PUZZLE
+			
 		}				
 	} else if(state == MinigameState.PLAYING) {
 		// Durante o minigame
@@ -46,11 +56,15 @@ if(!global.quartoArrumado) {
 		for(var i=0; i<array_length(minigameSpritesIds); i++) {
 			instance_deactivate_object(minigameSpritesIds[i])
 		}
+		
+		global.quartoArrumado = true
+		global.state = gameState.GAME_RUNNING
 	}
 }
 
 verificaClickNosItens = function() {
 	if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, minigameSpritesIds[2])) {
 		show_debug_message("Cliquei no sprite do donnut!")
+		state = MinigameState.STARTSCREEN
 	}
 }

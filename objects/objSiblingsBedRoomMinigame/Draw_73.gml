@@ -4,7 +4,7 @@ if (state == MinigameState.STARTSCREEN) {
 	drawScreenDim(0.6, room_width, room_height)
 	drawFrameScale(guiSprX, guiSprY, frameScaleX, frameScaleY)
 	drawText(text1, fntMinigameSmall, guiSprX, guiSprY - 50, 50, 200, true)
-	draw_sprite_ext(sprButtonPlay, 0, guiSprX - 5, guiSprY + 100, frameScaleY, frameScaleY, 0, c_white, 1)
+	draw_sprite_ext(sprButtonPlay, 0, guiPlayButtonX, guiPlayButtonY, frameScaleY, frameScaleY, 0, c_white, 1)
 	 
 } else if(state == MinigameState.PLAYING) {	
 	//draw_sprite(sprFrameMiniGame, 0, guiSprX, guiSprY)

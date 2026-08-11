@@ -20,6 +20,8 @@ global.quartoArrumado = false
 
 guiSprX = room_width/2
 guiSprY = room_height/2 - 3
+guiPlayButtonX =  guiSprX - 5
+guiPlayButtonY =  guiSprY + 100
 frameScaleX = 0.65
 frameScaleY = 0.65
 frameSizeX = sprite_get_width(sprFrameMiniGame)*frameScaleX
@@ -53,7 +55,7 @@ clothesBin.isClothesBin = true
 
 // Salva o ID dos sprites do cenário, para uso posterior
 for( var i=0; i<array_length(minigameObjects); i++) {
-	minigameSpritesIds[i] =	layer_sprite_get_id("Assets", minigameSprites[i])
+	minigameSpritesIds[i] =	layer_sprite_get_id("Assets", string(minigameSprites[i]))
 }
 
 // No create event, gera os objetos do minigame
