@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
   "%Name":"objDeadTree",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"objDeadTree",
   "overriddenProperties":[],
   "parent":{
-    "name":"Forest",
-    "path":"folders/Objetos/Forest.yy",
+    "name":"objInteract",
+    "path":"folders/Objetos/objInteract.yy",
   },
   "parentObjectId":null,
   "persistent":false,

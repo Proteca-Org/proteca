@@ -8,8 +8,8 @@
   "name":"objRedTree",
   "overriddenProperties":[],
   "parent":{
-    "name":"Forest",
-    "path":"folders/Objetos/Forest.yy",
+    "name":"objInteract",
+    "path":"folders/Objetos/objInteract.yy",
   },
   "parentObjectId":null,
   "persistent":false,
