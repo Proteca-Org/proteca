@@ -1,0 +1,1 @@
+scrCutsceneRun(scrCutsceneDefinitions("chegada_floresta"));
