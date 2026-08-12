@@ -6,8 +6,8 @@
   "name":"objDeadTree",
   "overriddenProperties":[],
   "parent":{
-    "name":"objInteract",
-    "path":"folders/Objetos/objInteract.yy",
+    "name":"Forest",
+    "path":"folders/Objetos/Forest.yy",
   },
   "parentObjectId":null,
   "persistent":false,

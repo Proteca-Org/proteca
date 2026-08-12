@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objHorse3",
+  "%Name":"objHorse",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objHorse3",
+  "name":"objHorse",
   "overriddenProperties":[],
   "parent":{
-    "name":"objInteract",
-    "path":"folders/Objetos/objInteract.yy",
+    "name":"Forest",
+    "path":"folders/Objetos/Forest.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprHorse3",
-    "path":"sprites/sprHorse3/sprHorse3.yy",
+    "name":"sprHorse",
+    "path":"sprites/sprHorse/sprHorse.yy",
   },
   "spriteMaskId":null,
   "visible":true,
