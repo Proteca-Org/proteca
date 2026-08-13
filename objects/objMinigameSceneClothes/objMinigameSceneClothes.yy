@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"objBin",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"objClickableItensForMinigame","path":"objects/objClickableItensForMinigame/objClickableItensForMinigame.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objMinigameSceneClothes",
+  "eventList":[],
   "managed":true,
-  "name":"objBin",
+  "name":"objMinigameSceneClothes",
   "overriddenProperties":[],
   "parent":{
     "name":"objInteract",
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sprBin",
-    "path":"sprites/sprBin/sprBin.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
