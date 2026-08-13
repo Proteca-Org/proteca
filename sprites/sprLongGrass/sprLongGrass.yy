@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"ForestEncounter",
-    "path":"folders/Sprites/ForestEncounter.yy",
+    "name":"Forest2",
+    "path":"folders/Sprites/Forest2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
