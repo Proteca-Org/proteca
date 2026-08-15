@@ -1,8 +1,12 @@
-cadeadoCriado = false;
 modoInspecao = false;
-dialogInitialized = false
-posicaoOriginalX = 0;
-posicaoOriginalY = 0;
-tamanhoOriginalX = 1;
-tamanhoOriginalY = 1;
-fatorAumento = 3.5;
+dialogInitialized = false;
+
+escalaOriginalX = image_xscale;
+escalaOriginalY = image_yscale;
+fatorAumento = 5;
+
+padlockVisible = false;
+padlockX = 0;
+padlockY = 0;
+padlockHalfW = sprite_get_width(sprPadlock) * 1 / 2;
+padlockHalfH = sprite_get_height(sprPadlock) * 1 / 2;
