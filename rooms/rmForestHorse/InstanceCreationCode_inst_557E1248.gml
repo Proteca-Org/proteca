@@ -1,4 +1,4 @@
-target_x = 89;
-target_y = 379;
-target_room = rmForestHorseII;
 visible = false;
+target_x = 80;
+target_y = 352;
+target_room = rmForestHorseII;

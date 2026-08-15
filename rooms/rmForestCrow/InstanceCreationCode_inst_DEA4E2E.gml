@@ -1,4 +1,4 @@
-target_x = 83;
-target_y = 404;
+target_x = 800;
+target_y = 352;
 target_room = rmForestArrival;
 visible = false;
