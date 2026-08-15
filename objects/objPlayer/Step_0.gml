@@ -4,8 +4,8 @@ if (global.state != gameState.GAME_RUNNING) {
 
 // Para testar minigame na nova room (tirar depois)
 if (keyboard_check_pressed(vk_shift)) {
-	y = 500
-	room_goto(rmParentsBedroom)
+	y = 300
+	room_goto(rmForestArrival)
 }
 
 // Inicialização do alvo na primeira execução
