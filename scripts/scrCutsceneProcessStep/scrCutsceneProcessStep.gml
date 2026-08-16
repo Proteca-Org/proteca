@@ -146,6 +146,10 @@ function scrCutsceneProcessStep(step) {
 
 		     if (scrCutsceneProcessStep(currentStep)) {
 		         step.sequenceIndex++;
+				 
+				 if (step.sequenceIndex >= array_length(step.steps)) {
+                     return true;
+                 }
 		     }
 		     return false;
     }
