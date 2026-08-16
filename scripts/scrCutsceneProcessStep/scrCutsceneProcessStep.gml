@@ -103,6 +103,51 @@ function scrCutsceneProcessStep(step) {
                 }
             }
             return allDone;
+			
+         case "dialog":
+		     if (!variable_struct_exists(step, "dialogStarted")) {
+                 step.dialogStarted = true;
+
+                 var dialog = instance_create_depth(0, 0, -9999, objDialog);
+                 dialog.objectName = step.character;
+             }
+			 
+             return !instance_exists(objDialog);
+			 
+		 case "sequence":
+		     // Inicializa a sequência
+		     if (!variable_struct_exists(step, "sequenceStarted")) {
+		         step.sequenceStarted = false;
+		         step.sequenceIndex = 0;
+		     }
+
+			 if (!step.sequenceStarted) {
+			     // Se houver uma fala configurada, espera por ela
+			     if (variable_struct_exists(step, "trigger_text")) {
+			         if (!instance_exists(objDialog)) {
+			             return false;
+			         }
+
+			         var dialogInstance = instance_find(objDialog, 0);
+			         if (dialogInstance.currentSpeechText != step.trigger_text) {
+			             return false;
+			         }
+			     }
+			     step.sequenceStarted = true;
+		     }
+
+		     // Verifica se terminou todos os steps
+		     if (step.sequenceIndex >= array_length(step.steps)) {
+		         return true;
+		     }
+
+		     // Executa o step atual
+		     var currentStep = step.steps[step.sequenceIndex];
+
+		     if (scrCutsceneProcessStep(currentStep)) {
+		         step.sequenceIndex++;
+		     }
+		     return false;
     }
 
     show_debug_message("scrCutsceneProcessStep: ação desconhecida: " + string(step.action));

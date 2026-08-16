@@ -21,9 +21,17 @@ function scrCutsceneDefinitions(cutscene_id) {
 	}
 	
 	if (cutscene_id == "chegada_casa") {
-      return [
-			{ action: "unlock_input" }
-      ];
+	     return [
+		     { action: "lock_input" },
+			 { action: "parallel", branches: [
+                { action: "dialog", character: "chegada_casa" },
+                { action: "sequence", trigger_text: "Que saco!", steps: [
+						{ action: "move", target: objPlayer, target_position: { x: objWaypoint2.x, y: objWaypoint2.y }, velocity: 3 },
+						{ action: "move", target: objPlayer, target_position: { x: inst_42A66B9B.x, y: inst_42A66B9B.y}, velocity: 3 }
+                ]}
+            ]},
+            { action: "unlock_input" }
+		];
 	}
 	
     show_debug_message("scrCutsceneDefinitions: cutscene_id desconhecido: " + string(cutscene_id));
