@@ -1,14 +1,15 @@
 if (currentAlpha > 0.0) {
-	drawScreenDim()
+	drawMinigameScreenDim(currentAlpha, guiWidth, guiHeight)
 }
 
 if (state == PuzzleState.MENU) {
 	
-	draw_sprite(sprFrameMiniGame, 0, spriteX, spriteY)
-	drawText(text1, fntMinigameBig, spriteX, spriteY - 100, 50, 300, true)
-	drawText(text2, fntMinigameSmall, spriteX, spriteY + 50, 30, 280, true)
-	draw_sprite(sprButtonPlay, 0, playButtonX, playButtonY)
-	//draw_rectangle(playBtnRect.x1, playBtnRect.y1, playBtnRect.x2, playBtnRect.y2, true)
+	drawMinigameFrame(spriteX, spriteY)
+	drawMinigameText(text1, fntMinigameBig, spriteX, spriteY - 100, 50, 300)
+	drawMinigameText(text2, fntMinigameSmall, spriteX, spriteY + 50, 30, 280)
+	if (drawMinigameSpriteButton(sprButtonPlay, playButtonX, playButtonY)) {
+		state = puzzleCompleted ? PuzzleState.DONE : PuzzleState.PLAYING;
+	}
 	
 } else if (state == PuzzleState.PLAYING) {
 	
@@ -23,7 +24,7 @@ if (state == PuzzleState.MENU) {
         var finalY = spriteY + 50 + padlockFallY
         draw_sprite_ext(sprPadlockOpen, 0, spriteX, finalY, 4, 4, padlockAngle, c_white, 1)
     } else if(padlockDoneDelay == 0) {
-		draw_sprite(sprFrameMiniGame, 0, spriteX, spriteY)
-		drawText(text3, fntMinigameBig, spriteX, spriteY, 50, 300, true)
+		drawMinigameFrame(spriteX, spriteY)
+		drawMinigameText(text3, fntMinigameBig, spriteX, spriteY, 50, 300)
 	}
 }

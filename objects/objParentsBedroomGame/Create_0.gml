@@ -49,29 +49,6 @@ hasChestBeenPressed = function() {
 	return true
 }
 
-// Detectar colisão
-playButtonWidth = sprite_get_width(sprButtonPlay)
-playButtonHeight = sprite_get_height(sprButtonPlay)
-playBtnRect = {
-	x1: playButtonX - playButtonWidth/3,
-	y1: playButtonY - playButtonHeight/4,
-	x2: playButtonX + playButtonWidth/3,
-	y2: playButtonY + playButtonHeight/4
-}
-
-hasPlayBtnPressed = function() {
-	if (!mouse_check_button_pressed(mb_left)) {
-		return false
-	}
-	
-	var mx = device_mouse_x_to_gui(0)
-	var my = device_mouse_y_to_gui(0)
-	if (!point_in_rectangle(mx, my, playBtnRect.x1, playBtnRect.y1, playBtnRect.x2, playBtnRect.y2)) {
-		return false
-	}
-	return true
-}
-
 padlockWidth = sprite_get_width(sprPadlockClosed) * 2
 padlockHeight = sprite_get_height(sprPadlockClosed) * 1.5
 padlockMargin = 60
@@ -108,14 +85,6 @@ text1 = "Você está pronto para iniciar o jogo?"
 text2 = "Clique no cadeado até que ceda!"
 text3 = "Parabéns!       Você finalizou o mini game!"
 
-drawScreenDim = function() {
-	draw_set_alpha(currentAlpha)
-	draw_set_color(c_black)
-	draw_rectangle(0, 0, guiWidth, guiHeight, false)
-	draw_set_alpha(1.0)
-	draw_set_color(c_white)
-}
-
 mathFadeIn = function(_currentAlpha, _targetAlpha, _fadeSpeed) {
 	if (_currentAlpha < _targetAlpha) {
 		_currentAlpha += _fadeSpeed
@@ -134,17 +103,4 @@ mathFadeOut = function(_currentAlpha, _fadeSpeed) {
 		}
 	}
 	return _currentAlpha
-}
-
-drawText = function(_text, _font, _x, _y, _sep, _w, _alignCenter) {
-	draw_set_font(_font)
-	draw_set_color(c_black)
-	if (_alignCenter) {
-		draw_set_halign(fa_center)
-		draw_set_valign(fa_middle)
-	}
-	draw_text_ext(_x, _y, _text, _sep, _w)
-	draw_set_color(c_white)
-	draw_set_halign(fa_left)
-	draw_set_valign(fa_top)
 }
