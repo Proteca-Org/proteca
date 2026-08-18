@@ -91,6 +91,23 @@
     }
   },
 
+  "confirmar_deletar_item": {
+    "inicio": {
+      "text": "Tem certeza que deseja descartar este item do inventário?",
+      "options": [
+        { "label": "Sim", "next": "confirmar" },
+        { "label": "Não", "next": "cancelar" }
+      ]
+    },
+    "confirmar": {
+      "text": "Ok, clique para confirmar o descarte.",
+      "action": "delete_inventory_item"
+    },
+    "cancelar": {
+      "text": "Tudo bem, o item foi mantido."
+    }
+  },
+
   "Mochila": [
     "Ah, a minha mochila! Estava aqui o tempo todo.",
     "Agora só falta encontrar o meu irmão."
