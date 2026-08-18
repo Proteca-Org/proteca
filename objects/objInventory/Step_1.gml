@@ -24,3 +24,16 @@ if (mouse_check_button_pressed(mb_left)) {
         }
     }
 }
+
+if (mouse_check_button_pressed(mb_right)) {
+    for (var h = 0; h < hotbarSlots; h++) {
+        var hxPos = hotbarX + h * (slotSize + padding);
+        if (mx >= hxPos && mx < hxPos + slotSize && my >= hotbarY && my < hotbarY + slotSize) {
+            var hItem = global.inventory.slots[h];
+            if (is_struct(hItem) && !is_undefined(hItem.inspectData)) {
+                scrOpenInspectOverlay(hItem.inspectData);
+                global.inventoryConsumedClick = true;
+            }
+        }
+    }
+}

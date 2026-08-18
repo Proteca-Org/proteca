@@ -1,0 +1,2 @@
+inspectData      = undefined;
+isManagingDialog = false;
