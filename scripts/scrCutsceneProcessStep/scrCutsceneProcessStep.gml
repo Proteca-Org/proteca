@@ -69,6 +69,61 @@ function scrCutsceneProcessStep(step) {
 		        return true;
 		    }
 		    return false;
+			case "move_horse_minigame":
+
+    if (!variable_struct_exists(step, "moveInitialized")) {
+
+        step.moveInitialized = true;
+
+        step.targetX = step.target_position.x;
+        step.targetY = step.target_position.y;
+
+        var dist = point_distance(
+            objHorseMinigame.horse_x,
+            objHorseMinigame.horse_y,
+            step.targetX,
+            step.targetY
+        );
+
+        step.timeoutTimer = ceil(dist / step.velocity) + 30;
+    }
+
+    step.timeoutTimer--;
+
+    var dir = point_direction(
+        objHorseMinigame.horse_x,
+        objHorseMinigame.horse_y,
+        step.targetX,
+        step.targetY
+    );
+
+    objHorseMinigame.horse_x += lengthdir_x(
+        step.velocity,
+        dir
+    );
+
+    objHorseMinigame.horse_y += lengthdir_y(
+        step.velocity,
+        dir
+    );
+
+    var remaining = point_distance(
+        objHorseMinigame.horse_x,
+        objHorseMinigame.horse_y,
+        step.targetX,
+        step.targetY
+    );
+
+    if (remaining <= CUTSCENE_ARRIVAL_TOLERANCE ||
+        step.timeoutTimer <= 0) {
+
+        objHorseMinigame.horse_x = step.targetX;
+        objHorseMinigame.horse_y = step.targetY;
+
+        return true;
+    }
+
+    return false;
 
         case "parallel":
 		    // Roda vários steps ("branches") ao mesmo tempo. Cada branch
