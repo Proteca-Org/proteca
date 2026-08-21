@@ -16,4 +16,10 @@ global.dialogs = {};
 global.encontrouPapel    = false;
 global.paperPassword     = "";
 
+// gênero do protagonista e do irmão/irmã/irmane — "M" | "F" | "N"
+// sobrescritos ao passar pela room rmGenderSelect
+global.playerGender  = "M";
+global.siblingGender = "M";
+
+
 instance_create_depth(0, 0, 0, objCutsceneController);

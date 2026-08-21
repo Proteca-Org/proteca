@@ -1,5 +1,6 @@
 objectName = ""
 dialogData = undefined
+dialogSpeaker = ""
 text[0] = ""
 
 page = 0
