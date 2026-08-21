@@ -15,7 +15,6 @@ if (state == HorseMiniState.INTRO) {
             my <= frame_y + frame_h / 2;
 
         if (dentro_frame) {
-
     state = HorseMiniState.PUZZLE;
 	objPlayer.visible = false;
     if (instance_exists(horse_original)) {
@@ -42,9 +41,22 @@ else if (state == HorseMiniState.PUZZLE) {
 
     // Clique durante a primeira tentativa
    if (mouse_check_button_pressed(mb_left)) {
+	   if (!global.horseEscaped) {
+		   instance_destroy(objHorseMinigame);
+		   instance_destroy(objHorse);
+		   objPlayer.visible =true;
+		   global.horseEscaped = true;
+	   }
+	   else {
+        if (arrow_x >= green_left && arrow_x <= green_right) {
+            show_debug_message("ACERTOU!");
+			
+        }
+        else {
 
-    scrCutsceneRun(
-        scrCutsceneDefinitions("fuga_cavalo")
-    );
+            show_debug_message("ERROU!");
+
+        }
+    }
 }
 }

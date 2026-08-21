@@ -6,7 +6,6 @@ if (distance_to_object(objPlayer) < 15 && mouse_check_button_pressed(mb_left) &&
         -1000,
         objHorseMinigame
     );
-    objPlayer.emInspecao = true;
     puzzle.can_interact = true;
     puzzle.horse_original = id;
 }

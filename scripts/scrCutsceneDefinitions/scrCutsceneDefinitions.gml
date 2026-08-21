@@ -53,23 +53,6 @@ function scrCutsceneDefinitions(cutscene_id) {
     }
 
 
-    if (cutscene_id == "fuga_cavalo") {
-    return [
-        { action: "lock_input" },
-
-        {
-            action: "move_horse_minigame",
-            target_position: {
-                x: 750,
-                y: 250
-            },
-            velocity: 5
-        },
-
-        { action: "unlock_input" }
-    ];
-}
-
 
     show_debug_message(
         "scrCutsceneDefinitions: cutscene_id desconhecido: "

@@ -68,6 +68,7 @@ else if (state == HorseMiniState.PUZZLE) {
 
     false
 );
+
     draw_set_color(c_white);
  
     // Mão

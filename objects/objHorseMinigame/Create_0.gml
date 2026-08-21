@@ -27,8 +27,10 @@ hand_y = gui_h / 2 + 50;
 
 arrow_left = bar_x;
 arrow_right = bar_x + bar_w;
-
+green_left = bar_x + 236;
+green_right = bar_x + 314;
 arrow_x = arrow_left;
 arrow_dir = 1;
 arrow_speed = 5;
 global.minigameActive = true;
+horse_visible = true;

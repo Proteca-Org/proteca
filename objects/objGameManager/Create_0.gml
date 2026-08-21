@@ -17,3 +17,4 @@ global.encontrouPapel    = false;
 global.paperPassword     = "";
 
 instance_create_depth(0, 0, 0, objCutsceneController);
+global.horseEscaped = false;
