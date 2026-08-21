@@ -1,4 +1,12 @@
 {
+  "_genderTerms": {
+    "mano_vocativo":     {"M": "mano",         "F": "mana",        "N": "mane"},
+    "irmao_vocativo":    {"M": "irmão",        "F": "irmã",        "N": "irmane"},
+    "meu_irmao_sujeito": {"M": "Meu irmão",    "F": "Minha irmã",  "N": "Minhe irmane"},
+    "o_meu_irmao":       {"M": "o meu irmão",  "F": "a minha irmã","N": "a minhe irmane"},
+    "irmao_titulo":      {"M": "Irmão",        "F": "Irmã",        "N": "Irmane"}
+  },
+
   "Teste Geral": [
     "Olá, meu amigo",
     "Tudo bem?",
@@ -6,36 +14,51 @@
     "Verificando funcionamento do JSON..."
   ],
 
-  "Tutorial": [
-    "Com essa seta eu me movo para esquerda.",
-    "Com essa seta eu me movo para direita.",
-    "Com essa seta eu me movo para baixo.",
-    "Com essa seta eu me movo para cima.",
-    "Ao clicar com o botão esquerdo eu posso interagir com objetos.",
-    "Para testar, clique nas cadeiras para procurar minha mochila.."
-  ],
+  "Tutorial": {
+    "speaker": "Você",
+    "lines": [
+      "Com essa seta eu me movo para esquerda.",
+      "Com essa seta eu me movo para direita.",
+      "Com essa seta eu me movo para baixo.",
+      "Com essa seta eu me movo para cima.",
+      "Ao clicar com o botão esquerdo eu posso interagir com objetos.",
+      "Para testar, clique nas cadeiras para procurar minha mochila.."
+    ]
+  },
 
-  "Introducao": [
-    "Nossa! Cadê minha mochila?",
-    "Só fui ao banheiro rapidinho e já esconderam minha mochila...",
-    "E ainda meus pais devem estar chegando e eu preciso encontrar meu irmão!"
-  ],
+  "Introducao": {
+    "speaker": "Você",
+    "lines": [
+      "Nossa! Cadê minha mochila?",
+      "Só fui ao banheiro rapidinho e já esconderam minha mochila...",
+      "E ainda meus pais devem estar chegando e eu preciso encontrar {sibling:o_meu_irmao}!"
+    ]
+  },
 
-  "Carteiras da introdução": [
-    "Minha mochila não está aqui!",
-    "Tente achá-la clicando pela sala."
-  ],
+  "Carteiras da introdução": {
+    "speaker": "Você",
+    "lines": [
+      "Minha mochila não está aqui!",
+      "Tente achá-la clicando pela sala."
+    ]
+  },
 
-  "Lápis da introdução": [
-    "Espera... esses são os meus lápis!"
-  ],
+  "Lápis da introdução": {
+    "speaker": "Você",
+    "lines": [
+      "Espera... esses são os meus lápis!"
+    ]
+  },
 
   "Papel da introdução": [
     "Você encontrou um papel, parece ter algo escrito nele..."
   ],
-  "Armário": [
-    "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
-  ],
+  "Armário": {
+    "speaker": "Você",
+    "lines": [
+      "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
+    ]
+  },
   "Cadeado sem senha": [
     "Você ainda não tem a senha para o cadeado. Aperte espaço para voltar."
   ],
@@ -49,47 +72,84 @@
   "Senha errada": [
     "Essa senha não é a correta. Tente novamente."
   ],  
-  "Armário com papel": [
-    "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
-  ],
-  "objBlockedDoor": [
-    "Não tenho motivo para entrar. Meu irmão é da sala 4."
-  ],
-  "sair sem inventario": [
-    "Ops, Estou esquecendo minha mochila.",
-    "Antes de sair, acho melhor encontrar minha mochila primeiro."
-  ],
+  "Armário com papel": {
+    "speaker": "Você",
+    "lines": [
+      "O armário está trancado, será que a minha bolsa está aí dentro? Clique no cadeado."
+    ]
+  },
+  "objBlockedDoor": {
+    "speaker": "Você",
+    "lines": [
+      "Não tenho motivo para entrar. {sibling:meu_irmao_sujeito} é da sala 4."
+    ]
+  },
+  "sair sem inventario": {
+    "speaker": "Você",
+    "lines": [
+      "Ops, Estou esquecendo minha mochila.",
+      "Antes de sair, acho melhor encontrar minha mochila primeiro."
+    ]
+  },
   "IrmaoNPC": {
     "inicio": {
-      "text": "Oi mano. Você demorou. Já estava pensando em te procurar. Está tudo bem?",
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Oi {player:mano_vocativo}. Você demorou. Já estava pensando em te procurar. Está tudo bem?",
       "options": [
         { "label": "A) Aconteceram algumas coisas comigo.... Mas não quero falar sobre isso... já estou aqui. Vamos para casa...", "next": "rota_a" },
         { "label": "B) Esconderam minha mochila e tive que procurar. Não foi legal terem feito isso comigo", "next": "rota_b" }
       ]
     },
     "rota_a": {
+      "speaker": "{sibling:irmao_titulo}",
       "text": "Tudo bem se você não quer falar. Podemos ir para casa.",
       "action": "teleport",
       "target": "rmCutscene"
     },
     "rota_b": {
-      "text": "Sinto muito irmão. Podemos falar com a professora sobre isso. Você quer fazer isso junto comigo?",
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Sinto muito, {player:irmao_vocativo}. Podemos falar com a professora sobre isso. Você quer fazer isso junto comigo?",
       "options": [
         { "label": "Sim", "next": "rota_b_sim" },
         { "label": "Não", "next": "rota_b_nao" }
       ]
     },
     "rota_b_sim": {
+      "speaker": "{sibling:irmao_titulo}",
       "text": "Certo, vamos lá falar com ela.",
       "action": "run_cutscene",
       "cutscene_id": "sala_professora"
     },
     "rota_b_nao": {
+       "speaker": "{sibling:irmao_titulo}",
        "text": "Entendo. Vamos para casa então.",
        "action": "teleport",
        "target": "rmCutscene"
     }
   },
+  "GenderSelect": {
+    "inicio": {
+      "text": "Antes de começarmos, como você prefere ser chamado(a)?",
+      "options": [
+        { "label": "Menino", "next": "ask_sibling", "set_player_gender": "M" },
+        { "label": "Menina", "next": "ask_sibling", "set_player_gender": "F" },
+        { "label": "Prefiro não especificar", "next": "ask_sibling", "set_player_gender": "N" }
+      ]
+    },
+    "ask_sibling": {
+      "text": "E seu irmão, irmã ou irmane, como devemos chamá-lo(a)?",
+      "options": [
+        { "label": "Irmão", "next": "fim", "set_sibling_gender": "M" },
+        { "label": "Irmã", "next": "fim", "set_sibling_gender": "F" },
+        { "label": "Irmane", "next": "fim", "set_sibling_gender": "N" }
+      ]
+    },
+    "fim": {
+      "text": "Perfeito!",
+      "action": "advance_room"
+    }
+  },
+
 
   "confirmar_deletar_item": {
     "inicio": {
@@ -108,8 +168,11 @@
     }
   },
 
-  "Mochila": [
-    "Ah, a minha mochila! Estava aqui o tempo todo.",
-    "Agora só falta encontrar o meu irmão."
-  ]
+  "Mochila": {
+    "speaker": "Você",
+    "lines": [
+      "Ah, a minha mochila! Estava aqui o tempo todo.",
+      "Agora só falta encontrar {sibling:o_meu_irmao}."
+    ]
+  }
 }
