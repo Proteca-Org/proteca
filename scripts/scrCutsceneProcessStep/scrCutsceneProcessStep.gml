@@ -70,10 +70,10 @@ function scrCutsceneProcessStep(step) {
 		    }
 		    return false;
 
-        case "parallel":
+		case "parallel":
 		    // Roda vários steps ("branches") ao mesmo tempo. Cada branch
-            // é só um step normal (move, teleport, wait, etc)
-			// branchDone rastreia quais já terminaram, p/ evitar reprocessamento
+        // é só um step normal (move, teleport, wait, etc)
+			  // branchDone rastreia quais já terminaram, p/ evitar reprocessamento
             if (!variable_struct_exists(step, "branchDone")) {
                 step.branchDone = array_create(array_length(step.branches), false);
             }
@@ -113,6 +113,45 @@ function scrCutsceneProcessStep(step) {
             }
             // termina quando o objDialog não existe mais (jogador clicou na última página)
             return !instance_exists(step.dialogInstance);
+			 
+		 case "sequence":
+		     // Inicializa a sequência
+		     if (!variable_struct_exists(step, "sequenceStarted")) {
+		         step.sequenceStarted = false;
+		         step.sequenceIndex = 0;
+		     }
+
+			 if (!step.sequenceStarted) {
+			     // Se houver uma fala configurada, espera por ela
+			     if (variable_struct_exists(step, "trigger_text")) {
+			         if (!instance_exists(objDialog)) {
+			             return false;
+			         }
+
+			         var dialogInstance = instance_find(objDialog, 0);
+			         if (dialogInstance.currentSpeechText != step.trigger_text) {
+			             return false;
+			         }
+			     }
+			     step.sequenceStarted = true;
+		     }
+
+		     // Verifica se terminou todos os steps
+		     if (step.sequenceIndex >= array_length(step.steps)) {
+		         return true;
+		     }
+
+		     // Executa o step atual
+		     var currentStep = step.steps[step.sequenceIndex];
+
+		     if (scrCutsceneProcessStep(currentStep)) {
+		         step.sequenceIndex++;
+				 
+				 if (step.sequenceIndex >= array_length(step.steps)) {
+                     return true;
+                 }
+		     }
+		     return false;
     }
 
     show_debug_message("scrCutsceneProcessStep: ação desconhecida: " + string(step.action));

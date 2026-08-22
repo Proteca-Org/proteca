@@ -5,7 +5,12 @@ if (global.state != gameState.GAME_RUNNING) {
 // Para testar minigame na nova room (tirar depois)
 if (keyboard_check_pressed(vk_shift)) {
 	y = 300
-	room_goto(rmParentsBedroom)
+	room_goto(rmEscola3)
+}
+
+// Para debug (tirar depois)
+if (keyboard_check_pressed(vk_alt)) {
+	global.inventoryUnlocked = true;
 }
 
 // DEBUG: Primeiro Enter leva até a room; Segundo Enter (já na room) dispara a cutscene (remover depois)
