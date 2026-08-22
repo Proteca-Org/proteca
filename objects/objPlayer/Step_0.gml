@@ -5,7 +5,12 @@ if (global.state != gameState.GAME_RUNNING) {
 // Para testar minigame na nova room (tirar depois)
 if (keyboard_check_pressed(vk_shift)) {
 	y = 300
-	room_goto(rmForestArrival)
+	room_goto(rmEscola3)
+}
+
+// Para debug (tirar depois)
+if (keyboard_check_pressed(vk_alt)) {
+	global.inventoryUnlocked = true;
 }
 
 // Inicialização do alvo na primeira execução
