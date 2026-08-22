@@ -1,3 +1,4 @@
-target_x = 128;
-target_y = 215;
-target_room = rmEscola1;
+target_x = 80;
+target_y = 352;
+target_room = rmForestHorse;
+visible = false;
