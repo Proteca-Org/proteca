@@ -55,10 +55,11 @@ function Inventory() constructor{
 	}
 }
 
-function Item(_idItem, _nameItem, _spriteItem, _descriptionItem, _effectItem) constructor {
-	idItem = _idItem;
-	nameItem = _nameItem;
-	spriteItem = _spriteItem;
+function Item(_idItem, _nameItem, _spriteItem, _descriptionItem, _effectItem, _inspectData = undefined) constructor {
+	idItem          = _idItem;
+	nameItem        = _nameItem;
+	spriteItem      = _spriteItem;
 	descriptionItem = _descriptionItem;
-	effectItem = _effectItem;
+	effectItem      = _effectItem;
+	inspectData     = _inspectData;
 }

@@ -49,29 +49,6 @@ hasChestBeenPressed = function() {
 	return true
 }
 
-// Detectar colisão
-playButtonWidth = sprite_get_width(sprButtonPlay)
-playButtonHeight = sprite_get_height(sprButtonPlay)
-playBtnRect = {
-	x1: playButtonX - playButtonWidth/3,
-	y1: playButtonY - playButtonHeight/4,
-	x2: playButtonX + playButtonWidth/3,
-	y2: playButtonY + playButtonHeight/4
-}
-
-hasPlayBtnPressed = function() {
-	if (!mouse_check_button_pressed(mb_left)) {
-		return false
-	}
-	
-	var mx = device_mouse_x_to_gui(0)
-	var my = device_mouse_y_to_gui(0)
-	if (!point_in_rectangle(mx, my, playBtnRect.x1, playBtnRect.y1, playBtnRect.x2, playBtnRect.y2)) {
-		return false
-	}
-	return true
-}
-
 padlockWidth = sprite_get_width(sprPadlockClosed) * 2
 padlockHeight = sprite_get_height(sprPadlockClosed) * 1.5
 padlockMargin = 60
