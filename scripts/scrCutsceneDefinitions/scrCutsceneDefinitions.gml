@@ -14,7 +14,7 @@ function scrCutsceneDefinitions(cutscene_id) {
 	        { action: "lock_input" },
 			{ action: "parallel", branches: [
 			    { action: "move", target: objPlayer, target_position: { x: inst_3CAE71CC.x, y: objPlayer.y }, velocity: 2 },
-			    { action: "teleport", delay: 200, target: "rmHouseLivingRoom", target_position: { x: 700, y: 265 }, fade_speed: 0.2 }
+			    { action: "teleport", delay: 200, target: "rmHouseLivingRoom", target_position: { x: 700, y: 250 }, fade_speed: 0.2 }
 			]},
 	        { action: "unlock_input" }
 	    ];
@@ -26,10 +26,11 @@ function scrCutsceneDefinitions(cutscene_id) {
 			 { action: "parallel", branches: [
                 { action: "dialog", character: "chegada_casa" },
                 { action: "sequence", trigger_text: "Que saco!", steps: [
-						{ action: "move", target: objPlayer, target_position: { x: objWaypoint2.x, y: objWaypoint2.y }, velocity: 3 },
-						{ action: "move", target: objPlayer, target_position: { x: inst_42A66B9B.x, y: inst_42A66B9B.y}, velocity: 3 }
+						{ action: "move", target: objPlayer, target_position: { x: inst_2AAD1E8F.x, y: objPlayer.y }, velocity: 3.5 },
+						{ action: "move", target: objPlayer, target_position: { x: inst_2AAD1E8F.x, y: inst_42A66B9B.y}, velocity: 3.5 }
                 ]}
             ]},
+			{ action: "teleport", delay: 200, target: "rmHouseSiblingsBedRoom", target_position: { x: 140, y: 205 } },
             { action: "unlock_input" }
 		];
 	}
