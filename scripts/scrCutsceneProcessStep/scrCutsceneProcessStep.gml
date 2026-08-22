@@ -16,6 +16,17 @@ function scrCutsceneProcessStep(step) {
             global.cutscene = false;
             return true;
 			
+		case "call_cutscene":
+		    if (!variable_struct_exists(step, "triggered")) {
+		        step.triggered = true;
+		        scrCutsceneRun(scrCutsceneDefinitions(step.cutscene_id));
+		    }
+		    return false;
+			
+		case "set_visible":
+		    step.target.visible = step.value;
+		    return true;
+			
         case "wait":
 			// variable_struct_exists é o "isso já foi inicializado?" padrão
             if (!variable_struct_exists(step, "waitTimer")) {

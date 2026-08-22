@@ -23,7 +23,7 @@
   ],
   "name":"sprBrother",
   "nineSlice":null,
-  "origin":9,
+  "origin":4,
   "parent":{
     "name":"School3",
     "path":"folders/Sprites/School3.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":63,
-    "yorigin":190,
+    "yorigin":115,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
