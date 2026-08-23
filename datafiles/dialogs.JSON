@@ -111,5 +111,36 @@
   "Mochila": [
     "Ah, a minha mochila! Estava aqui o tempo todo.",
     "Agora só falta encontrar o meu irmão."
+  ],  
+
+  "chegada_casa": [
+    {
+      "character": "Pai",
+      "text": "Tudo bem meninos? Agora que já estão em casa..."
+    },
+    {
+      "character": "Pai",
+      "text": "...precisamos fazer o almoço, eu e sua mãe chegamos agora do trabalho"
+    },
+    {
+      "character": "Pai",
+      "text": "Vamos fazer isso?"
+    },
+    {
+      "character": "Irmao",
+      "text": "Eba! Eu quero ajudar!"
+    },
+    {
+      "character": "Jogador",
+      "text": "Eu não quero ajudar..."
+    },
+    {
+      "character": "Pai",
+      "text": "Você está fazendo birra, vá arrumar o seu quarto, está uma bagunça!"
+    },
+    {
+      "character": "Jogador",
+      "text": "Que saco!"
+    }
   ]
 }
