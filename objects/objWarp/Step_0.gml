@@ -1,6 +1,9 @@
 if (variable_global_exists("dialog") && global.dialog) {
 	exit
 }
+if (variable_global_exists("cutscene") && global.cutscene) {
+	exit
+}
 if place_meeting(x, y, objPlayer) and !instance_exists(objFade){
     // Só permite passar se o inventário estiver desbloqueado
 	if (global.inventoryUnlocked) {

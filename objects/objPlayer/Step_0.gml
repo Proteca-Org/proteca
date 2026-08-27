@@ -13,6 +13,22 @@ if (keyboard_check_pressed(vk_alt)) {
 	global.inventoryUnlocked = true;
 }
 
+// DEBUG: Primeiro Enter leva até a room; Segundo Enter (já na room) dispara a cutscene (remover depois)
+if (keyboard_check_pressed(vk_enter)) {
+	if (room == rmHouseSiblingsBedRoom) {
+		if (!scrCutsceneIsActive()) {
+			scrCutsceneRun(scrCutsceneDefinitions("quarto_arrumado"));
+		}
+	} else {
+		// objPlayer é persistente: sem isso, ele mantém x/y da sala anterior ao trocar de sala
+		x = 500;
+		y = 300;
+		targetX = x;
+		targetY = y;
+		room_goto(rmHouseSiblingsBedRoom);
+	}
+}
+
 // Inicialização do alvo na primeira execução
 if (!initialized) {
 	targetX = x;

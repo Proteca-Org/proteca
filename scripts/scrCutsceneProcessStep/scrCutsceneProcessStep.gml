@@ -16,6 +16,17 @@ function scrCutsceneProcessStep(step) {
             global.cutscene = false;
             return true;
 			
+		case "call_cutscene":
+		    if (!variable_struct_exists(step, "triggered")) {
+		        step.triggered = true;
+		        scrCutsceneRun(scrCutsceneDefinitions(step.cutscene_id));
+		    }
+		    return false;
+			
+		case "set_visible":
+		    step.target.visible = step.value;
+		    return true;
+			
         case "wait":
 			// variable_struct_exists é o "isso já foi inicializado?" padrão
             if (!variable_struct_exists(step, "waitTimer")) {
@@ -70,10 +81,10 @@ function scrCutsceneProcessStep(step) {
 		    }
 		    return false;
 
-        case "parallel":
+		case "parallel":
 		    // Roda vários steps ("branches") ao mesmo tempo. Cada branch
-            // é só um step normal (move, teleport, wait, etc)
-			// branchDone rastreia quais já terminaram, p/ evitar reprocessamento
+        // é só um step normal (move, teleport, wait, etc)
+			  // branchDone rastreia quais já terminaram, p/ evitar reprocessamento
             if (!variable_struct_exists(step, "branchDone")) {
                 step.branchDone = array_create(array_length(step.branches), false);
             }
@@ -104,15 +115,15 @@ function scrCutsceneProcessStep(step) {
             }
             return allDone;
 			
-         case "dialog":
-		     if (!variable_struct_exists(step, "dialogStarted")) {
-                 step.dialogStarted = true;
-
-                 var dialog = instance_create_depth(0, 0, -9999, objDialog);
-                 dialog.objectName = step.character;
-             }
-			 
-             return !instance_exists(objDialog);
+		case "dialog":
+            // inicialização: cria a caixa de diálogo com o key indicado
+            if (!variable_struct_exists(step, "dialogInstance")) {
+                var d = instance_create_depth(0, 0, -9999, objDialog);
+                d.objectName = step.key;
+                step.dialogInstance = d;
+            }
+            // termina quando o objDialog não existe mais (jogador clicou na última página)
+            return !instance_exists(step.dialogInstance);
 			 
 		 case "sequence":
 		     // Inicializa a sequência
