@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBoxTest",
-    "path":"sprites/sprBoxTest/sprBoxTest.yy",
+    "name":"sprBrother",
+    "path":"sprites/sprBrother/sprBrother.yy",
   },
   "spriteMaskId":null,
   "visible":true,
