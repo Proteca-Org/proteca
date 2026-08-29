@@ -1,3 +1,7 @@
+draw_texture_flush();
+window_set_size(1280, 720);
+gpu_set_texfilter(false);
+
 enum gameState {
     INTRODUCTION,
     TUTORIAL,
@@ -9,8 +13,10 @@ global.state  = gameState.INTRODUCTION;
 global.pause  = false;
 global.dialog = false;
 global.dialogsLoaded = false;
-global.cutscene = false;
 global.dialogs = {};
+global.dialogConsumedClick = false;
+global.cutscene = false;
+global.cutscenesPlayed = {};
 
 // flags de história
 global.encontrouPapel    = false;

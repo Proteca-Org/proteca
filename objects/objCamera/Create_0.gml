@@ -1,4 +1,4 @@
-global.viewSizeX = 852
+global.viewSizeX = 854
 global.viewSizeY = 480
 
 
