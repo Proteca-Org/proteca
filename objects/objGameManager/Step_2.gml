@@ -1,0 +1,1 @@
+global.dialogConsumedClick = false;

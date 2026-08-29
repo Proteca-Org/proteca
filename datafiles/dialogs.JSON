@@ -87,7 +87,7 @@
     "rota_b_nao": {
        "text": "Entendo. Vamos para casa então.",
        "action": "teleport",
-       "target": "rmCutscene"
+       "cutscene_id": "chegada_floresta"
     }
   },
 
@@ -120,7 +120,7 @@
   ],
   "quarto_irmao_2": [
     ".... O que está acontecendo com ele?"
-  ],  
+  ],
 
   "chegada_casa": [
     {

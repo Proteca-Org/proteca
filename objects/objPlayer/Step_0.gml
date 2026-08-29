@@ -2,16 +2,39 @@ if (global.state != gameState.GAME_RUNNING) {
 	exit
 }
 
-// Para testar minigame na nova room (tirar depois)
-if (keyboard_check_pressed(vk_shift)) {
-	y = 300
-	room_goto(rmEscola3)
-}
+#region DEBUG
+	if (keyboard_check_pressed(vk_shift)) {
+		y = 300
+		room_goto(rmDebugRoom)
+	}
 
-// Para debug (tirar depois)
-if (keyboard_check_pressed(vk_alt)) {
-	global.inventoryUnlocked = true;
-}
+	if (keyboard_check_pressed(vk_alt)) {
+		global.inventoryUnlocked = true;
+	}
+
+	// DEBUG: Primeiro Enter leva até a room; Segundo Enter (já na room) dispara a cutscene (remover depois)
+	if (keyboard_check_pressed(vk_enter)) {
+		if (room == rmHouseSiblingsBedRoom) {
+			if (!scrCutsceneIsActive()) {
+				scrCutsceneRun(scrCutsceneDefinitions("quarto_arrumado"));
+			}
+		} else {
+			// objPlayer é persistente: sem isso, ele mantém x/y da sala anterior ao trocar de sala
+			x = 500;
+			y = 300;
+			targetX = x;
+			targetY = y;
+			room_goto(rmHouseSiblingsBedRoom);
+		}
+	}
+
+	// Dialog System
+	if (keyboard_check_pressed(ord("F"))) {
+		face = 6;
+		var dialog = instance_create_layer(x, y, "Instances", objDialog)
+		dialog.objectName = "Teste Geral";
+	}
+#endregion
 
 // DEBUG: Primeiro Enter leva até a room; Segundo Enter (já na room) dispara a cutscene (remover depois)
 if (keyboard_check_pressed(vk_enter)) {
@@ -59,7 +82,13 @@ if (canMove) {
 	if (keyboard_check(vk_down) || keyboard_check(ord("S"))) moveY = 1;
 }
 
+var prevX = x;
+var prevY = y;
+
 if (moveX != 0 || moveY != 0) {
+	// Define o lado que o player está olhando (teclado)
+	if (moveX != 0) facing = (moveX > 0) ? xScale : -xScale;
+	
 	var dir = point_direction(0, 0, moveX, moveY);
 	var moveX = lengthdir_x(velocity, dir);
 	var moveY = lengthdir_y(velocity, dir);
@@ -72,25 +101,48 @@ if (moveX != 0 || moveY != 0) {
 
 	targetX = x;
 	targetY = y;
+	isMoving = true;
 	
 } else {
 	if (distance > tolerance && distance > velocity) {
+		// Define o lado que o player está olhando (clique)
+		if (targetX != x) facing = (targetX > x) ? xScale : -xScale;
+		
 		var dir = point_direction(x, y, targetX, targetY);
 		var moveX = lengthdir_x(velocity, dir);
 		var moveY = lengthdir_y(velocity, dir);
 	
-		if (!place_meeting(x + moveX, y, objCollider)) {
-			x += moveX;}
+	    if (!place_meeting(x + moveX, y, objCollider)) {
+	        x += moveX;
+	    } else {
+	        targetX = x; 
+	    }
 
 		if (!place_meeting(x, y + moveY, objCollider)) {
-			y += moveY;}
+	        y += moveY;
+	    } else {
+	        targetY = y; 
+	    }
 
+		isMoving = true;
 		
 	} else {
 		x = targetX;
 		y = targetY;
 		
+		isMoving = false;
 	}
+}
+
+isMoving = (x != prevX) || (y != prevY);
+
+// Troca o sprite entre parado e andando
+if (isMoving) {
+	if (sprite_index != sprPlayerWalk) sprite_index = sprPlayerWalk;
+	bobOffset = walkBobOffsets[floor(image_index) mod array_length(walkBobOffsets)];
+} else {
+	if (sprite_index != sprPlayerIdle) sprite_index = sprPlayerIdle;
+	bobOffset = -2;
 }
 
 if (x > room_width - sprite_get_width(sprBlouses) / 2) x = room_width - sprite_get_width(sprBlouses) / 2;
@@ -100,7 +152,7 @@ if (y < sprite_get_height(sprBlouses)) y = sprite_get_height(sprBlouses);
 
 
 // MOVIMENTAÇÃO PELO CLIQUE
-if (mouse_check_button_pressed(mb_left) && canMove && !global.inventoryConsumedClick) {
+if (mouse_check_button_pressed(mb_left) && canMove && !global.inventoryConsumedClick && !global.dialogConsumedClick) {
 	var pauseButtonHalfWidth = sprite_get_width(sprPauseButton) / 2;
 	var pauseButtonHalfHeight = sprite_get_height(sprPauseButton) / 2;
 
@@ -125,12 +177,12 @@ if (mouse_check_button_pressed(mb_left) && canMove && !global.inventoryConsumedC
 	}
 }
 
-#region Dialog System
-	if (keyboard_check_pressed(ord("F"))) {
-		var dialog = instance_create_layer(x, y, "Instances", objDialog)
-		dialog.objectName = "Teste Geral";
-	}
-#endregion
+if (faceTimer > 0) {
+    faceTimer--;
+    if (faceTimer <= 0) {
+        face = 0; // volta para expressão neutra
+    }
+}
 
 // Define o nível de profundidade entre dois objetos, quem está mais abaixo na tela é desenhado na frente
 depth = -bbox_bottom;

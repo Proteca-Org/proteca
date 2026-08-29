@@ -39,33 +39,36 @@ function scrCutsceneDefinitions(cutscene_id) {
 // ========================
 
 	if (cutscene_id == "quarto_arrumado") {
-        return [
-            { action: "lock_input" },
-			{ action: "set_visible", target: objIrmao, value: true },
-			
-			{ action: "move", target: objIrmao, target_position: { x: objIrmao.x, y: quarto_irmao_1.y }, velocity: 3 },
-			{ action: "move", target: objIrmao, target_position: { x: quarto_irmao_2.x, y: quarto_irmao_1.y }, velocity: 3 },
-			{ action: "move", target: objIrmao, target_position: { x: quarto_irmao_2.x, y: quarto_irmao_3.y }, velocity: 3 },
+	    return [
+	        { action: "lock_input" },
+	        { action: "set_visible", target: objIrmao, value: true },
+        
+	        // PARA DEBUG: colocar expressão triste (é setada no minigame)
+	        { action: "set_face", target: objIrmao, value: 2 },
 
-            // TODO: trocar sprite do herói para expressão neutra aqui
+	        { action: "move", target: objIrmao, target_position: { x: objIrmao.x, y: quarto_irmao_1.y }, velocity: 3 },
+	        { action: "move", target: objIrmao, target_position: { x: quarto_irmao_2.x, y: quarto_irmao_1.y }, velocity: 3 },
+	        { action: "move", target: objIrmao, target_position: { x: quarto_irmao_2.x, y: quarto_irmao_3.y }, velocity: 3 },
 
-            { action: "dialog", key: "quarto_irmao_1" },
-				
-			{ action: "move", target: objPlayer, target_position: { x: objPlayer.x, y: quarto_irmao_2.y }, velocity: 3 },
-			{ action: "move", target: objPlayer, target_position: { x: quarto_irmao_1.x, y: quarto_irmao_1.y }, velocity: 3 },
-			{ action: "move", target: objPlayer, target_position: { x: quarto_irmao_1.x, y: inst_47412913.y }, velocity: 3 },
+	        { action: "set_face", target: objPlayer, value: 0 }, // expressão neutra
 
-			{ action: "set_visible", target: objPlayer, value: false },
-			
-            { action: "dialog", key: "quarto_irmao_2" },
-		
-			{ action: "teleport", target: "rmHouseLivingRoom", target_position: { x: 222, y: 240 } },
-			{ action: "set_visible", target: objPlayer, value: true },
-			
-			{ action: "unlock_input" }
-            // TODO prox cena
-        ];
-    }
+	        { action: "dialog", key: "quarto_irmao_1" },
+            
+	        { action: "move", target: objPlayer, target_position: { x: objPlayer.x, y: quarto_irmao_2.y }, velocity: 3 },
+	        { action: "move", target: objPlayer, target_position: { x: quarto_irmao_1.x, y: quarto_irmao_1.y }, velocity: 3 },
+	        { action: "move", target: objPlayer, target_position: { x: quarto_irmao_1.x, y: inst_47412913.y }, velocity: 3 },
+
+	        { action: "set_visible", target: objPlayer, value: false },
+        
+	        { action: "dialog", key: "quarto_irmao_2" },
+    
+	        { action: "teleport", target: "rmHouseLivingRoom", target_position: { x: 222, y: 240 } },
+	        { action: "set_visible", target: objPlayer, value: true },
+        
+	        { action: "unlock_input" }
+	        // TODO prox cena
+	    ];
+	}
 
     show_debug_message("scrCutsceneDefinitions: cutscene_id desconhecido: " + string(cutscene_id));
     return [];

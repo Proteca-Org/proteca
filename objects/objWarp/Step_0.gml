@@ -17,6 +17,7 @@ if place_meeting(x, y, objPlayer) and !instance_exists(objFade){
             var dialog = instance_create_layer(x, y, "Instances_2", objDialog);
             dialog.objectName = "sair sem inventario";
             global.dialog = true;
+			objPlayer.targetY += 32;
         }
     }
 }
