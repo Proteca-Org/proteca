@@ -1,18 +1,24 @@
 enum HorseMiniState {
     INTRO,
-    PUZZLE
+    PUZZLE,
+    VICTORY,
+    HORSE_ESCAPE,
+	HORSE_WALKING,
+	FAIL
 }
-
+escape_next_state = HorseMiniState.HORSE_WALKING;
 state = HorseMiniState.INTRO;
-
+escapeTimer = 0;
 gui_w = display_get_gui_width();
 gui_h = display_get_gui_height();
-
+walking_sprites = [sprWalkingHorse1, sprWalkingHorse2, sprWalkingHorse3, sprWalkingHorse4];
+horse_walk_sprite = 0;
+horse_walk_timer = 0;
+horse_walk_speed = 5;
+horse_move_speed = 5;
 frame_x = gui_w / 2;
 frame_y = gui_h / 2;
-
 horse_scale = 4.0;
-
 horse_x = gui_w / 2 - (sprite_get_width(sprHorse) * horse_scale) / 2;
 horse_y = gui_h / 2 - (sprite_get_height(sprHorse)* horse_scale) / 2;
 
