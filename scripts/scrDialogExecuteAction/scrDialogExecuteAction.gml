@@ -31,4 +31,12 @@ function scrDialogExecuteAction(){
         global.inventory.deleteItem(global.pendingDeleteSlot);
         global.pendingDeleteSlot = -1;
     }
+
+    if (currentNodeData.action == "go_to_main_menu") {
+        global.pause = false;
+        if (instance_exists(objPlayer)) instance_destroy(objPlayer);
+        if (instance_exists(objInventory)) instance_destroy(objInventory);
+        if (instance_exists(objMissionManager)) instance_destroy(objMissionManager);
+        room_goto(rmMenu);
+    }
 }

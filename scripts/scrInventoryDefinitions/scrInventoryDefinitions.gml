@@ -63,3 +63,23 @@ function Item(_idItem, _nameItem, _spriteItem, _descriptionItem, _effectItem, _i
 	effectItem      = _effectItem;
 	inspectData     = _inspectData;
 }
+
+function noEffect() {
+	show_message("function");
+	return "return";
+}
+
+// Fonte única de verdade para reconstruir um Item a partir do seu idItem.
+// usada pelo carregamento de save (scrLoadGame) para não precisar serializar
+// o struct Item inteiro (effectItem é uma referência de função, não é serializável).
+function scrGetItemById(id) {
+	switch (id) {
+		case 1:
+			return new Item(1, "Lápis", sprPencil, "lápis", noEffect);
+		case 2:
+			return new Item(2, "Papel", sprFloorPaper, "papel", noEffect, { type: "password" });
+	}
+
+	show_debug_message("scrGetItemById: id desconhecido: " + string(id));
+	return -1;
+}

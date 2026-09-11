@@ -5,7 +5,7 @@ function scrMenuSelection(option){
 			break
 			
 		case 1:
-			show_message("Carregar Jogo!")
+			scrLoadGame()
 			break
 			
 		case 2:
