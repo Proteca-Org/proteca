@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"Jogo Proteca",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -151,6 +151,7 @@
     {"id":{"name":"scrMinigameUI","path":"scripts/scrMinigameUI/scrMinigameUI.yy",},},
     {"id":{"name":"scrOpenInspectOverlay","path":"scripts/scrOpenInspectOverlay/scrOpenInspectOverlay.yy",},},
     {"id":{"name":"scrPauseSelection","path":"scripts/scrPauseSelection/scrPauseSelection.yy",},},
+    {"id":{"name":"scrSaveLoad","path":"scripts/scrSaveLoad/scrSaveLoad.yy",},},
     {"id":{"name":"srcCanOpenDialog","path":"scripts/srcCanOpenDialog/srcCanOpenDialog.yy",},},
     {"id":{"name":"srcGetDialogs","path":"scripts/srcGetDialogs/srcGetDialogs.yy",},},
     {"id":{"name":"spr_moldura","path":"sprites/spr_moldura/spr_moldura.yy",},},
