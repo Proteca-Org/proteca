@@ -18,7 +18,7 @@ for (var k = 0; k < 4; k++) {
 // Cliques no grid (apenas quando o menu está aberto)
 // inventoryConsumedClick: se o Begin Step já processou um clique na hotbar neste frame,
 // não processa o grid para não sobrescrever a seleção.
-if (global.isInventoryOpen && !global.inventoryConsumedClick) {
+if (global.isInventoryOpen && !global.inventoryConsumedClick && !instance_exists(objInspectOverlay) && !global.dialog) {
     var leftBtnPressed = mouse_check_button_pressed(mb_left);
     var rightBtnPressed = mouse_check_button_pressed(mb_right);
     
@@ -40,13 +40,20 @@ if (global.isInventoryOpen && !global.inventoryConsumedClick) {
                         selectedSlot = indexSlot;
                     }
                     
-                    if (rightBtnPressed) {
-                        global.inventory.removeItem(selectedSlot);
+                    if (rightBtnPressed && is_struct(item) && !is_undefined(item.inspectData)) {
+                        scrOpenInspectOverlay(item.inspectData);
                     }
                 }
             }
         }
     }
+}
+
+if (keyboard_check_pressed(vk_delete) && selectedSlot != -1 && !global.dialog) {
+    global.pendingDeleteSlot = selectedSlot;
+    var confirmDialog = instance_create_layer(0, 0, "Instances_1", objDialog);
+    confirmDialog.objectName = "confirmar_deletar_item";
+    global.dialog = true;
 }
 
 // Ao fechar o menu, só limpa selectedSlot se for um slot do grid exclusivo (>= 4).

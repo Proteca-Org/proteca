@@ -12,13 +12,18 @@ function scrDialogDrawTextRectangle(){
 	
 	var textToDraw = ""
 	if (!isBranching) {
-		if (is_array(dialogData)) {
-			textToDraw = dialogData[page]
-		}
-	} else {
-	    if (variable_struct_exists(currentNodeData, "text")) {
-	        textToDraw = currentNodeData.text
+		if (is_array(dialogData)){
+		    if (is_string(dialogData[page])) {
+                textToDraw = dialogData[page]
+            }
+		    else if (is_struct(dialogData[page])) {
+                textToDraw = dialogData[page].text
+            }
 	    }
-	}
+	 } else {
+	   if (variable_struct_exists(currentNodeData, "text")) {
+	       textToDraw = currentNodeData.text
+	   }
+    }
 	draw_text_ext(xRectangle + 32, yRectangle + 32, textToDraw, 32, guiWidth - 64)
 }

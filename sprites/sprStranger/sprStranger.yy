@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Forest2",
-    "path":"folders/Sprites/Forest2.yy",
+    "name":"Forest",
+    "path":"folders/Sprites/Forest.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

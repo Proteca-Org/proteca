@@ -28,16 +28,20 @@ global.yPauseButton = pauseButtonHalfHeight + 5
 
 // Se o jogo não está pausado, desenha o botão de pause
 if (!global.pause) {
-	draw_sprite(sprPauseButton, -1, global.xPauseButton, global.yPauseButton)
+	
+	var btnAlpha = 0.7; 
+	
 	if (point_in_rectangle(mx, my, global.xPauseButton-pauseButtonHalfWidth, global.yPauseButton-pauseButtonHalfHeight, global.xPauseButton+pauseButtonHalfWidth, global.yPauseButton+pauseButtonHalfHeight)) {
-		draw_set_alpha(1)
+		btnAlpha = 1.0;
+		
 		if (mouse_check_button_pressed(mb_left)) {
 			global.pause = true;
 		}
-	} else {
-		draw_set_alpha(.7)
-	}
-	exit
+	} 
+	
+	draw_sprite_ext(sprPauseButton, -1, global.xPauseButton, global.yPauseButton, 1, 1, 0, c_white, btnAlpha);
+	
+	exit;
 }
 
 // Se o jogo está pausado, desenha as opções do menu de pausa

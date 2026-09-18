@@ -26,4 +26,9 @@ function scrDialogExecuteAction(){
         var queue = scrCutsceneDefinitions(currentNodeData.cutscene_id);
         scrCutsceneRun(queue);
     }
+
+    if (currentNodeData.action == "delete_inventory_item") {
+        global.inventory.deleteItem(global.pendingDeleteSlot);
+        global.pendingDeleteSlot = -1;
+    }
 }

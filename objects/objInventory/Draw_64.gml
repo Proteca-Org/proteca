@@ -30,8 +30,8 @@ for (var h = 0; h < hotbarSlots; h++) {
 }
 
 // --- GRID COMPLETO (soh quando inventario aberto) ---
-if (!global.isInventoryOpen) {
-	exit; // Não desenha se o inventário estiver fechado
+if (!global.isInventoryOpen || instance_exists(objInspectOverlay) || global.dialog) {
+	exit;
 }
 
 draw_rectangle(startX - 20 , startY -20 , startX + 306, startY + 336, false); // Desenha container do inventario

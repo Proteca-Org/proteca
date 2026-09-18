@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Forest",
-    "path":"folders/Sprites/Forest.yy",
+    "name":"WalkHome",
+    "path":"folders/Sprites/WalkHome.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

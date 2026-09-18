@@ -7,8 +7,9 @@ if (state == PuzzleState.MENU) {
 	drawMinigameFrame(spriteX, spriteY)
 	drawMinigameText(text1, fntMinigameBig, spriteX, spriteY - 100, 50, 300)
 	drawMinigameText(text2, fntMinigameSmall, spriteX, spriteY + 50, 30, 280)
-	draw_sprite(sprButtonPlay, 0, playButtonX, playButtonY)
-	//draw_rectangle(playBtnRect.x1, playBtnRect.y1, playBtnRect.x2, playBtnRect.y2, true)
+	if (drawMinigameSpriteButton(sprButtonPlay, playButtonX, playButtonY)) {
+		state = puzzleCompleted ? PuzzleState.DONE : PuzzleState.PLAYING;
+	}
 	
 } else if (state == PuzzleState.PLAYING) {
 	

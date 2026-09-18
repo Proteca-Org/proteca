@@ -8,3 +8,4 @@ if (instance_number(objPause) > 1) {
 options = ["Retomar", "Salvar jogo", "Configurações", "Sair"]
 numOptions = array_length(options)
 selectedOption = 0
+depth = -10000

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrOpenInspectOverlay",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrOpenInspectOverlay",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

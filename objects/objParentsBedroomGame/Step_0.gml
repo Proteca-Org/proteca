@@ -46,12 +46,6 @@ if (state == PuzzleState.IDLE) {
 		global.state = gameState.PUZZLE
 	}	
 	
-} else if (state == PuzzleState.MENU) {
-	
-	if (hasPlayBtnPressed()) {
-		state = puzzleCompleted ? PuzzleState.DONE : PuzzleState.PLAYING
-	}
-	
 } else if (state == PuzzleState.PLAYING) {
 	
 	if (hasPadlockPressed()) {
