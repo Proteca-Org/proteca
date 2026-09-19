@@ -124,7 +124,7 @@
        "speaker": "{sibling:irmao_titulo}",
        "text": "Entendo. Vamos para casa então.",
        "action": "teleport",
-       "target": "rmCutscene"
+       "cutscene_id": "chegada_floresta"
     }
   },
   "GenderSelect": {
@@ -183,7 +183,7 @@
   ],
   "quarto_irmao_2": [
     ".... O que está acontecendo com ele?"
-  ],  
+  ],
 
   "chegada_casa": [
     {

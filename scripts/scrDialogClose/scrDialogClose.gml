@@ -1,4 +1,5 @@
 function scrDialogClose(){
-	instance_destroy()
-	global.dialog = false
+	global.dialogConsumedClick = true;
+	instance_destroy();
+	global.dialog = false;
 }
