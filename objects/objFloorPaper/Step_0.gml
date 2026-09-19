@@ -29,15 +29,14 @@ if (dialogInitialized) {
                 layer_create(-100000, "TopLayer");
             }
             
-            var passwordPaper = instance_create_layer(
+            var overlay = instance_create_layer(
                 camera_get_view_width(view_camera[0]) / 2,
                 camera_get_view_height(view_camera[0]) / 2,
-                "TopLayer",
-                objPasswordPaper
+                "TopLayer", objInspectOverlay
             );
-            passwordPaper.image_xscale = 20;
-            passwordPaper.image_yscale = 20;
-            passwordPaper.password_code = global.paperPassword;
+            overlay.image_xscale = 20;
+            overlay.image_yscale = 20;
+            overlay.inspectData  = { type: "password" };
             
             dialogInitialized = false;
         }
