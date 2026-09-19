@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"Jogo Proteca",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -128,6 +128,7 @@
     {"id":{"name":"rmForestEncounter","path":"rooms/rmForestEncounter/rmForestEncounter.yy",},},
     {"id":{"name":"rmForestHorse","path":"rooms/rmForestHorse/rmForestHorse.yy",},},
     {"id":{"name":"rmForestHorseII","path":"rooms/rmForestHorseII/rmForestHorseII.yy",},},
+    {"id":{"name":"rmGenderSelect","path":"rooms/rmGenderSelect/rmGenderSelect.yy",},},
     {"id":{"name":"rmHouseBathroom","path":"rooms/rmHouseBathroom/rmHouseBathroom.yy",},},
     {"id":{"name":"rmHouseDiningRoom","path":"rooms/rmHouseDiningRoom/rmHouseDiningRoom.yy",},},
     {"id":{"name":"rmHouseHallway","path":"rooms/rmHouseHallway/rmHouseHallway.yy",},},
@@ -392,6 +393,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},},
     {"roomId":{"name":"rmCustomization","path":"rooms/rmCustomization/rmCustomization.yy",},},
+    {"roomId":{"name":"rmGenderSelect","path":"rooms/rmGenderSelect/rmGenderSelect.yy",},},
     {"roomId":{"name":"rmVideo","path":"rooms/rmVideo/rmVideo.yy",},},
     {"roomId":{"name":"rmEscola1","path":"rooms/rmEscola1/rmEscola1.yy",},},
     {"roomId":{"name":"rmEscola2","path":"rooms/rmEscola2/rmEscola2.yy",},},
