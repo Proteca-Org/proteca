@@ -3,14 +3,13 @@
   "%Name":"objBin",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"objClickableItensForMinigame","path":"objects/objClickableItensForMinigame/objClickableItensForMinigame.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"objBin",
   "overriddenProperties":[],
   "parent":{
-    "name":"objInteract",
-    "path":"folders/Objetos/objInteract.yy",
+    "name":"MinigameSiblingsBedroom",
+    "path":"folders/Objetos/Minigames/MinigameSiblingsBedroom.yy",
   },
   "parentObjectId":null,
   "persistent":false,

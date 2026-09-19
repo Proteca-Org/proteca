@@ -6,8 +6,8 @@
   "name":"objMinigameSceneClothes",
   "overriddenProperties":[],
   "parent":{
-    "name":"objInteract",
-    "path":"folders/Objetos/objInteract.yy",
+    "name":"MinigameSiblingsBedroom",
+    "path":"folders/Objetos/Minigames/MinigameSiblingsBedroom.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -10,8 +10,8 @@
   "name":"objLockerGame",
   "overriddenProperties":[],
   "parent":{
-    "name":"objInteract",
-    "path":"folders/Objetos/objInteract.yy",
+    "name":"Minigames",
+    "path":"folders/Objetos/Minigames.yy",
   },
   "parentObjectId":null,
   "persistent":true,
