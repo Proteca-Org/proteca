@@ -22,6 +22,10 @@ function scrDialogExecuteAction(){
         
     }
 
+    if (currentNodeData.action == "advance_room") {
+        room_goto_next();
+    }
+
     if (currentNodeData.action == "run_cutscene") {
         var queue = scrCutsceneDefinitions(currentNodeData.cutscene_id);
         scrCutsceneRun(queue);
