@@ -21,6 +21,12 @@ if (isBranching && variable_struct_exists(currentNodeData, "options")) {
 		if (point_in_rectangle(mouseGuiX, mouseGuiY, x1, y1, x2, y2)) {
 			hoveredOption = i
 			if (mouse_check_button_pressed(mb_left)) {
+				if (variable_struct_exists(option, "set_player_gender")) {
+					global.playerGender = option.set_player_gender
+				}
+				if (variable_struct_exists(option, "set_sibling_gender")) {
+					global.siblingGender = option.set_sibling_gender
+				}
 				currentNodeKey = option.next
 				currentNodeData = dialogData[$ currentNodeKey]
 			}

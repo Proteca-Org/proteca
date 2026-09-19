@@ -1,7 +1,10 @@
 function scrDialogInitialize(){
-	dialogData = scrGetDialogs(objectName)
+	var unwrapped = scrDialogUnwrap(scrGetDialogs(objectName))
+	dialogSpeaker = unwrapped.speaker
+	dialogData = unwrapped.data
+
 	isBranching = is_struct(dialogData)
-	
+
 	if (isBranching) {
 		currentNodeData = dialogData[$ currentNodeKey]
 	}

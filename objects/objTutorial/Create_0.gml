@@ -13,7 +13,9 @@ y = display_get_gui_height()/2 - sprite_get_height(sprLeftArrow)/2
 
 stepPage = 0
 page = 0
-dialogData = scrGetDialogs("Tutorial")
+tutorialDialog = scrDialogUnwrap(scrGetDialogs("Tutorial"))
+dialogSpeaker = tutorialDialog.speaker
+dialogData = tutorialDialog.data
 guiWidth = display_get_gui_width()
 guiHeight = display_get_gui_height()
 
@@ -36,8 +38,17 @@ drawDialogTextRectangle = function() {
 	draw_set_alpha(1);
 	draw_set_color(c_white)
 	
-	var textToDraw = dialogData[page]
-	draw_text_ext(xRectangle + 32, yRectangle + 32, textToDraw, 32, guiWidth - 64)
+	var entry = scrDialogResolveEntry(dialogData[page], dialogSpeaker)
+
+	var textY = yRectangle + 32
+	if (entry.speaker != "") {
+		draw_set_color(c_yellow)
+		draw_text(xRectangle + 32, yRectangle + 16, entry.speaker)
+		draw_set_color(c_white)
+		textY = yRectangle + 52
+	}
+
+	draw_text_ext(xRectangle + 32, textY, entry.text, 32, guiWidth - 64)
 }
 
 drawSkipTutorialBtn = function() {

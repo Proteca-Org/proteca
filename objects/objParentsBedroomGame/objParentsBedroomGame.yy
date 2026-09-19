@@ -10,8 +10,8 @@
   "name":"objParentsBedroomGame",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Minigames",
+    "path":"folders/Objetos/Minigames.yy",
   },
   "parentObjectId":null,
   "persistent":false,

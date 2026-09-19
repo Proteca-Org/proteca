@@ -41,10 +41,11 @@ function scrCutsceneDefinitions(cutscene_id) {
 	if (cutscene_id == "quarto_arrumado") {
 	    return [
 	        { action: "lock_input" },
-	        { action: "set_visible", target: objIrmao, value: true },
+    
+	        { action: "set_face", target: objPlayer, value: 2 },
+          { action: "wait", duration: 30 },
         
-	        // PARA DEBUG: colocar expressão triste (é setada no minigame)
-	        { action: "set_face", target: objIrmao, value: 2 },
+          { action: "set_visible", target: objIrmao, value: true },
 
 	        { action: "move", target: objIrmao, target_position: { x: objIrmao.x, y: quarto_irmao_1.y }, velocity: 3 },
 	        { action: "move", target: objIrmao, target_position: { x: quarto_irmao_2.x, y: quarto_irmao_1.y }, velocity: 3 },
