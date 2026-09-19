@@ -41,6 +41,7 @@ function scrCutsceneDefinitions(cutscene_id) {
 	if (cutscene_id == "quarto_arrumado") {
         return [
             { action: "lock_input" },
+			{ action: "wait", duration: 30 },
 			{ action: "set_visible", target: objIrmao, value: true },
 			
 			{ action: "move", target: objIrmao, target_position: { x: objIrmao.x, y: quarto_irmao_1.y }, velocity: 3 },
