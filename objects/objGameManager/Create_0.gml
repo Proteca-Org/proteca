@@ -11,6 +11,7 @@ global.dialog = false;
 global.dialogsLoaded = false;
 global.cutscene = false;
 global.dialogs = {};
+global.cutscenesPlayed = {};
 
 // flags de história
 global.encontrouPapel    = false;

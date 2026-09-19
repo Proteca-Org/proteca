@@ -16,6 +16,17 @@ function scrCutsceneProcessStep(step) {
             global.cutscene = false;
             return true;
 			
+		case "call_cutscene":
+		    if (!variable_struct_exists(step, "triggered")) {
+		        step.triggered = true;
+		        scrCutsceneRun(scrCutsceneDefinitions(step.cutscene_id));
+		    }
+		    return false;
+			
+		case "set_visible":
+		    step.target.visible = step.value;
+		    return true;
+			
         case "wait":
 			// variable_struct_exists é o "isso já foi inicializado?" padrão
             if (!variable_struct_exists(step, "waitTimer")) {
@@ -70,10 +81,10 @@ function scrCutsceneProcessStep(step) {
 		    }
 		    return false;
 
-        case "parallel":
+		case "parallel":
 		    // Roda vários steps ("branches") ao mesmo tempo. Cada branch
-            // é só um step normal (move, teleport, wait, etc)
-			// branchDone rastreia quais já terminaram, p/ evitar reprocessamento
+        // é só um step normal (move, teleport, wait, etc)
+			  // branchDone rastreia quais já terminaram, p/ evitar reprocessamento
             if (!variable_struct_exists(step, "branchDone")) {
                 step.branchDone = array_create(array_length(step.branches), false);
             }
@@ -103,6 +114,55 @@ function scrCutsceneProcessStep(step) {
                 }
             }
             return allDone;
+			
+		case "dialog":
+            // inicialização: cria a caixa de diálogo com o key indicado
+            if (!variable_struct_exists(step, "dialogInstance")) {
+                var d = instance_create_depth(0, 0, -9999, objDialog);
+                d.objectName = step.key;
+                step.dialogInstance = d;
+            }
+            // termina quando o objDialog não existe mais (jogador clicou na última página)
+            return !instance_exists(step.dialogInstance);
+			 
+		 case "sequence":
+		     // Inicializa a sequência
+		     if (!variable_struct_exists(step, "sequenceStarted")) {
+		         step.sequenceStarted = false;
+		         step.sequenceIndex = 0;
+		     }
+
+			 if (!step.sequenceStarted) {
+			     // Se houver uma fala configurada, espera por ela
+			     if (variable_struct_exists(step, "trigger_text")) {
+			         if (!instance_exists(objDialog)) {
+			             return false;
+			         }
+
+			         var dialogInstance = instance_find(objDialog, 0);
+			         if (dialogInstance.currentSpeechText != step.trigger_text) {
+			             return false;
+			         }
+			     }
+			     step.sequenceStarted = true;
+		     }
+
+		     // Verifica se terminou todos os steps
+		     if (step.sequenceIndex >= array_length(step.steps)) {
+		         return true;
+		     }
+
+		     // Executa o step atual
+		     var currentStep = step.steps[step.sequenceIndex];
+
+		     if (scrCutsceneProcessStep(currentStep)) {
+		         step.sequenceIndex++;
+				 
+				 if (step.sequenceIndex >= array_length(step.steps)) {
+                     return true;
+                 }
+		     }
+		     return false;
     }
 
     show_debug_message("scrCutsceneProcessStep: ação desconhecida: " + string(step.action));

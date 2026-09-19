@@ -1,0 +1,2 @@
+strRotulo = ""
+isClothesBin = undefined
