@@ -3,8 +3,8 @@
 	-> Cesto lixo: applePie, chips, donnut, soda
 	-> Cesto de roupa: shirt, bluePants, shorts, sock, panties
 	
-	Obs: o minigame deve ser iniciado por uma cutscene(?), quando esta estiver pronta,
-	então por enquanto ele se inicia ao clicar em algum dos objetos envovlidos
+	Depois de completar, o player é teletransportado
+	para a cutscene ser ligada em seguida.
 */
 
 enum MinigameState {
@@ -16,8 +16,26 @@ enum MinigameState {
 }
 
 state = MinigameState.IDLE
-global.quartoArrumado = false
+
+if (!variable_global_exists("quartoArrumado")) global.quartoArrumado = false
+if (global.quartoArrumado) {
+	instance_destroy(objMinigameSceneClothes)
+   	instance_destroy()
+    exit
+}
+
 minigameCorrectiness = true
+
+hasBinBeenPressed = function() {
+	if (!mouse_check_button_pressed(mb_left)) {
+		return false;
+	}
+	
+	if (!point_in_rectangle(mouse_x, mouse_y, bbox_left, bbox_top, bbox_right, bbox_bottom)) {
+		return false;
+	}
+	return true;
+}
 
 guiSprX = room_width/2
 guiSprY = room_height/2 - 3
@@ -41,6 +59,36 @@ minigameSprites = [sprApplePie, sprChips, sprDonnut, sprSoda, sprShirt, sprBlueP
 minigameObjSpritesIds = []
 minigameBinsPositionAndScale = [[330, 335, binScale], [524 - 10, 335, binScale]]
 objCount = array_length(minigameSprites)
+
+// Funções (definidas antes de serem usadas)
+function generateClickableItens() {
+	for( var i=0; i<array_length(minigameSprites); i++) {
+		var objId = instance_create_layer(minigameItensPositionsAndScale[i][0], minigameItensPositionsAndScale[i][1], "Instances", minigameObjects[i])
+		objId.sprite_index = minigameSprites[i]
+		objId.image_xscale = minigameItensPositionsAndScale[i][2]
+		objId.image_yscale = minigameItensPositionsAndScale[i][2]
+		objId.stackOrder = i	// Ordem de empilhamento (maior = por cima)
+		if(i <= 3)
+			objId.isCloth = false
+		else
+			objId.isCloth = true
+	}	
+	return
+}
+
+verifyitensClick = function(mx, my) {
+	for(var i=0; i<array_length(minigameObjSpritesIds); i++) {
+		var inst = minigameObjSpritesIds[i]
+		if(inst != noone && instance_exists(inst) && position_meeting(mx, my, inst)) {
+			return true
+		}
+	}
+	return false
+}
+
+drawFrameScale = function drawMinigameFrameScale(x, y, scaleX, scaleY) {
+	draw_sprite_ext(sprFrameMiniGame, 0, x, y, scaleX, scaleY, 0, c_white, 1)
+}
 
 // Criar os cestos de lixo e de roupa
 trashBin = instance_create_layer(minigameBinsPositionAndScale[0][0], minigameBinsPositionAndScale[0][1], "Instances", objBin)
@@ -66,21 +114,5 @@ generateClickableItens()
 instance_deactivate_object(objClickableItensForMinigame)
 instance_deactivate_object(objBin)
 
-// Função extra
- function generateClickableItens() {
-	for( var i=0; i<array_length(minigameSprites); i++) {
-		var objId = instance_create_layer(minigameItensPositionsAndScale[i][0], minigameItensPositionsAndScale[i][1], "Instances", minigameObjects[i])
-		objId.sprite_index = minigameSprites[i]
-		objId.image_xscale = minigameItensPositionsAndScale[i][2]
-		objId.image_yscale = minigameItensPositionsAndScale[i][2]
-		if(i <= 3)
-			objId.isCloth = false
-		else
-			objId.isCloth = true
-	}	
-	return
-}
-
-drawFrameScale = function drawMinigameFrameScale(_x, _y, _scaleX, _scaleY) {
-	draw_sprite_ext(sprFrameMiniGame, 0, _x, _y, _scaleX, _scaleY, 0, c_white, 1)
-}
+// Define o nível de profundidade entre dois objetos, quem está mais abaixo na tela é desenhado na frente
+depth = -bbox_bottom;
