@@ -168,14 +168,28 @@
     }
   },
 
-  "Mochila": {
-    "speaker": "Você",
-    "lines": [
-      "Ah, a minha mochila! Estava aqui o tempo todo.",
-      "Agora só falta encontrar {sibling:o_meu_irmao}."
-    ]
-  }
-  
+  "confirmar_menu_principal": {
+    "inicio": {
+      "text": "Se você voltar ao menu principal sem salvar, o progresso desde o último save será perdido. Deseja continuar mesmo assim?",
+      "options": [
+        { "label": "Sim, voltar ao menu", "next": "confirmar" },
+        { "label": "Não, continuar jogando", "next": "cancelar" }
+      ]
+    },
+    "confirmar": {
+      "text": "Ok, clique para voltar ao menu principal.",
+      "action": "go_to_main_menu"
+    },
+    "cancelar": {
+      "text": "Tudo bem, continue jogando."
+    }
+  },
+
+  "Mochila": [
+    "Ah, a minha mochila! Estava aqui o tempo todo.",
+    "Agora só falta encontrar o meu irmão."
+  ],
+
   "quarto_irmao_1": [
     "Oi irmão, o almoço está pront...",
     "Nossa! O quarto está super arrumado! Que legal! Me dê um abraço!",

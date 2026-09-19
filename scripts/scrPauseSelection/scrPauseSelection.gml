@@ -5,13 +5,21 @@ function scrPauseSelection(option){
 			break
 			
 		case 1:
-			show_message("Essa funcionalidade será desenvolvida em breve (salvar jogo)")
+			scrSaveGame()
 			break
 			
 		case 2:
 			show_message("Essa funcionalidade será desenvolvida em breve (configurações)")
 			break
 		case 3:
+			if (!global.dialog) {
+				var confirmDialog = instance_create_depth(0, 0, -10001, objDialog)
+				confirmDialog.objectName = "confirmar_menu_principal"
+				confirmDialog.depth = -10001
+				global.dialog = true
+			}
+			break
+		case 4:
 			game_end()
 			break
 	}
