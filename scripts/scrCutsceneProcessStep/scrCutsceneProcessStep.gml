@@ -80,8 +80,8 @@ function scrCutsceneProcessStep(step) {
 		        return true;
 		    }
 		    return false;
-
-		case "parallel":
+			
+        case "parallel":
 		    // Roda vários steps ("branches") ao mesmo tempo. Cada branch
         // é só um step normal (move, teleport, wait, etc)
 			  // branchDone rastreia quais já terminaram, p/ evitar reprocessamento
