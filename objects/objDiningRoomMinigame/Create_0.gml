@@ -2,14 +2,6 @@
 
 */
 
-enum MinigameState {
-	IDLE,
-	STARTSCREEN,
-	PLAYING,
-	END,
-	DONE
-}
-
 enum foodIndexes {
 	friedEgg = 0,
 	lettuceLeaf = 1,
