@@ -3,54 +3,10 @@ if (global.state != gameState.GAME_RUNNING) {
 }
 
 #region DEBUG
-	if (keyboard_check_pressed(vk_shift)) {
-		y = 300
-		room_goto(rmDebugRoom)
-	}
-
 	if (keyboard_check_pressed(vk_alt)) {
 		global.inventoryUnlocked = true;
 	}
-
-	// DEBUG: Primeiro Enter leva até a room; Segundo Enter (já na room) dispara a cutscene (remover depois)
-	if (keyboard_check_pressed(vk_enter)) {
-		if (room == rmHouseSiblingsBedRoom) {
-			if (!scrCutsceneIsActive()) {
-				scrCutsceneRun(scrCutsceneDefinitions("quarto_arrumado"));
-			}
-		} else {
-			// objPlayer é persistente: sem isso, ele mantém x/y da sala anterior ao trocar de sala
-			x = 500;
-			y = 300;
-			targetX = x;
-			targetY = y;
-			room_goto(rmHouseSiblingsBedRoom);
-		}
-	}
-
-	// Dialog System
-	if (keyboard_check_pressed(ord("F"))) {
-		face = 6;
-		var dialog = instance_create_layer(x, y, "Instances", objDialog)
-		dialog.objectName = "Teste Geral";
-	}
 #endregion
-
-// DEBUG: Primeiro Enter leva até a room; Segundo Enter (já na room) dispara a cutscene (remover depois)
-if (keyboard_check_pressed(vk_enter)) {
-	if (room == rmHouseSiblingsBedRoom) {
-		if (!scrCutsceneIsActive()) {
-			scrCutsceneRun(scrCutsceneDefinitions("quarto_arrumado"));
-		}
-	} else {
-		// objPlayer é persistente: sem isso, ele mantém x/y da sala anterior ao trocar de sala
-		x = 500;
-		y = 300;
-		targetX = x;
-		targetY = y;
-		room_goto(rmHouseSiblingsBedRoom);
-	}
-}
 
 // Inicialização do alvo na primeira execução
 if (!initialized) {
