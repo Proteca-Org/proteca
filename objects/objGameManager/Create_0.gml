@@ -29,3 +29,6 @@ global.siblingGender = "M";
 
 
 instance_create_depth(0, 0, 0, objCutsceneController);
+if (!variable_global_exists("horseEscaped")) {
+    global.horseEscaped = false;
+}

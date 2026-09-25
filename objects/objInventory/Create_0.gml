@@ -10,17 +10,10 @@ if (!variable_global_exists("inventoryUnlocked")) {
     global.inventoryUnlocked = false;
 }
 
-function noEffect() {
-    show_message("function");
-    return "return"
-};
-
 if (!variable_global_exists("inventory")) {
     global.inventory = new Inventory();
-    var pencil = new Item(1, "Lápis", sprPencil, "lápis", noEffect);
-    var paper = new Item(2, "Papel", sprFloorPaper, "papel", noEffect, { type: "password" });
-    global.inventory.addItem(pencil);
-    global.inventory.addItem(paper);
+    global.inventory.addItem(scrGetItemById(1));
+    global.inventory.addItem(scrGetItemById(2));
 }
 
 selectedSlot = -1;

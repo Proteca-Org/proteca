@@ -4,15 +4,6 @@
  * Na demais vezes: IDLE -> START -> MENU -> DONE -> END -> IDLE
  */
 
-enum PuzzleState {
-	IDLE,
-	START,
-	MENU,
-	PLAYING,
-	DONE,
-	END
-}
-
 state = PuzzleState.IDLE
 puzzleCompleted = false
 padlockTries = 4

@@ -1,4 +1,8 @@
 /// @description Desenha a pausa (o botão ou o menu)
+if (room == rmMenu) {
+	exit;
+}
+
 draw_set_font(fntMenu)
 
 // x e y do mouse
