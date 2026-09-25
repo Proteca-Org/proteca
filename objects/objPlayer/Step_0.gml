@@ -8,6 +8,13 @@ if (global.state != gameState.GAME_RUNNING) {
 	}
 #endregion
 
+// Mensagem de save carregado
+if (variable_global_exists("showLoadMessage") && global.showLoadMessage) {
+	global.showLoadMessage = false;
+	var dialog = instance_create_layer(x, y, "Instances", objDialog);
+	dialog.objectName = "save_carregado";
+}
+
 // Inicialização do alvo na primeira execução
 if (!initialized) {
 	targetX = x;

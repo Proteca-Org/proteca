@@ -244,5 +244,9 @@
       "speaker": "Você",
       "text": "Que saco!"
     }
+  ],
+
+  "save_carregado": [
+    "Jogo carregado com sucesso!"
   ]
 }
