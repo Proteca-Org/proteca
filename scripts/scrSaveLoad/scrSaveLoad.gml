@@ -138,5 +138,6 @@ function scrLoadGame() {
 	global.newRoomStartPosition = { x: save_data.player.x, y: save_data.player.y };
 	global.hasEnteredRoom = true;
 
+	global.showLoadMessage = true;
 	room_goto(asset_get_index(save_data.room));
 }

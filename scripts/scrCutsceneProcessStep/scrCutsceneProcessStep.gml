@@ -27,6 +27,10 @@ function scrCutsceneProcessStep(step) {
 		    step.target.visible = step.value;
 		    return true;
 			
+		case "set_face":
+		    step.target.face = step.value;
+		    return true;
+			
         case "wait":
 			// variable_struct_exists é o "isso já foi inicializado?" padrão
             if (!variable_struct_exists(step, "waitTimer")) {
