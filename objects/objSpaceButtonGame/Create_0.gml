@@ -15,5 +15,4 @@ bar_x = gui_w / 2 - bar_w / 2;
 bar_y = gui_h - 140;
 
 bar_started = false;   // controla se já apareceu a barra (após o 1º clique)
-
 global.anxietyMinigameActive = true;

@@ -16,7 +16,7 @@ if (bar_started) {
 draw_set_color(c_white);
 draw_text_transformed(
     bar_x, bar_y - 40,
-    "Tente agitar a ansiedade apertando a tecla de espaço!",
+    "Tente agitar a ansiedade apertando a tecla de espaco!",
     1.5, 1.5,
     0
 );

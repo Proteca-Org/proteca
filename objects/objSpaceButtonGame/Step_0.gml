@@ -1,22 +1,22 @@
 // Dispara o minigame de ansiedade na primeira tentativa de movimento
-if (room = rmAnxiety && !anxiety_triggered) {
-	show_debug_message("entrou");
+if (!anxiety_triggered && !global.anxietyDefeated && !instance_exists(objDialog)) {
+
     var tentou_mover =
         keyboard_check(vk_left) || keyboard_check(vk_right) ||
-        keyboard_check(vk_up)   || keyboard_check(vk_down) || mouse_check_button_pressed(vk_left);
-        // ajuste pros inputs reais que você usa (ord("A"), gamepad, etc.)
+        keyboard_check(vk_up)   || keyboard_check(vk_down) || mouse_check_button_pressed(mb_left);
+
     if (tentou_mover) {
-		show_debug_message("tentou mover");
-		visible = true;
+        visible = true;
         anxiety_triggered = true;
-        objPlayer.emInspecao = true;		
+        objPlayer.emInspecao = true;
     }
 }
+
 if (keyboard_check_pressed(vk_space)) {
 
     if (!bar_started) {
         bar_started = true;
-        sprite_index = -1;   // some o sprite do botão
+        sprite_index = -1;
     }
 
     anxiety_value += fill_amount;
@@ -31,11 +31,20 @@ if (bar_started) {
 
         global.anxietyMinigameActive = false;
         objPlayer.emInspecao = false;
+
         var _fade = instance_create_layer(0, 0, "Instances", objFade);
-		_fade.target_x = 444;
-		_fade.target_y = 270;
-		_fade.target_room = rmAnxiety2;
+        _fade.target_x = 444;
+        _fade.target_y = 270;
+
+        if (room == rmAnxiety) {
+            _fade.target_room = rmAnxiety2;
+        }
+        else {
+            _fade.target_room = rmAnxiety4;
+            global.anxietyDefeated = true;
+        }
 
         instance_destroy();
+        anxiety_triggered = false;
     }
 }

@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"objDarkGrass",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objVillain",
+  "eventList":[],
   "managed":true,
-  "name":"objDarkGrass",
+  "name":"objVillain",
   "overriddenProperties":[],
   "parent":{
     "name":"Forest",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprDarkGrass",
-    "path":"sprites/sprDarkGrass/sprDarkGrass.yy",
+    "name":"sprVillain",
+    "path":"sprites/sprVillain/sprVillain.yy",
   },
   "spriteMaskId":null,
   "visible":true,

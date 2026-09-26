@@ -209,13 +209,70 @@
     }
   ],
   "lamentando": [
-    "Por que isso tinha que acontecer..."
+    {
+      "speaker": "Você",
+      "text": "Por que isso tinha que acontecer..."
+    }
   ],
   "vendo o passado":[
-    "Ele nos enganou..."
+    {
+      "speaker": "Você",
+      "text": "Ele nos enganou..."
+    }
   ],
   "cavalo-ansiedade": [
-    "Não consigo interagir..."
+    {
+      "speaker": "Você",
+      "text": "Não consigo interagir..."
+    }
+  ],
+  "irmao-ansiedade": [
+    {
+      "speaker": "Você",
+      "text": "Não posso fazer nada... são só lembranças..."
+    }
+  ],
+  "ansiedade-4":[
+    {
+      "speaker": "Você",
+      "text": "Como poderei sair desse lugar?"
+    }
+  ],
+  "ansiedade-5":[
+    {
+      "speaker": "Você",
+      "text": "Por quê isso foi acontecer, por quê?"
+    },
+    {
+      "speaker": "Vilão",
+      "text": "Seu irmão agora é meu. Até nunca mais!!"
+    }
+  ],
+  "ansiedade-6":[
+    {
+      "speaker": "Você",
+      "text": "Nós estavamos sozinhos... sem ajuda..."
+    },
+    {
+      "speaker":"Você",
+      "text": "Onde estamos?"
+    },
+    {
+      "speaker":"Você",
+      "text": "Não consigo interagir... são apenas lembranças."
+    }
+  ],
+  "ansiedade-7":[
+    {
+      "speaker": "Você",
+      "text": "Vazio... Não há nada..."
+    }
+  ],
+  "ansiedade-8":[
+    {
+      "speaker": "Você",
+      "text": "Será que tem uma passagem por ali?"
+    }
   ],
   "quarto_irmao_2": {
     "speaker": "{sibling:irmao_titulo}",

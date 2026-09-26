@@ -1,3 +1,3 @@
-target_x = 775;
-target_x = 445;
+target_x = 675;
+target_y = 425;
 target_room = rmAnxiety3;
