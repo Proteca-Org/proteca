@@ -97,7 +97,7 @@ else if (state == HorseMiniState.HORSE_WALKING) {
     }
 }
 else if (state == HorseMiniState.FAIL) {
-
+	
     if (mouse_check_button_pressed(mb_left)) {
         var frame_w = sprite_get_width(sprFrameMiniGame);
         var frame_h = sprite_get_height(sprFrameMiniGame);
@@ -112,6 +112,32 @@ else if (state == HorseMiniState.FAIL) {
             arrow_dir = 1;
             // Volta pro puzzle
             state = HorseMiniState.PUZZLE;
+        }
+    }
+}
+else if (state == HorseMiniState.VICTORY) {
+
+    if (mouse_check_button_pressed(mb_left)) {
+
+        var frame_w = sprite_get_width(sprFrameMiniGame);
+        var frame_h = sprite_get_height(sprFrameMiniGame);
+
+        var dentro_frame =
+            mx >= frame_x - frame_w / 2 &&
+            mx <= frame_x + frame_w / 2 &&
+            my >= frame_y - frame_h / 2 &&
+            my <= frame_y + frame_h / 2;
+
+        if (dentro_frame) {
+			
+            objPlayer.visible = true;
+            var _fade = instance_create_layer(0, 0, "Instances", objFade);
+            _fade.target_room = rmAnxiety;
+            _fade.target_x = 444;   
+            _fade.target_y = 270;
+            _fade.position_applied = false;
+
+            instance_destroy(); 
         }
     }
 }

@@ -17,7 +17,11 @@ global.dialogs = {};
 global.dialogConsumedClick = false;
 global.cutscene = false;
 global.cutscenesPlayed = {};
-
+global.dialogoAnsiedade4Visto = false;
+global.dialogoAnsiedade5Visto = false;
+global.dialogoAnsiedade6Visto = false;
+global.dialogoAnsiedade7Visto = false;
+global.dialogoAnsiedade8Visto = false;
 // flags de história
 global.encontrouPapel    = false;
 global.paperPassword     = "";
@@ -31,4 +35,8 @@ global.siblingGender = "M";
 instance_create_depth(0, 0, 0, objCutsceneController);
 if (!variable_global_exists("horseEscaped")) {
     global.horseEscaped = false;
+}
+
+if (!variable_global_exists("anxietyDefeated")) {
+    global.anxietyDefeated = false;
 }
