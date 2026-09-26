@@ -22,6 +22,10 @@ function scrDialogExecuteAction(){
         
     }
 
+    if (currentNodeData.action == "advance_room") {
+        room_goto_next();
+    }
+
     if (currentNodeData.action == "run_cutscene") {
         var queue = scrCutsceneDefinitions(currentNodeData.cutscene_id);
         scrCutsceneRun(queue);
@@ -30,5 +34,13 @@ function scrDialogExecuteAction(){
     if (currentNodeData.action == "delete_inventory_item") {
         global.inventory.deleteItem(global.pendingDeleteSlot);
         global.pendingDeleteSlot = -1;
+    }
+
+    if (currentNodeData.action == "go_to_main_menu") {
+        global.pause = false;
+        if (instance_exists(objPlayer)) instance_destroy(objPlayer);
+        if (instance_exists(objInventory)) instance_destroy(objInventory);
+        if (instance_exists(objMissionManager)) instance_destroy(objMissionManager);
+        room_goto(rmMenu);
     }
 }

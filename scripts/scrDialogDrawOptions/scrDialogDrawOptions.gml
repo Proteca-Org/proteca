@@ -13,7 +13,13 @@ function scrDialogDrawOptions(){
 				false
 			)
 			draw_set_color(c_white)
-			draw_text(optionRectangle._x + 10, optionRectangle._y + 10, options[i].label)
+			if (objectName == "GenderSelect") {
+				draw_set_halign(fa_center)
+				draw_text(optionRectangle._x + optionRectangle._width / 2, optionRectangle._y + 10, options[i].label)
+				draw_set_halign(fa_left)
+			} else {
+				draw_text(optionRectangle._x + 10, optionRectangle._y + 10, options[i].label)
+			}
 		}
 	}
 }
