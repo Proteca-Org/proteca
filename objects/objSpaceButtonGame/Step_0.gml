@@ -3,7 +3,10 @@ if (!anxiety_triggered && !global.anxietyDefeated && !instance_exists(objDialog)
 
     var tentou_mover =
         keyboard_check(vk_left) || keyboard_check(vk_right) ||
-        keyboard_check(vk_up)   || keyboard_check(vk_down) || mouse_check_button_pressed(mb_left);
+        keyboard_check(vk_up)   || keyboard_check(vk_down) ||
+        keyboard_check(ord("A")) || keyboard_check(ord("D")) ||
+        keyboard_check(ord("W")) || keyboard_check(ord("S")) ||
+        mouse_check_button_pressed(mb_left);
 
     if (tentou_mover) {
         visible = true;
