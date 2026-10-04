@@ -19,7 +19,7 @@ function scrCutsceneDefinitions(cutscene_id) {
         { action: "move", target: objPlayer, target_position: { x: 674, y: 383 }, velocity: 2 },
 		{action: "move", target: objIrmao, target_position: { x: 674, y: 383 }, velocity: 2},
         ]},
-        { action: "teleport", target: "rmHouseLivingRoom", target_position: { x: 700, y: 250 } },
+        { action: "teleport", delay: 200, target: "rmHouseLivingRoom", target_position: { x: 700, y: 250 }, fade_speed: 0.2 },
 
         { action: "call_cutscene", cutscene_id: "chegada_casa"}
     ];
