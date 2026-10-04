@@ -104,8 +104,8 @@
     "rota_a": {
       "speaker": "{sibling:irmao_titulo}",
       "text": "Tudo bem se você não quer falar. Podemos ir para casa.",
-      "action": "teleport",
-      "target": "rmCutscene"
+      "action": "run_cutscene",
+      "cutscene_id": "chegada_floresta"
     },
     "rota_b": {
       "speaker": "{sibling:irmao_titulo}",
@@ -124,7 +124,7 @@
     "rota_b_nao": {
        "speaker": "{sibling:irmao_titulo}",
        "text": "Entendo. Vamos para casa então.",
-       "action": "teleport",
+       "action": "run_cutscene",
        "cutscene_id": "chegada_floresta"
     }
   },
