@@ -9,3 +9,5 @@ options = ["Retomar", "Salvar jogo", "Configurações", "Menu Principal", "Sair"
 numOptions = array_length(options)
 selectedOption = 0
 depth = -10000
+
+settings_open = false;

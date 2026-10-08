@@ -53,6 +53,13 @@ draw_set_alpha(.8)
 draw_set_color(c_black)
 draw_rectangle(0, 0, guiHalfWidth*2, guiHalfHeight*2, false)
 draw_set_alpha(1)
+
+// Isso serve para que o menu de pausa não apareça junto com as configurações
+if (settings_open)
+{
+    exit;
+}
+
 for (var i = 0; i < numOptions; i++) {
 	
 	// posição em y do centro do botão
