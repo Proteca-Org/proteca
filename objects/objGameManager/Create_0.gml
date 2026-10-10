@@ -25,6 +25,7 @@ global.dialogoAnsiedade8Visto = false;
 // flags de história
 global.encontrouPapel    = false;
 global.paperPassword     = "";
+global.plateClean        = false;
 
 // gênero do protagonista e do irmão/irmã/irmane — "M" | "F" | "N"
 // sobrescritos ao passar pela room rmGenderSelect

@@ -5,7 +5,8 @@
     "meu_irmao_sujeito": {"M": "Meu irmão",    "F": "Minha irmã",  "N": "Minhe irmane"},
     "o_meu_irmao":       {"M": "o meu irmão",  "F": "a minha irmã","N": "a minhe irmane"},
     "irmao_titulo":      {"M": "Irmão",        "F": "Irmã",        "N": "Irmane"},
-    "pronome_ele":       {"M": "ele",          "F": "ela",         "N": "elu"}
+    "pronome_ele":       {"M": "ele",          "F": "ela",         "N": "elu"},
+    "irmaozao_vocativo": {"M": "irmãozão",     "F": "irmãzona",    "N": "irmãozone"}
   },
 
   "Teste Geral": [
@@ -314,5 +315,35 @@
 
   "save_carregado": [
     "Jogo carregado com sucesso!"
-  ]
+  ],
+
+  "banheiro_irmao": [
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Diplinism irhm, u tenho mus icao casa pff azê"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "I quio us docinti di noca ecola. num se adequudo is mainha nixdadi."
+    },
+    {
+      "speaker": "Você",
+      "text": "Quê? Não fala com a escova na boca."
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Eu entendi nada do dever de matemática... Me ajuda a fazer, {player:irmaozao_vocativo}?"
+    },
+    {
+      "speaker": "Você",
+      "text": "Depois, {sibling:mano_vocativo}, depois."
+    }
+  ],
+
+  "banheiro_irmao_sozinho": {
+    "speaker": "{sibling:irmao_titulo}",
+    "lines": [
+      "Nossa, mas ainda tem tanta coisa pra fazer..."
+    ]
+  }
 }
