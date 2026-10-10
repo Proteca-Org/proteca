@@ -71,6 +71,44 @@ function scrCutsceneDefinitions(cutscene_id) {
 	    ];
 	}
 
+// ========================
+
+	if (cutscene_id == "cutscene_banheiro") {
+	    return [
+	        { action: "lock_input" },
+
+	        { action: "set_visible", target: objIrmao, value: true },
+
+	        { action: "dialog", key: "banheiro_irmao" },
+
+	        { action: "move", target: objPlayer, target_position: { x: 531, y: 480 }, velocity: 3 },
+
+	        { action: "set_visible", target: objPlayer, value: false },
+
+	        { action: "dialog", key: "banheiro_irmao_sozinho" },
+
+	        { action: "set_visible", target: objIrmao, value: false },
+
+	        { action: "teleport", target: "rmHouseHallway", target_position: { x: 265, y: 300 } },
+
+	        { action: "call_cutscene", cutscene_id: "corredor_para_quarto_pais" }
+	    ];
+	}
+
+	if (cutscene_id == "corredor_para_quarto_pais") {
+	    return [
+	        { action: "set_visible", target: objPlayer, value: true },
+
+	        { action: "move", target: objPlayer, target_position: { x: 582, y: objPlayer.y }, velocity: 3 },
+
+	        { action: "move", target: objPlayer, target_position: { x: 582, y: 220 }, velocity: 3 },
+
+	        { action: "teleport", target: "rmParentsBedroom", target_position: { x: 200, y: 250 } },
+
+	        { action: "unlock_input" }
+	    ];
+	}
+
     show_debug_message("scrCutsceneDefinitions: cutscene_id desconhecido: " + string(cutscene_id));
     return [];
 }
