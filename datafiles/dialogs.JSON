@@ -281,6 +281,33 @@
     ]
   },
 
+  "antes_jantar": [
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Mãeeee! O Irmãozão finalmente arrumou aquela zona! Nunca vi um quarto tão limpo como aquele."
+    },
+    {
+      "speaker": "Mãe",
+      "text": "Que bicho te mordeu? Nem parece meu filho."
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "É verdade! E ficou muito bom."
+    },
+    {
+      "speaker": "Você",
+      "text": "Aff... Nem foi grande coisa."
+    },
+    {
+      "speaker": "Pai",
+      "text": "Mas aquela pilha de roupas era grande! Achava que se respirasse forte aquele monstro me engoliria."
+    },
+    {
+      "speaker": "Mãe",
+      "text": "Obrigada, filho. Sei que a mamãe está sem tempo pra cuidar de vocês, isso me ajuda e muito. Vamos comer!"
+    }
+  ],
+
   "chegada_casa": [
     {
       "speaker": "Pai",
