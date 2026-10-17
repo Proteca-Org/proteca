@@ -22,6 +22,7 @@ guiPlayButtonY =  guiSprY + 165
 itensScale = 0.8
 
 heroChair = instance_find(objChair1, 0)
+diningTable = instance_find(objTable, 0)
 // ovo, repolho, folhas salada,, tomate, carne
 eatenFoods = [false, false, false, false, false]
 leftFoods = array_length(eatenFoods)
