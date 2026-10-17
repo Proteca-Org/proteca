@@ -1,3 +1,4 @@
-target_x = 160;
-target_y = 370;
-target_room = rmEscola3;
+visible = false;
+target_x = 400;
+target_y = 350;
+target_room = rmHouseHallway;
