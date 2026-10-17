@@ -5,21 +5,24 @@ function scrCutsceneDefinitions(cutscene_id) {
             { action: "lock_input" },
             { action: "teleport", target: "rmEscola4", target_position: { x: 375, y: 260 } },
             { action: "wait", duration: 180 },
-            { action: "teleport", target: "rmWalkHome", target_position: { x: 120, y: 330 } },
             
 			{ action: "call_cutscene", cutscene_id: "chegada_floresta" }
         ];
     }
 	
 	if (cutscene_id == "chegada_floresta") {
-	    return [
-			{ action: "parallel", branches: [
-			    { action: "move", target: objPlayer, target_position: { x: inst_3CAE71CC.x, y: objPlayer.y }, velocity: 2 },
-			    { action: "teleport", delay: 200, target: "rmHouseLivingRoom", target_position: { x: 700, y: 250 }, fade_speed: 0.2 }
-			]},
-	        
-			{ action: "call_cutscene", cutscene_id: "chegada_casa" }
-	    ];
+	  return [
+	    { action: "lock_input" },
+        { action: "teleport", target: "rmWalkHome", target_position: { x: 110, y: 370 } },
+        { action: "parallel", branches: [
+			                                        //Passando o valor direto pois pelo WayPoint da erro
+        { action: "move", target: objPlayer, target_position: { x: 674, y: 383 }, velocity: 2 },
+		{action: "move", target: objIrmao, target_position: { x: 674, y: 383 }, velocity: 2},
+        ]},
+        { action: "teleport", delay: 200, target: "rmHouseLivingRoom", target_position: { x: 700, y: 250 }, fade_speed: 0.2 },
+
+        { action: "call_cutscene", cutscene_id: "chegada_casa"}
+    ];
 	}
 	
 	if (cutscene_id == "chegada_casa") {
