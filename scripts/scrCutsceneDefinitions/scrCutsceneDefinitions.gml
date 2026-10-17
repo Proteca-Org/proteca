@@ -27,6 +27,9 @@ function scrCutsceneDefinitions(cutscene_id) {
 	
 	if (cutscene_id == "chegada_casa") {
 	     return [
+			 { action: "set_visible", target: objFather, value: true },
+			 { action: "set_visible", target: objMother, value: true },
+			 { action: "set_visible", target: objIrmao, value: true },
 			 { action: "parallel", branches: [
                 { action: "dialog", key: "chegada_casa" },
                 { action: "sequence", trigger_text: "Que saco!", steps: [
@@ -77,7 +80,9 @@ function scrCutsceneDefinitions(cutscene_id) {
 	    return [
 	        //{ action: "lock_input" },
 			{ action: "set_visible", target: objPlayer, value: true },
-			
+			{ action: "set_visible", target: objFather, value: true },
+			{ action: "set_visible", target: objMother, value: true },
+
 			{ action: "wait", duration: 30 },
 			{ action: "set_visible", target: objIrmao, value: true },
 	
