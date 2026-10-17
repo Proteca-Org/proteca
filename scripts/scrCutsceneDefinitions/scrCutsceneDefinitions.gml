@@ -5,25 +5,31 @@ function scrCutsceneDefinitions(cutscene_id) {
             { action: "lock_input" },
             { action: "teleport", target: "rmEscola4", target_position: { x: 375, y: 260 } },
             { action: "wait", duration: 180 },
-            { action: "teleport", target: "rmWalkHome", target_position: { x: 120, y: 330 } },
             
 			{ action: "call_cutscene", cutscene_id: "chegada_floresta" }
         ];
     }
 	
 	if (cutscene_id == "chegada_floresta") {
-	    return [
-			{ action: "parallel", branches: [
-			    { action: "move", target: objPlayer, target_position: { x: inst_3CAE71CC.x, y: objPlayer.y }, velocity: 2 },
-			    { action: "teleport", delay: 200, target: "rmHouseLivingRoom", target_position: { x: 700, y: 250 }, fade_speed: 0.2 }
-			]},
-	        
-			{ action: "call_cutscene", cutscene_id: "chegada_casa" }
-	    ];
+	  return [
+	    { action: "lock_input" },
+        { action: "teleport", target: "rmWalkHome", target_position: { x: 110, y: 370 } },
+        { action: "parallel", branches: [
+			                                        //Passando o valor direto pois pelo WayPoint da erro
+        { action: "move", target: objPlayer, target_position: { x: 674, y: 383 }, velocity: 2 },
+		{action: "move", target: objIrmao, target_position: { x: 674, y: 383 }, velocity: 2},
+        ]},
+        { action: "teleport", delay: 200, target: "rmHouseLivingRoom", target_position: { x: 700, y: 250 }, fade_speed: 0.2 },
+
+        { action: "call_cutscene", cutscene_id: "chegada_casa"}
+    ];
 	}
 	
 	if (cutscene_id == "chegada_casa") {
 	     return [
+			 { action: "set_visible", target: objFather, value: true },
+			 { action: "set_visible", target: objMother, value: true },
+			 { action: "set_visible", target: objIrmao, value: true },
 			 { action: "parallel", branches: [
                 { action: "dialog", key: "chegada_casa" },
                 { action: "sequence", trigger_text: "Que saco!", steps: [
@@ -63,9 +69,34 @@ function scrCutsceneDefinitions(cutscene_id) {
         
 	        { action: "dialog", key: "quarto_irmao_2" },
     
-	        { action: "teleport", target: "rmHouseLivingRoom", target_position: { x: 222, y: 240 } },
-	        { action: "set_visible", target: objPlayer, value: true },
+	        { action: "teleport", target: "rmHouseDiningRoom", target_position: { x: 367, y: 270 } },
         
+			{ action: "call_cutscene", cutscene_id: "antes_do_jantar" },
+	    ];
+	}
+	
+	// Continuacao da cena anterior, mas no outro cenario
+	if (cutscene_id == "antes_do_jantar") {
+	    return [
+	        //{ action: "lock_input" },
+			{ action: "set_visible", target: objPlayer, value: true },
+			{ action: "set_visible", target: objFather, value: true },
+			{ action: "set_visible", target: objMother, value: true },
+
+			{ action: "wait", duration: 30 },
+			{ action: "set_visible", target: objIrmao, value: true },
+	
+	        { action: "move", target: objIrmao, target_position: { x: sala_jantar_irmao_1.x, y: sala_jantar_irmao_1.y }, velocity: 3 },
+			{ action: "move", target: objIrmao, target_position: { x: sala_jantar_irmao_2.x, y: sala_jantar_irmao_2.y }, velocity: 3 },	        
+			{ action: "move", target: objIrmao, target_position: { x: sala_jantar_irmao_3.x, y: sala_jantar_irmao_3.y }, velocity: 3 },
+			
+			//{ action: "wait", duration: 100 },
+        
+			{ action: "dialog", key: "antes_jantar" },
+			// TODO alterar rosto irmao para alegria
+			
+			//{ action: "dialog", key: "antes_jantar_2" },
+			
 	        { action: "unlock_input" }
 	        // TODO prox cena
 	    ];

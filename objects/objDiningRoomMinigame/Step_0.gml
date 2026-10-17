@@ -4,9 +4,9 @@ if (!global.plateClean) {
 	if(state == MinigameState.IDLE) {
 	 
 		// Minigame ainda não começou	
-		if (mouse_check_button_pressed(mb_left) && 
-			position_meeting(device_mouse_x(0), device_mouse_y(0), heroChair) && 
-			point_distance(objPlayer.x, objPlayer.y, heroChair.x, heroChair.y) <= 35) {
+		if (global.quartoArrumado && mouse_check_button_pressed(mb_left) &&
+			position_meeting(device_mouse_x(0), device_mouse_y(0), diningTable) &&
+			point_distance(objPlayer.x, objPlayer.y, diningTable.x, diningTable.y) <= 80) {
 				
 			state = MinigameState.STARTSCREEN
 		}
