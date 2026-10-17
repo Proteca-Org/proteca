@@ -9,8 +9,10 @@ function scrPauseSelection(option){
 			break
 			
 		case 2:
-			show_message("Essa funcionalidade será desenvolvida em breve (configurações)")
-			break
+		    var pauseMenu = instance_find(objPause, 0);
+		    pauseMenu.settings_open = true;
+		    instance_create_depth(0, 0, -10001, objSettingsMenu);
+		    break
 		case 3:
 			if (!global.dialog) {
 				var confirmDialog = instance_create_depth(0, 0, -10001, objDialog)
