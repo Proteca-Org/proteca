@@ -105,7 +105,7 @@ for (var i = 0; i < 4; i++)
 {
     var yy = cat_y + i * (cat_h + cat_spacing);
 
-    // Verifica se o mouse está sobre esta categoria
+    // Verifica se o mouse esta sobre esta categoria
     if (point_in_rectangle(
         mouse_gui_x,
         mouse_gui_y,
@@ -117,14 +117,14 @@ for (var i = 0; i < 4; i++)
     {
         categoria_mouse = i;
 
-        // Só muda a categoria quando clicar
+        // So muda a categoria quando clicar
         if (mouse_check_button_pressed(mb_left))
         {
             categoria_selecionada = i;
         }
     }
 
-    // Desenha o botão selecionado
+    // Desenha o botao selecionado
     // se estiver selecionado ou com o mouse em cima
     if (i == categoria_selecionada || i == categoria_mouse)
     {
@@ -208,20 +208,48 @@ switch (categoria_selecionada)
         );
 
 
-        draw_line(
-            panel_x + 20,
-            panel_y + 95,
-            panel_x + 220,
-            panel_y + 95
-        );
+        
+		// Barra do slider
+		draw_set_color(c_gray);
 
-        draw_circle(
-            panel_x + 120,
-            panel_y + 95,
-            8,
-            false
-        );
+		draw_rectangle(
+		    slider_x,
+		    slider_y - 3,
+		    slider_x + slider_w,
+		    slider_y + 3,
+		    false
+		);
 
+		// Posição do indicador conforme o volume
+		var slider_indicador_x = slider_x
+		    + slider_w * global.configuracoes.audio.volume_geral;
+
+		// Desenha o indicador
+		draw_set_color(c_blue);
+
+		draw_circle(
+		    slider_indicador_x,
+		    slider_y,
+		    slider_raio,
+		    false
+		);
+		
+		// Mostra o volume atual em porcentagem
+		var volume_porcentagem = round(
+		    global.configuracoes.audio.volume_geral * 100
+		);
+
+		draw_set_color(c_black);
+
+		draw_text_transformed(
+		    slider_x + slider_w + 20,
+		    slider_y - 5,
+		    string(volume_porcentagem) + "%",
+		    0.8,
+		    0.8,
+		    0
+		);
+		
         break;
     case 1:
         draw_text_transformed(
@@ -243,7 +271,20 @@ switch (categoria_selecionada)
         );
 
         break;
-    case 2:
+    case 2:	   
+	    // Verifica se o mouse esta sobre o dropdown
+		var mouse_sobre_dropdown = point_in_rectangle(
+		    mouse_gui_x,
+		    mouse_gui_y,
+		    dropdown_x,
+		    dropdown_y,
+		    dropdown_x + dropdown_w,
+		    dropdown_y + dropdown_h
+		);
+		
+	    // Título da categoria
+	    draw_set_color(c_black);
+
 	    draw_text_transformed(
 	        panel_x + 30,
 	        panel_y + 50,
@@ -252,8 +293,8 @@ switch (categoria_selecionada)
 	        0.65,
 	        0
 	    );
-		
-		draw_text_transformed(
+
+	    draw_text_transformed(
 	        panel_x + 31,
 	        panel_y + 50,
 	        "Idioma do jogo",
@@ -262,7 +303,113 @@ switch (categoria_selecionada)
 	        0
 	    );
 
-		break;
+	    
+		// Caixa do dropdown
+		if (mouse_sobre_dropdown)
+		{
+		    draw_sprite_ext(
+		        sprUiDropdownSelected,
+		        0,
+		        dropdown_x,
+		        dropdown_y,
+		        dropdown_w / sprite_get_width(sprUiDropdownSelected),
+		        dropdown_h / sprite_get_height(sprUiDropdownSelected),
+		        0,
+		        c_white,
+		        1
+		    );
+		}
+		else
+		{
+		    draw_sprite_ext(
+		        sprUiDropdown,
+		        0,
+		        dropdown_x,
+		        dropdown_y,
+		        dropdown_w / sprite_get_width(sprUiDropdown),
+		        dropdown_h / sprite_get_height(sprUiDropdown),
+		        0,
+		        c_white,
+		        1
+		    );
+		}
+
+	    // Idioma atualmente selecionado
+	    draw_set_color(c_black);
+
+	    draw_text_transformed(
+	        dropdown_x + 12,
+	        dropdown_y + 12,
+	        idiomas[idioma_selecionado],
+	        0.65,
+	        0.65,
+	        0
+	    );
+		
+		// Opcoes do dropdown
+		if (dropdown_aberto)
+		{
+		    var opcao_altura = 36;
+		    var opcao_y = dropdown_y + 40;
+
+		    idioma_mouse = -1;
+
+		    for (var i = 0; i < array_length(idiomas); i++)
+		    {
+		        var opcao_topo = opcao_y + (i * opcao_altura);
+		        var opcao_fundo = opcao_topo + opcao_altura;
+
+		        var mouse_sobre_opcao = point_in_rectangle(
+		            mouse_gui_x,
+		            mouse_gui_y,
+		            dropdown_x,
+		            opcao_topo,
+		            dropdown_x + dropdown_w,
+		            opcao_fundo
+		        );
+
+		        if (mouse_sobre_opcao)
+		        {
+		            idioma_mouse = i;
+		        }
+
+		        // Fundo da opcao
+		        if (mouse_sobre_opcao)
+		        {
+		            draw_sprite_ext(
+		                sprUiButtonSelected, 0,
+		                dropdown_x, opcao_topo,
+		                dropdown_w / sprite_get_width(sprUiButtonSelected),
+		                opcao_altura / sprite_get_height(sprUiButtonSelected),
+		                0, c_white, 1
+		            );
+		        }
+		        else
+		        {
+		            draw_sprite_ext(
+		                sprUiButtonNormal, 0,
+		                dropdown_x, opcao_topo,
+		                dropdown_w / sprite_get_width(sprUiButtonNormal),
+		                opcao_altura / sprite_get_height(sprUiButtonNormal),
+		                0, c_white, 1
+		            );
+		        }
+
+		        // Texto da opcao
+		        draw_set_color(c_black);
+		        draw_text_transformed(
+		            dropdown_x + 12,
+		            opcao_topo + 9,
+		            idiomas[i],
+		            0.55,
+		            0.55,
+		            0
+		        );
+		    }
+		}
+
+	    break;
+
 
     case 3:
         draw_text_transformed(
