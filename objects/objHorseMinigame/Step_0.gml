@@ -92,6 +92,10 @@ else if (state == HorseMiniState.HORSE_WALKING) {
         objPlayer.visible = true;
         // Marca que o cavalo fugiu
         global.horseEscaped = true;
+        // Falha da cena 4: encadeia a continuacao do dialogo (so em rmForestHorse)
+        if (room == rmForestHorse) {
+            scrCutsceneRun(scrCutsceneDefinitions("floresta_cavalo1_fim"));
+        }
         // Destrói o minigame
         instance_destroy();
     }
@@ -129,15 +133,24 @@ else if (state == HorseMiniState.VICTORY) {
             my <= frame_y + frame_h / 2;
 
         if (dentro_frame) {
-			
-            objPlayer.visible = true;
-            var _fade = instance_create_layer(0, 0, "Instances", objFade);
-            _fade.target_room = rmAnxiety;
-            _fade.target_x = 444;   
-            _fade.target_y = 270;
-            _fade.position_applied = false;
 
-            instance_destroy(); 
+            objPlayer.visible = true;
+
+            if (room == rmForestHorseII) {
+                // Vitoria da cena 5: encadeia a transformacao/revelacao do vilao
+                // (a cutscene cuida do teleporte final para rmAnxiety).
+                scrCutsceneRun(scrCutsceneDefinitions("floresta_cavalo2_fim"));
+                instance_destroy();
+            } else {
+                // Comportamento legado (fallback seguro): fade direto para rmAnxiety.
+                var _fade = instance_create_layer(0, 0, "Instances", objFade);
+                _fade.target_room = rmAnxiety;
+                _fade.target_x = 444;
+                _fade.target_y = 270;
+                _fade.position_applied = false;
+
+                instance_destroy();
+            }
         }
     }
 }

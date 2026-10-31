@@ -140,6 +140,110 @@ function scrCutsceneDefinitions(cutscene_id) {
 	    ];
 	}
 
+// ======================== FLORESTA ========================
+
+	// Cena 1 — rmForestArrival
+	if (cutscene_id == "floresta_chegada") {
+	    return [
+	        { action: "lock_input" },
+	        { action: "set_visible", target: objIrmao, value: true },
+	        { action: "parallel", branches: [
+	            { action: "dialog", key: "chegada_floresta" },
+	            { action: "sequence", trigger_text: "Hein, {player:irmaozao_vocativo}, não fique parado aí! Vamos explorar!", steps: [
+	                { action: "move", target: objIrmao, target_position: { x: 950, y: objIrmao.y }, velocity: 3 },
+	                { action: "set_visible", target: objIrmao, value: false }
+	            ]}
+	        ]},
+	        { action: "unlock_input" }
+	    ];
+	}
+
+	// Cena 2 — rmForestCrow
+	if (cutscene_id == "floresta_corvo") {
+	    return [
+	        { action: "lock_input" },
+	        { action: "set_visible", target: objIrmao, value: true },
+	        { action: "parallel", branches: [
+	            { action: "dialog", key: "corvo_forest" },
+	            { action: "sequence", trigger_text: "Passarinho!", steps: [
+	                { action: "move", target: objIrmao, target_position: { x: 950, y: objIrmao.y }, velocity: 3 },
+	                { action: "set_visible", target: objIrmao, value: false }
+	            ]}
+	        ]},
+	        { action: "unlock_input" }
+	    ];
+	}
+
+	// Cena 3a — rmForestEncounter (ao entrar). Cavalo relincha em "Iiiiriri!" (pagina 0 -> sem trigger_text;
+	// delay no branch do parallel) e trota para fora de cena pela direita antes de sumir.
+	if (cutscene_id == "floresta_encontro") {
+	    return [
+	        { action: "lock_input" },
+	        { action: "set_visible", target: objIrmao, value: true },
+	        { action: "parallel", branches: [
+	            { action: "dialog", key: "estranho_1a" },
+	            { action: "sequence", delay: 45, steps: [
+	                { action: "move", target: objHorse, target_position: { x: 1000, y: objHorse.y }, velocity: 4 },
+	                { action: "set_visible", target: objHorse, value: false }
+	            ]}
+	        ]},
+	        { action: "unlock_input" }
+	    ];
+	}
+
+	// Cena 3b — disparada pelo clique no estranho deitado
+	if (cutscene_id == "floresta_encontro_fim") {
+	    return [
+	        { action: "lock_input" },
+	        { action: "set_angle", target: objStranger, value: 0 },
+	        { action: "dialog", key: "estranho_1b" },
+	        { action: "unlock_input" }
+	    ];
+	}
+
+	// Cena 4 — rmForestHorse (ao entrar)
+	if (cutscene_id == "floresta_cavalo1") {
+	    return [
+	        { action: "lock_input" },
+	        { action: "set_visible", target: objIrmao, value: true },
+	        { action: "dialog", key: "estranho_2a" },
+	        { action: "unlock_input" }
+	    ];
+	}
+
+	// Cena 4 fim — disparada pela falha do minigame em rmForestHorse
+	if (cutscene_id == "floresta_cavalo1_fim") {
+	    return [
+	        { action: "lock_input" },
+	        { action: "dialog", key: "estranho_2b" },
+	        { action: "unlock_input" }
+	    ];
+	}
+
+	// Cena 5a — rmForestHorseII (ao entrar)
+	if (cutscene_id == "floresta_cavalo2") {
+	    return [
+	        { action: "lock_input" },
+	        { action: "set_visible", target: objIrmao, value: true },
+	        { action: "dialog", key: "estranho_3a" },
+	        { action: "unlock_input" }
+	    ];
+	}
+
+	// Cena 5b/6 — disparada pela vitoria do minigame em rmForestHorseII.
+	// Irmao some no inicio (set_visible; "Consegui!" e pagina 0 e trigger_text nao dispara na 1a linha).
+	if (cutscene_id == "floresta_cavalo2_fim") {
+	    return [
+	        { action: "lock_input" },
+	        { action: "set_visible", target: objIrmao, value: false },
+	        { action: "dialog", key: "estranho_3b" },
+	        { action: "set_visible", target: objStranger, value: false },
+	        { action: "set_visible", target: objVillain, value: true },
+	        { action: "dialog", key: "estranho_vilao" },
+	        { action: "teleport", target: "rmAnxiety", target_position: { x: 444, y: 270 } }
+	    ];
+	}
+
     show_debug_message("scrCutsceneDefinitions: cutscene_id desconhecido: " + string(cutscene_id));
     return [];
 }

@@ -379,5 +379,188 @@
     "lines": [
       "Nossa, mas ainda tem tanta coisa pra fazer..."
     ]
-  }
+  },
+
+  "chegada_floresta": [
+    {
+      "speaker": "Você",
+      "text": "Onde estamos?"
+    },
+    {
+      "speaker": "Você",
+      "text": "Estávamos em casa... Como podemos aparecer em um lugar tão diferente?"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Caramba!"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Um redemoinho saltou, e nós saltamos com ele, e nós viemos parar aqui, e é tudo diferente aqui! Legal demais!"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Hein, {player:irmaozao_vocativo}, não fique parado aí! Vamos explorar!"
+    },
+    {
+      "speaker": "Você",
+      "text": "Hum, talvez não seja tão ruim..."
+    }
+  ],
+
+  "corvo_forest": [
+    {
+      "speaker": "Corvo",
+      "text": "Cua!"
+    },
+    {
+      "speaker": "Corvo",
+      "text": "Cua! Cua!"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Passarinho!"
+    }
+  ],
+
+  "estranho_1a": [
+    {
+      "speaker": "Cavalo",
+      "text": "Iiiiriri!"
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Ai, meu joelho!"
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Pela Santa! Como eu poderia imaginar que encontraria alguém no meio da floresta?! Meus heróis!"
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Aí, aí, meninos... Aí... Meninos, por favor, me ajudem!"
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Eu acabei caindo do meu cavalo e ele continuou trotando."
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Como o conheço bem, sei que ele não deve ter ido muito longe."
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Por favor, me ajudem a encontrar meu cavalo... Ai que dor!"
+    }
+  ],
+
+  "estranho_1b": [
+    {
+      "speaker": "Estranho",
+      "text": "Muito, mas muito obrigado mesmo! Eu não sei o que faria sem a ajuda de vocês, sou apenas um velho que mal consegue se aguentar em pé."
+    },
+    {
+      "speaker": "Você (pensamento)",
+      "text": "Ele apenas deve estar tendo dificuldade em se segurar."
+    }
+  ],
+
+  "estranho_2a": [
+    {
+      "speaker": "Estranho",
+      "text": "Ali! Meu cavalo está ali!"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Onde está? Eu também quero ver!"
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Ali!"
+    },
+    {
+      "speaker": "Você",
+      "text": "Estou vendo... Façam silêncio, vou tentar me aproximar..."
+    }
+  ],
+
+  "estranho_2b": [
+    {
+      "speaker": "Estranho",
+      "text": "Minha nossa! Essa foi quase! É impressionante o quanto você é habilidoso, garotinho! Ah, se eu fosse assim na sua idade! Incrível!"
+    },
+    {
+      "speaker": "Você (pensamento)",
+      "text": "Será que foi tão impressionante assim?"
+    }
+  ],
+
+  "estranho_3a": [
+    {
+      "speaker": "Estranho",
+      "text": "Ali! Meu cavalo está ali!"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Onde? Onde?"
+    },
+    {
+      "speaker": "Você",
+      "text": "Agora não tem por onde ele fugir... Vou finalmente pegá-lo!"
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Caramba! Está sendo mais difícil do que imaginei... Eu nunca conseguiria sem a ajuda de vocês..."
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Vamos fazer o seguinte: acabo de me lembrar que na bolsa que ainda está presa à sela do meu cavalo, tenho vários doces guardados! Vocês podem ficar com quantos quiserem se conseguirem pegá-lo!"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Precisamos capturar este cavalo!"
+    },
+    {
+      "speaker": "Você",
+      "text": "Vamos!"
+    }
+  ],
+
+  "estranho_3b": [
+    {
+      "speaker": "Você",
+      "text": "Consegui!"
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Que incrível. Eu nunca conseguiria sem você! Essa nova geração é mesmo impressionante, venha até aqui, vou te dar todos os doces que quiser..."
+    },
+    {
+      "speaker": "Você",
+      "text": "Que é isso... Eu não fiz nada de mais. Mas espera aí... Você está conseguindo ficar de pé, desde quando?"
+    }
+  ],
+
+  "estranho_vilao": [
+    {
+      "speaker": "Estranho",
+      "text": "Seu irmão tem muita inocência dentro de si, acho melhor você desistir dele."
+    },
+    {
+      "speaker": "Você",
+      "text": "O que... O que você fez?! Cadê o meu irmão?!"
+    },
+    {
+      "speaker": "Estranho",
+      "text": "Seu irmão agora é meu. Até nunca mais!!"
+    },
+    {
+      "speaker": "Você",
+      "text": "Aconteceu... De novo... Foi a mesma coisa... A mesmíssima coisa... E eu não percebi... haah..."
+    },
+    {
+      "speaker": "Você (pensamento)",
+      "text": "Irmão... Eu não devia ter saído do seu lado... Todos aqueles elogios... Promessas... E ele ainda tocou em mim... Aquele cara tocou em mim e deve ter tocado no meu irmão também! Como eu não percebi antes? Como eu não percebi antes!?"
+    }
+  ]
 }
