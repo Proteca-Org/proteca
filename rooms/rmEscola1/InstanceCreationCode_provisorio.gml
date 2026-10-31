@@ -1,3 +1,3 @@
-target_x = 382;
-target_y = 382;
-target_room = rmHouseSiblingsBedRoom;
+target_x = 100;
+target_y = 400;
+target_room = rmForestArrival;

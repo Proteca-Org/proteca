@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rmForestHorse",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rmForestHorse/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -59,12 +59,16 @@
     {"name":"inst_64344FA","path":"rooms/rmForestHorse/rmForestHorse.yy",},
     {"name":"inst_1C47A5D5","path":"rooms/rmForestHorse/rmForestHorse.yy",},
     {"name":"inst_2408E160","path":"rooms/rmForestHorse/rmForestHorse.yy",},
+    {"name":"inst_1E9E0EEE","path":"rooms/rmForestHorse/rmForestHorse.yy",},
+    {"name":"inst_745860F","path":"rooms/rmForestHorse/rmForestHorse.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances_Warps","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_557E1248","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_557E1248","objectId":{"name":"objWarp","path":"objects/objWarp/objWarp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":4.203125,"x":847.0,"y":348.5,},
+        {"$GMRInstance":"v4","%Name":"inst_557E1248","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_557E1248","objectId":{"name":"objWarp","path":"objects/objWarp/objWarp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":4.203125,"x":836.0,"y":348.5,},
         {"$GMRInstance":"v4","%Name":"inst_3A808329","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A808329","objectId":{"name":"objWarp","path":"objects/objWarp/objWarp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":4.203125,"x":15.0,"y":349.0,},
+        {"$GMRInstance":"v4","%Name":"inst_1E9E0EEE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1E9E0EEE","objectId":{"name":"objIrmao","path":"objects/objIrmao/objIrmao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.4920635,"scaleY":0.44588745,"x":96.0,"y":416.27704,},
+        {"$GMRInstance":"v4","%Name":"inst_745860F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_745860F","objectId":{"name":"objStranger","path":"objects/objStranger/objStranger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.24944602,"scaleX":-0.40465117,"scaleY":0.48051947,"x":192.0,"y":288.0,},
       ],"layers":[],"name":"Instances_Warps","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances_Colliders","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_140649DE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_140649DE","objectId":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":13.5,"scaleY":0.5,"x":432.0,"y":496.0,},
