@@ -3,9 +3,10 @@ function scrCutsceneDefinitions(cutscene_id) {
     if (cutscene_id == "sala_professora") {
         return [
             { action: "lock_input" },
-            { action: "teleport", target: "rmEscola4", target_position: { x: 375, y: 260 } },
-            { action: "wait", duration: 180 },
-            
+            { action: "teleport", target: "rmEscola4", target_position: { x: 576, y: 260 } },
+            { action: "wait", duration: 120 },
+            { action: "dialog", key: "sala_professora" },
+			{ action: "wait", duration: 120 },
 			{ action: "call_cutscene", cutscene_id: "chegada_floresta" }
         ];
     }
