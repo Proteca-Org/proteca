@@ -18,6 +18,8 @@
     {"name":"inst_7830B563","path":"rooms/rmEscola4/rmEscola4.yy",},
     {"name":"inst_70970205","path":"rooms/rmEscola4/rmEscola4.yy",},
     {"name":"inst_24A5141D","path":"rooms/rmEscola4/rmEscola4.yy",},
+    {"name":"inst_2EA6E9DE","path":"rooms/rmEscola4/rmEscola4.yy",},
+    {"name":"inst_5F26A2A8","path":"rooms/rmEscola4/rmEscola4.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -35,6 +37,8 @@
     {"$GMRInstanceLayer":"","%Name":"instancesPlayer","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_563DB5B3_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_563DB5B3_1","objectId":{"name":"objInventory","path":"objects/objInventory/objInventory.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":32.0,},
         {"$GMRInstance":"v4","%Name":"inst_22FEB92A_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_22FEB92A_1","objectId":{"name":"objPause","path":"objects/objPause/objPause.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":64.0,},
+        {"$GMRInstance":"v4","%Name":"inst_2EA6E9DE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2EA6E9DE","objectId":{"name":"objTeacher","path":"objects/objTeacher/objTeacher.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.7,"scaleY":0.7,"x":448.0,"y":128.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5F26A2A8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F26A2A8","objectId":{"name":"objIrmao","path":"objects/objIrmao/objIrmao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.45,"scaleY":0.45,"x":406.0,"y":256.0,},
       ],"layers":[],"name":"instancesPlayer","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_1F4B24BE","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_1F4B24BE","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.45728642,"scaleY":0.47409907,"spriteId":{"name":"sprBackgroundTeacherRoom","path":"sprites/sprBackgroundTeacherRoom/sprBackgroundTeacherRoom.yy",},"x":64.0,"y":3.0517578E-05,},

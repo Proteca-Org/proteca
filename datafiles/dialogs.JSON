@@ -381,6 +381,58 @@
     ]
   },
 
+  "sala_professora": [
+    {
+    "speaker": "Professora",
+    "text": "Olá pessoas, Que carinhas mais tristes... O que aconteceu?"
+    },
+    {
+    "speaker": "Você",
+    "text": "Pegaram as minhas coisas... De novo..."
+    },
+    {
+    "speaker": "{sibling:irmao_titulo}",
+    "text": "Aqueles marginais não deixam meu irmãozão em paz! Temos que fazer alguma coisa! Eu quero 'injustiça'!!!"
+    },
+    {
+    "speaker": "Professora",
+    "text": "Calma, vamos resolver isso juntos. Você conseguiu encontrar suas coisas ou ainda estão perdidas?"
+    },
+    {
+    "speaker": "Você",
+    "text": "Achei..."
+    },
+    {
+    "speaker": "Professora",
+    "text": "Ótimo. Você sabe quem fez isso?"
+    },
+    {
+    "speaker": "Você",
+    "text": "Eu tinha ido ao banheiro... E quando voltei estava tudo espalhado."
+    },
+    {
+    "speaker": "Professora",
+    "text": "Hmm... Eu sinto muito que isso tenha acontecido."
+    },
+    {
+    "speaker": "Professora",
+    "text":
+      "Não se preocupe, eu estou com você. O bullying é uma atitude lamentável, uma ferramenta de covardes."
+    },
+    {
+    "speaker": "Professora",
+    "text": "Eu vou comunicar a diretoria e isso será resolvido, vamos encontrar quem fez isso e vou ter uma conversa bem séria..."
+    },
+    {
+    "speaker": "Professora",
+    "text":  "Não se preocupe mesmo. Isso não irá se repetir."
+  },
+  {
+    "speaker": "Você",
+    "text": "Ok... Obrigado..."
+  }
+  ],
+
   "chegada_floresta": [
     {
       "speaker": "Você",
