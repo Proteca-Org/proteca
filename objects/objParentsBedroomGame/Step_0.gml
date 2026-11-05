@@ -74,8 +74,7 @@ if (state == PuzzleState.IDLE && global.cutscene == false) {
 	if (currentAlpha <= 0.0) {		
 		state = PuzzleState.IDLE
 		global.state = gameState.GAME_RUNNING
+		global.cutscene = true
+		scrCutsceneRun(scrCutsceneDefinitions("quarto_dos_pais_2"))
 	}
-	
-	global.cutscene = true
-	scrCutsceneRun(scrCutsceneDefinitions("quarto_dos_pais_2"))
 }
