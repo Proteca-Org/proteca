@@ -1,3 +1,3 @@
-target_x = 160;
-target_y = 370;
-target_room = rmEscola2;
+target_x = 93;
+target_y = 266;
+target_room = rmHouseLivingRoom;

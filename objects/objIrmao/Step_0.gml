@@ -23,8 +23,9 @@ if (distance > tolerance && distance > velocity) {
 depth = -bbox_bottom;
 
 // Interação clicável (NPC da escola) — desativada durante cutscenes pra não abrir o diálogo errado
-if (!global.cutscene && srcCanOpenDialog() && room != rmAnxiety3 && room != rmAnxiety6) {
+if (!global.cutscene && srcCanOpenDialog() && global.brotherFound = false) {
     var dialog = instance_create_layer(0, 0, "Instances", objDialog);
     dialog.objectName = "IrmaoNPC";
     scrCompleteMission("flag_brother_found");
+	global.brotherFound = true;
 }
