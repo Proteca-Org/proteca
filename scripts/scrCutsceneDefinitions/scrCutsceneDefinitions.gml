@@ -137,14 +137,16 @@ function scrCutsceneDefinitions(cutscene_id) {
 
 	        { action: "teleport", target: "rmParentsBedroom", target_position: { x: 200, y: 250 } },
 
+			{ action: "set_visible", target: objPlayer, value: false },
+			
 	        { action: "call_cutscene", cutscene_id: "quarto_dos_pais_1" }
 	    ];
 	}
 	
 	if (cutscene_id == "quarto_dos_pais_1") {
 		return [
-			{ action: "set_visible", target: objPlayer, value: false },
-			
+			{ action: "wait", duration: 3},		
+			{ action: "lock_input" },			
 			{ action: "set_visible", target: objIrmao, value: true },
 			
 			{ action: "move", target: objIrmao, target_position: { x: 500, y: 320 }, velocity: 3 },
@@ -163,22 +165,25 @@ function scrCutsceneDefinitions(cutscene_id) {
 			
 			{ action: "dialog", key: "quarto_dos_pais_3" },
 			
-			//{ action: "unlock_input" }
-			
 			// Agora o jogador deve clicar no baú
 		];
 	}
 	
 	if (cutscene_id == "quarto_dos_pais_2") {
 		return [
-			{ action: "lock_input" },
-			
+			{ action: "lock_input" },			
 			{ action: "parallel", branches: [
             		{ action: "move", target: objPlayer, target_position: { x: 395, y: 320 }, velocity: 3 },
-					{ action: "move", target: objIrmao, target_position: { x: 458, y: 320 }, velocity: 3 }
-            ]},
-			
+					{ action: "move", target: objIrmao, target_position: { x: 458, y: 320 }, velocity: 3 },
+					{ action: "move", target: objIrmao, target_position: { x: 459, y: 320 }, velocity: 3 }
+            ]},			
 			{ action: "dialog", key: "quarto_dos_pais_4" },
+			
+			// Animacao do pergaminho e portal
+			
+			// Transicao de fase
+			{ action: "teleport", target: "rmForestArrival", target_position: { x: 400, y: 384} },			
+			{ action: "call_cutscene", cutscene_id: "floresta_chegada" }
 		];
 	}
 
