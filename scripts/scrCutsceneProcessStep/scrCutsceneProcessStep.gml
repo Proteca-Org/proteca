@@ -30,6 +30,10 @@ function scrCutsceneProcessStep(step) {
 		case "set_face":
 		    step.target.face = step.value;
 		    return true;
+
+		case "set_angle":
+		    step.target.image_angle = step.value;
+		    return true;
 			
         case "wait":
 			// variable_struct_exists é o "isso já foi inicializado?" padrão

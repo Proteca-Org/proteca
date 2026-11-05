@@ -4,6 +4,11 @@ if (variable_global_exists("dialog") && global.dialog) {
 if (variable_global_exists("cutscene") && global.cutscene) {
 	exit
 }
+// Trava o avanco de rmForestHorse -> rmForestHorseII ate o cavalo fugir
+// (exige que o jogador interaja com o cavalo primeiro).
+if (room == rmForestHorse && target_room == rmForestHorseII && !global.horseEscaped) {
+	exit
+}
 if place_meeting(x, y, objPlayer) and !instance_exists(objFade){
     // Só permite passar se o inventário estiver desbloqueado
 	if (global.inventoryUnlocked) {

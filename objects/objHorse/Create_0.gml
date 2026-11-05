@@ -2,6 +2,13 @@
 depth = -bbox_bottom;
 horse_original = noone;
 interagido = false;
+
+// Permite que a cutscene mova o cavalo (ex.: fugir de cena apos relinchar).
+initialized = false;
+targetX = x;
+targetY = y;
+velocity = 2;
+
 if (room == rmForestHorse && global.horseEscaped) {
     instance_destroy();
     exit;

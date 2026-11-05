@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rmForestHorseII",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rmForestHorseII/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -38,11 +38,17 @@
     {"name":"inst_1CA6B","path":"rooms/rmForestHorseII/rmForestHorseII.yy",},
     {"name":"inst_2E440EA9","path":"rooms/rmForestHorseII/rmForestHorseII.yy",},
     {"name":"inst_53297114","path":"rooms/rmForestHorseII/rmForestHorseII.yy",},
+    {"name":"inst_25D180D1","path":"rooms/rmForestHorseII/rmForestHorseII.yy",},
+    {"name":"inst_6678A1D2","path":"rooms/rmForestHorseII/rmForestHorseII.yy",},
+    {"name":"inst_6A69EB68","path":"rooms/rmForestHorseII/rmForestHorseII.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances_Warps","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_699B69AA","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_699B69AA","objectId":{"name":"objWarp","path":"objects/objWarp/objWarp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":4.234375,"x":13.0,"y":350.5,},
+        {"$GMRInstance":"v4","%Name":"inst_25D180D1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_25D180D1","objectId":{"name":"objIrmao","path":"objects/objIrmao/objIrmao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.4920635,"scaleY":0.44588745,"x":64.0,"y":384.0,},
+        {"$GMRInstance":"v4","%Name":"inst_6678A1D2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6678A1D2","objectId":{"name":"objVillain","path":"objects/objVillain/objVillain.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":256.0,},
+        {"$GMRInstance":"v4","%Name":"inst_6A69EB68","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6A69EB68","objectId":{"name":"objStranger","path":"objects/objStranger/objStranger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-0.5534884,"scaleY":0.58441556,"x":160.0,"y":224.0,},
       ],"layers":[],"name":"Instances_Warps","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances_Colliders","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_187E9A7D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_187E9A7D","objectId":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":14.0,"scaleY":0.5,"x":416.0,"y":496.0,},
