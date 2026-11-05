@@ -1,3 +1,4 @@
-target_x = 100;
-target_y = 400;
-target_room = rmForestArrival;
+global.quartoArrumado = true;
+target_x = 360;
+target_y = 360;
+target_room = rmHouseDiningRoom;

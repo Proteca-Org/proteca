@@ -32,7 +32,7 @@ if (state != PuzzleState.IDLE && keyboard_check_pressed(vk_space)) {
 	state = PuzzleState.END
 }
 
-if (state == PuzzleState.IDLE) {
+if (state == PuzzleState.IDLE && global.cutscene == false) {
 	
 	if (hasChestBeenPressed()) {
 		state = PuzzleState.START
@@ -76,4 +76,6 @@ if (state == PuzzleState.IDLE) {
 		global.state = gameState.GAME_RUNNING
 	}
 	
+	global.cutscene = true
+	scrCutsceneRun(scrCutsceneDefinitions("quarto_dos_pais_2"))
 }
