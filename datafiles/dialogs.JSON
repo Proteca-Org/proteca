@@ -374,6 +374,62 @@
     }
   ],
 
+  "quarto_dos_pais_1": [
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "{player:irmaozao_vocativo}! Vem cá, vem cá!"
+    }
+  ],
+
+  "quarto_dos_pais_2": [
+    {
+      "speaker": "Você",
+      "text": "Ei! O que você está fazendo?"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Ei, {player:irmao_vocativo}. vamos abrir esse baú e ver o que tem dentro?"
+    }
+  ],
+
+  "quarto_dos_pais_3": [
+    {
+      "speaker": "Você",
+      "text": "Vamos! Esse ar de mistério me faz querer ver o que tem aí dentro!"
+    }
+  ],
+
+  "quarto_dos_pais_4": [
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Mas aqui tem um mapa do tesouro! Tenho certeza! É um mapa para o tesouro de um pirata dentro do baú de um pirata! Vamos ficar ricos!"
+    },
+    {
+      "speaker": "Você",
+      "text": "AFF, mas você vai dar um jeito de arrumar esse cadeado depois!"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Éééé!" 
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Nossa! Olha esse pergaminho antigo, nunca vi nada igual!"
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Parece que esse baú realmente pertenceu a algum pirata."
+    },
+    {
+      "speaker": "{sibling:irmao_titulo}",
+      "text": "Vamos abrir?"
+    },
+    {
+      "speaker": "Você",
+      "text": "Vamos abrir sim!!"
+    }
+  ],
+
   "banheiro_irmao_sozinho": {
     "speaker": "{sibling:irmao_titulo}",
     "lines": [
